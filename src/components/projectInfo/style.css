@@ -1,0 +1,45 @@
+.project-info-container {
+  width: 960px;
+  height: 400px;
+  position: relative;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.project-info-title {
+  width: 152px;
+  height: 32px;
+  position: absolute;
+  top: 59px;
+  left: 42px;
+  margin: 0;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal; /* "Regular" için normal */
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: black;
+}
+
+.project-info-description {
+  width: 875px;
+  height: 120px;
+  position: absolute;
+  top: 126px;
+  left: 42px;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal; /* "Book" için normal yazılır */
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: black;
+  margin: 0;
+}
+
+.project-info-button-wrapper {
+  position: absolute;
+  bottom: 59px;
+  left: 42px;
+}

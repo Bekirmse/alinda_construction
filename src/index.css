@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'BiondiSans';
+  src: url('./assets/fonts/biondi_sans_rg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BiondiSans';
+  src: url('./assets/fonts/biondi_sans_lt.otf') format('opentype');
+  font-weight: 300;
+  font-style: light;
+}

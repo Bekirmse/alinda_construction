@@ -1,0 +1,58 @@
+
+
+.hero-overlay {
+  position: absolute;
+  width: 1399px;
+  height: 453px;
+  bottom: 0;
+  left: 0;
+  color: white;
+  z-index: 10;
+}
+
+/* Başlık */
+.hero-title {
+  position: absolute;
+  bottom: 310px;
+  left: 224px;
+  font-size: 64px;
+  font-weight: bold;
+  font-family: 'BiondiSans', sans-serif;
+  width: 305px;
+  height: 64px;
+  margin: 0;
+}
+
+/* Açıklama */
+.hero-desc {
+  position: absolute;
+  bottom: 203px;
+  left: 224px;
+  width: 795px;
+  height: 64px;
+  font-size: 16px;
+  line-height: 100%;
+  font-family: 'BiondiSans', sans-serif;
+  margin: 0;
+}
+
+/* Buton */
+.hero-button {
+  position: absolute;
+  bottom: 94px;
+  left: 224px;
+  height: 50px;
+  width: 173px;
+  padding: 12px 24px;
+  background: white;
+  color: black;
+  font-family: 'BiondiSans', sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #eee;
+}

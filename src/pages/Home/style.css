@@ -1,0 +1,100 @@
+.section-wrapper {
+  position: relative;
+
+}
+
+/* Başlık */
+.intro-title {
+  position: absolute;
+  top: -445px; /* HeroSlider’dan 143px aşağıya */
+  width: 462px;
+  height: 80px;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+/* Açıklama */
+.intro-description {
+  position: absolute;
+  top: -245px; /* HeroSlider'dan 315px aşağıya denk gelir */
+  width: 1771px;
+  height: 168px;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.custom-section {
+  width: 100%;
+  height: 302px;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-text {
+  width: 629px;
+  height: 80px;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal; /* "Light" için genellikle normal kullanılır, font dosyası o şekilde tanımlanır */
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+.intro-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 593px; /* açıklamadan sonra boşluk */
+  margin-bottom: 135px; /* alttaki “Projelerimiz” bölümünden uzaklaşsın */
+}
+
+.project-row {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-image {
+  width: 960px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+.ant-col {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.project-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-image-placeholder {
+  width: 960px;
+  height: 400px;
+  background-color: #ccc; /* Geçici yer tutucu */
+}
