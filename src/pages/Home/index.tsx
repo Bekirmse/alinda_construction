@@ -123,7 +123,16 @@ Lorem ipsum dolor sit amet, "
             />
           </Col>
         </Row>
-        <div className="bottom-gap-placeholder" />
+        <div className="bottom-gap-placeholder">
+          <div className="bottom-content">
+            <h2 className="bottom-title">İLETİŞİM</h2>
+            <p className="bottom-description">
+              Projelerimiz hakkında daha fazla bilgi almak ister misiniz? 
+              Ekibimizle hemen iletişime geçin, size özel çözümler sunalım.
+            </p>
+            <button className="bottom-button">İncele</button>
+          </div>
+        </div>
       </div>
 
       {/* ✅ Footer burada çağrılıyor */}
