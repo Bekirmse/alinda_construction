@@ -1,0 +1,189 @@
+/* === Hero Görsel === */
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(400px, 60vh, 686px);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.contact-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Sayfa Başlığı (İLETİŞİM) === */
+.contact-heading-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 128px;
+  padding-bottom: 114px;
+}
+
+.contact-main-title {
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0;
+}
+
+/* === Beyaz Arka Planlı Alan === */
+.contact-white-wrapper {
+  width: 100%;
+  background-color: #fff;
+  min-height: clamp(900px, 80vh, 1232px);
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.contact-grid {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-grid > .ant-col {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* === Sol Bilgi Alanı === */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-top: 0;
+  padding-left: 205px;
+}
+
+.contact-section-title {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: Book;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.contact-section-desc {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: Light;
+  line-height: 100%;
+  margin: 0;
+}
+
+.contact-block {
+  margin-top: 48px;
+}
+
+.contact-subheading {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: Book;
+  text-transform: uppercase;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-detail p {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: Light;
+  line-height: 100%;
+  color: #000;
+  margin: 0;
+}
+
+.contact-social {
+  margin-top: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.social-box {
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+}
+
+/* === Divider Alanları === */
+.divider-108 {
+  width: 108px;
+  border-bottom: 3px solid #A4A4A4;
+  margin-top: 8px;
+}
+
+.divider-54 {
+  width: 54px;
+  border-bottom: 3px solid #A4A4A4;
+  margin-top: 8px;
+}
+
+/* === Harita === */
+.contact-map {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-right: 205px;
+  width: 100%;
+}
+
+.responsive-map {
+  width: 700px;
+  height: 620px;
+  max-width: 100%;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-right: 205px;
+}
+
+/* === Responsive Ayarlar === */
+@media (max-width: 992px) {
+  .contact-info {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact-map {
+    justify-content: center;
+    margin-right: 0;
+    padding-top: 48px;
+  }
+
+  .responsive-map {
+    width: 100%;
+    height: 420px;
+    margin-right: 0;
+  }
+
+  .contact-heading-wrapper {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .contact-main-title {
+    font-size: 48px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

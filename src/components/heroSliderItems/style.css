@@ -1,56 +1,53 @@
-
-
 .hero-overlay {
   position: absolute;
-  width: 1399px;
-  height: 453px;
   bottom: 0;
   left: 0;
-  color: white;
   z-index: 10;
+  padding-left: clamp(16px, 11vw, 224px);
+  padding-bottom: clamp(24px, 12vh, 94px);
+  padding-top: clamp(16px, 8vh, 150px);
+  max-width: 90%;
+  color: white;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Başlık */
 .hero-title {
-  position: absolute;
-  bottom: 310px;
-  left: 224px;
-  font-size: 64px;
+  font-size: clamp(32px, 5vw, 64px);
   font-weight: bold;
   font-family: 'BiondiSans', sans-serif;
-  width: 305px;
-  height: 64px;
-  margin: 0;
+  max-width: clamp(220px, 20vw, 305px);
+  margin-bottom: clamp(16px, 4vh, 32px);
+  line-height: 1.2;
 }
 
 /* Açıklama */
 .hero-desc {
-  position: absolute;
-  bottom: 203px;
-  left: 224px;
-  width: 795px;
-  height: 64px;
-  font-size: 16px;
-  line-height: 100%;
+  font-size: clamp(14px, 1.2vw, 16px);
   font-family: 'BiondiSans', sans-serif;
-  margin: 0;
+  line-height: 1.5;
+  max-width: clamp(300px, 45vw, 795px);
+  margin-bottom: clamp(24px, 8vh, 32px);
 }
 
 /* Buton */
 .hero-button {
-  position: absolute;
-  bottom: 94px;
-  left: 224px;
-  height: 50px;
-  width: 173px;
-  padding: 12px 24px;
+  height: clamp(40px, 5vh, 50px);
+  width: clamp(140px, 10vw, 173px);
+  font-size: clamp(14px, 1.2vw, 16px);
+  padding: clamp(8px, 1.5vh, 12px) clamp(16px, 2.5vw, 24px);
   background: white;
   color: black;
   font-family: 'BiondiSans', sans-serif;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .hero-button:hover {

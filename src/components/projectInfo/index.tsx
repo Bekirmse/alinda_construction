@@ -1,6 +1,4 @@
-// components/ProjectInfo.tsx
 import React from "react";
-
 import "./style.css";
 import PrimaryButton from "../primaryButton";
 
@@ -9,6 +7,7 @@ interface ProjectInfoProps {
   description: string;
   buttonText?: string;
   buttonLink?: string;
+  buttonClassName?: string; // ✅ className prop'u eklendi
 }
 
 const ProjectInfo: React.FC<ProjectInfoProps> = ({
@@ -16,6 +15,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
   description,
   buttonText = "İNCELE",
   buttonLink = "#",
+  buttonClassName = "project-detail-button", // ✅ default class
 }) => {
   return (
     <div className="project-info-container">
@@ -25,15 +25,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
         <PrimaryButton
           text={buttonText}
           href={buttonLink}
-          style={{
-            width: "191px",
-            height: "60px",
-            fontSize: "24px",
-            fontWeight: 400,
-            backgroundColor: "black",
-            color: "white"
-          }}
-          
+          className={buttonClassName} // ✅ className kullanıldı
         />
       </div>
     </div>

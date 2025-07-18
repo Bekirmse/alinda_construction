@@ -1,45 +1,61 @@
 .project-info-container {
-  width: 960px;
-  height: 400px;
-  position: relative;
+  height: 100%; /* 🔥 Col'un yüksekliğini kaplayacak */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(24px, 3vw, 42px);
   box-sizing: border-box;
   background-color: white;
 }
 
+
+/* Başlık */
 .project-info-title {
-  width: 152px;
-  height: 32px;
-  position: absolute;
-  top: 59px;
-  left: 42px;
-  margin: 0;
   font-family: 'Biondi Sans', sans-serif;
   font-weight: 400;
-  font-style: normal; /* "Regular" için normal */
-  font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 0;
+  font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 1.2;
   color: black;
+  margin: 0;
+  width: 100%;
 }
 
+/* Açıklama */
 .project-info-description {
-  width: 875px;
-  height: 120px;
-  position: absolute;
-  top: 126px;
-  left: 42px;
   font-family: 'Biondi Sans', sans-serif;
   font-weight: 400;
-  font-style: normal; /* "Book" için normal yazılır */
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: 0;
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 1.4;
   color: black;
   margin: 0;
+  width: 100%;
 }
 
+/* Buton Alanı */
 .project-info-button-wrapper {
-  position: absolute;
-  bottom: 59px;
-  left: 42px;
+  align-self: flex-start;
+}
+
+/* Buton için default style (eğer inline style yerine CSS class kullandıysan) */
+.project-info-button {
+  width: clamp(150px, 25vw, 191px);
+  height: clamp(40px, 7vh, 60px);
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 400;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobilde Ortalamak için */
+@media (max-width: 768px) {
+  .project-info-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-info-button-wrapper {
+    align-self: center;
+  }
 }

@@ -14,9 +14,8 @@
 .hero-slide {
   min-width: 100%;
   height: 100%;
-  position: relative; /* BU ÖNEMLİ */
+  position: relative;
 }
-
 
 .hero-image {
   width: 100%;
@@ -24,39 +23,42 @@
   object-fit: cover;
 }
 
+/* === OVERLAY === */
 .hero-overlay {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   color: white;
-  max-width: 600px;
   z-index: 10;
+  padding-left: clamp(32px, 11vw, 224px);
+  padding-bottom: clamp(32px, 15vh, 222px);
+  max-width: 90%;
 }
 
+/* === BAŞLIK === */
 .hero-title {
-  font-size: 64px;
+  font-size: clamp(32px, 5vw, 64px);
   font-weight: bold;
-
-  width: 305px;
-  height: 64px;
-  margin-left: 224px;
-  margin-bottom: 222px;
+  line-height: 1.1;
+  max-width: clamp(200px, 20vw, 305px);
+  margin-bottom: clamp(24px, 6vh, 40px);
 }
 
+/* === AÇIKLAMA === */
 .hero-desc {
- height: 64px;
- width: 795px;
-  font-size: 16px;
-  margin-bottom: 203px;
-  margin-left: 224px;
-  line-height: 100%;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.4;
+  max-width: clamp(300px, 45vw, 795px);
+  margin-bottom: clamp(32px, 12vh, 203px);
 }
 
+/* === BUTON === */
 .hero-button {
-  padding: 12px 24px;
+  padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
   background: white;
   color: black;
   font-weight: 600;
+  font-size: clamp(14px, 1.2vw, 16px);
   border: none;
   cursor: pointer;
   transition: 0.3s ease;

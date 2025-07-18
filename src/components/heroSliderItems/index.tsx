@@ -22,7 +22,7 @@ const SlideContent: React.FC<SlideContentProps> = ({
       <PrimaryButton
         text={buttonText}
         href={buttonLink}
-        style={{ position: "absolute", bottom: "94px", left: "224px" }}
+        className="hero-button"
       />
     </div>
   );
