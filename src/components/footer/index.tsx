@@ -6,21 +6,18 @@ const Footer = () => {
   return (
     <div className="footer-wrapper">
       <div className="footer-container">
-        <Row gutter={[48, 32]}>
+        <Row gutter={[0, 32]} align="top" justify="space-between">
           {/* Sol Blok */}
-          <Col xs={24} md={12} lg={10}>
+          <Col xs={24} md={12} lg={10} className="footer-col">
             <div className="footer-brand-block">
               <div className="footer-logo-placeholder" />
               <p className="footer-desc">
                 MİMARİ ESTETİK İLE MÜHENDİSLİK GÜCÜNÜ BİR ARAYA GETİRİYORUZ.
               </p>
               <div className="footer-line" />
-              <p className="footer-section-title">
-                SATIŞ VE MÜŞTERİ HİZMETLERİ
-              </p>
+              <p className="footer-section-title">SATIŞ VE MÜŞTERİ HİZMETLERİ</p>
+
               <div className="footer-contact-list">
-                {" "}
-                {/* ✅ Yeni kapsayıcı */}
                 <div className="footer-contact-item">
                   <span className="icon phone" /> 0533 xxx xx xx
                 </div>
@@ -35,13 +32,8 @@ const Footer = () => {
           </Col>
 
           {/* Orta Blok */}
-          <Col
-            xs={12}
-            md={6}
-            lg={7}
-            style={{ display: "flex", alignItems: "flex-start" }}
-          >
-            <div className="footer-link-block footer-links-block">
+          <Col xs={12} md={6} lg={7} className="footer-col footer-col--center">
+            <div className="footer-link-block">
               <p className="footer-section-title">PROJELERİMİZ</p>
               <div className="footer-line2" />
               <p>Proje 1</p>
@@ -51,13 +43,8 @@ const Footer = () => {
           </Col>
 
           {/* Sağ Blok */}
-          <Col
-            xs={12}
-            md={6}
-            lg={7}
-            style={{ display: "flex", alignItems: "flex-start" }}
-          >
-            <div className="footer-link-block footer-links-block">
+          <Col xs={12} md={6} lg={7} className="footer-col footer-col--center">
+            <div className="footer-link-block">
               <p className="footer-section-title">HIZLI ERİŞİM</p>
               <div className="footer-line2" />
               <p>Biz kimiz</p>

@@ -53,6 +53,7 @@
   .project-info-container {
     align-items: center;
     text-align: center;
+    background-color: #212121;
   }
 
   .project-info-button-wrapper {

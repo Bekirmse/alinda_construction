@@ -1,38 +1,44 @@
 .hero-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
   z-index: 10;
-  padding-left: clamp(16px, 11vw, 224px);
   padding-bottom: clamp(24px, 12vh, 94px);
   padding-top: clamp(16px, 8vh, 150px);
-  max-width: 90%;
+  padding-left: 0px;
+  margin-left: 11.72vw;
+  margin-right: 11.72vw;
+  max-width: 100%;
   color: white;
   box-sizing: border-box;
 
-  display: flex;
+
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* Başlık */
 .hero-title {
+  display: block;
+  /* veya inline-block değilse */
+  width: 100%;
   font-size: clamp(32px, 5vw, 64px);
   font-weight: bold;
   font-family: 'BiondiSans', sans-serif;
-  max-width: clamp(220px, 20vw, 305px);
-  margin-bottom: clamp(16px, 4vh, 32px);
   line-height: 1.2;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
+
 
 /* Açıklama */
 .hero-desc {
   font-size: clamp(14px, 1.2vw, 16px);
   font-family: 'BiondiSans', sans-serif;
   line-height: 1.5;
-  max-width: clamp(300px, 45vw, 795px);
-  margin-bottom: clamp(24px, 8vh, 32px);
+  margin-bottom: 5.56vh;
+  margin-top: 2.78vh;
+  width: 100%;
+  max-width: 100%;
 }
+
 
 /* Buton */
 .hero-button {
@@ -52,4 +58,52 @@
 
 .hero-button:hover {
   background-color: #eee;
+}
+
+@media (max-width: 768px) {
+
+  /* Açıklamayı gizle */
+  .hero-desc {
+    display: none !important;
+  }
+
+  /* Overlay'i tam ortaya getir: soldaki margin/padding etkisini iptal et */
+  .hero-overlay {
+    left: 50% !important;
+    /* absolute konteksi içinde merkezle */
+    transform: translateX(-50%);
+    /* X ekseninde tam ortala */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 16px;
+    padding-bottom: 48px;
+    padding-top: 0px;
+    /* mobilde küçük yanal padding */
+    padding-right: 16px;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    /* içeriği ortala */
+    text-align: center;
+  }
+
+  /* AntD Row'ları mobilde ortala (desktop etkilenmez) */
+  .hero-overlay .ant-row {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Başlık ve buton ortalı kalsın */
+  .hero-title {
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    font-size: 36px;
+  }
+
+  .hero-button {
+    display: block;
+    margin: 0 auto !important;
+    margin-top: 20px !important;
+  }
 }

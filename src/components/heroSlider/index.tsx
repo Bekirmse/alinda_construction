@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./style.css";
 import SlideContent from "../heroSliderItems";
 
@@ -22,25 +22,29 @@ const HeroSlider: React.FC = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number | null>(null);
 
-  const nextSlide = () => {
+  // Fonksiyonları useCallback ile sarmaladık ki referans değişmesin
+  const nextSlide = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length);
-  };
+  }, []);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  }, []);
 
+  // Otomatik geçiş
   useEffect(() => {
     timeoutRef.current = setInterval(nextSlide, 4000);
     return () => {
       if (timeoutRef.current) clearInterval(timeoutRef.current);
     };
-  }, []);
+  }, [nextSlide]);
 
+  // Dokunma başlangıcı
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     touchStartX.current = e.touches[0].clientX;
   };
 
+  // Dokunma bitişi
   const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     if (touchStartX.current === null) return;
     const diff = touchStartX.current - e.changedTouches[0].clientX;
@@ -66,7 +70,10 @@ const HeroSlider: React.FC = () => {
         {slides.map((slide, index) => (
           <div className="hero-slide" key={index}>
             <img src={slide.image} alt={slide.title} className="hero-image" />
-            <SlideContent title={slide.title} description={slide.description} />
+            <SlideContent
+              title={slide.title}
+              description={slide.description}
+            />
           </div>
         ))}
       </div>

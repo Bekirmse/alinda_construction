@@ -1,0 +1,468 @@
+/* === Genel Wrapper === */
+.project-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* === Üstteki Geniş Görsel (Başlık İçerir) === */
+.project-top-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 686px;
+  overflow: hidden;
+}
+
+.project-top-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Görsel üzerindeki başlık */
+.project-overlay-title {
+  position: absolute;
+  bottom: 69px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 75px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* === Ortadaki Beyaz İçerik Alanı === */
+.project-white-block {
+  width: 100%;
+  height: 2231px;
+  background-color: #fff;
+  position: relative;
+}
+
+/* === İki adet İstatistik Kutusu === */
+.project-stats-container {
+  position: relative;
+  margin-top: 135px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 467px;
+  gap: 106px;
+}
+
+.project-stat-box {
+  width: 440px;
+  height: 150px;
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Kare iç kutu (ikon) */
+.project-stat-icon {
+  width: 84px;
+  height: 84px;
+  background-color: #D9D9D9;
+  position: absolute;
+  top: 33px;
+  left: 34px;
+}
+
+/* Kutudaki başlık */
+.project-stat-label {
+  position: absolute;
+  top: 40px;
+  left: 143px;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #4E4E4E;
+}
+
+/* Kutudaki değer */
+.project-stat-value {
+  position: absolute;
+  top: 62px;
+  left: 143px;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* === Alt Slider Alanı === */
+.project-slider-section {
+  width: 100%;
+  height: 866px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+
+.project-slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.slider-arrow.left {
+  left: 16px;
+}
+
+.slider-arrow.right {
+  right: 16px;
+}
+
+/* === Slider Altı Beyaz Alan === */
+.project-bottom-white {
+  width: 100%;
+  height: 525px;
+  background-color: #fff;
+}
+.project-grid-content {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 0 16px;
+}
+.project-column-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Tüm içeriği sola yaslar */
+}
+
+.project-column-block h4 {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  margin-top: 0;
+  color: #4E4E4E;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.project-column-block h4:first-of-type {
+  margin-top: 0; /* İlk başlıkta yukarıdan boşluk olmasın */
+}
+/* Sütun hizalamaları */
+.project-column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Başlık ve açıklamaları sola yasla */
+  text-align: left;
+}
+
+.project-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.project-column-center ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.project-column-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Başlık ve açıklamaları sağa yasla */
+  text-align: right;
+}
+
+
+.project-column-block p,
+.project-column-block li {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 0 24px 0; /* her açıklama ile bir sonraki başlık/özellik arasında 24px boşluk */
+  color: #000;
+  line-height: 1.4;
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-column-block h4 {
+  margin-bottom: 8px; /* başlık ile açıklama arasına 8px boşluk */
+}
+
+.project-detail-grid {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  row-gap: 90px; /* Her satır arasında 90px boşluk */
+}
+/* === Tıklanabilir Proje Katalog Butonu === */
+.project-catalog-button {
+  margin-top: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.project-catalog-button:hover {
+  cursor: pointer;
+}
+
+/* Proje kutusu (tamamı tıklanabilir alan) */
+.project-catalog-box {
+  width: 772px;
+  height: 124px;
+  background-color: #EFEFEF;
+  display: flex;
+  align-items: center;
+  padding-left: 41px;
+  padding-right: 32px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.project-catalog-box:hover {
+  background-color: #e0e0e0;
+}
+
+/* Sol ikon kutusu */
+.catalog-icon {
+  width: 84px;
+  height: 84px;
+  background-color: #D9D9D9;
+  flex-shrink: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Yazı alanı */
+.catalog-texts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Başlık */
+.catalog-title {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #000;
+  line-height: 100%;
+}
+
+/* Alt yazı */
+.catalog-subtitle {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4E4E4E;
+  margin-bottom: 20px;
+}
+
+/* Sağ ok → */
+.catalog-arrow {
+  font-size: 40px;
+  font-weight: 300;
+  color: #000;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+.project-divider {
+  width: 91.51vw; /* 1759px / 1920px ≈ %91.51 */
+  max-width: 1759px;
+  height: 0;
+  border-top: 2px solid #000000;
+  margin: 186px auto 0 auto; /* üstten boşluk ve ortalama */
+}
+.project-virtual-tour {
+  margin-top: 216px;
+  text-align: center;
+  color: #000000;
+  padding: 0 16px;
+  background-color: transparent; /* HATA buydu: Eskiden tüm alan siyah yapılıyordu */
+}
+
+.project-virtual-title {
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 48px;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.project-virtual-subtitle {
+  max-width: 977px;
+  margin: 0 auto 28px auto;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.project-virtual-button {
+  width: 772px;
+  height: 70px;
+  max-width: 95%;
+  background-color: #000000; /* sadece buton siyah */
+  color: #FFFFFF;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 32px;
+  line-height: 100%;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto 38px auto;
+  display: block;
+}
+
+.project-virtual-note {
+  max-width: 369px;
+  margin: 0 auto;
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 13px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #4E4E4E;
+  text-align: center;
+}
+
+
+.project-divider-bottom {
+  width: 91.51vw; /* 1759px / 1920px ≈ %91.51 */
+  max-width: 1759px;
+  height: 0;
+  border-top: 2px solid #000000;
+  margin: 186px auto 0 auto; /* üstten boşluk ve ortalama */
+}
+
+
+/* === Responsive Ayarlar === */
+@media (max-width: 768px) {
+  .project-top-image-wrapper {
+    height: 400px;
+  }
+
+  .project-overlay-title {
+    font-size: 36px;
+    padding: 0 16px;
+    white-space: normal;
+  }
+
+  .project-white-block {
+    height: auto;
+    padding: 32px 16px;
+  }
+
+  .project-stats-container {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 32px;
+    margin-top: 64px;
+  }
+
+  .project-stat-box {
+    width: 100%;
+    height: auto;
+    padding: 120px 16px 32px;
+  }
+
+  .project-stat-icon {
+    width: 64px;
+    height: 64px;
+    top: 24px;
+    left: 16px;
+  }
+
+  .project-stat-label {
+    top: 28px;
+    left: 96px;
+    font-size: 12px;
+  }
+
+  .project-stat-value {
+    top: 52px;
+    left: 96px;
+    font-size: 36px;
+  }
+
+  .project-slider-section {
+    height: 420px;
+  }
+
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .project-bottom-white {
+    height: auto;
+    padding: 32px 16px;
+  }
+  .project-catalog-box {
+    flex-direction: column;
+    height: auto;
+    padding: 24px 16px;
+    width: 100%;
+  }
+
+  .catalog-icon {
+    margin: 0 0 16px 0;
+  }
+
+  .catalog-texts {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .catalog-arrow {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+}

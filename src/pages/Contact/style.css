@@ -123,6 +123,15 @@
   height: 24px;
   background-color: #ccc;
 }
+.contact-icon {
+  width: clamp(20px, 2.5vw, 25px);
+  height: clamp(20px, 2.5vw, 25px);
+  object-fit: contain;
+  margin-right: 12px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
 
 /* === Divider Alanları === */
 .divider-108 {

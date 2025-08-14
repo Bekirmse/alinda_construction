@@ -1,7 +1,7 @@
 .footer-wrapper {
   width: 100%;
   background-color: #1d1d1d;
-  color: white;
+  color: #fff;
   padding: 64px 0;
   font-family: 'Biondi Sans', sans-serif;
   box-sizing: border-box;
@@ -11,7 +11,33 @@
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0;
+}
+
+/* ---- Col hizalama ---- */
+.footer-col {
+  display: flex;                /* Col’u flex yap */
+  align-items: flex-start;      /* üstten hizala */
+}
+
+.footer-col--center {
+  justify-content: center;      /* içeriği yatayda ortala */
+}
+
+/* İç bloklar */
+.footer-link-block,
+.footer-brand-block {
+  width: 100%;
+  max-width: 346px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Merkezde görünsün ve metin ortalansın */
+.footer-col--center .footer-link-block {
+  margin: 0 auto;
+  align-items: center;           /* öğeleri ortala */
+  text-align: center;            /* metni ortala */
 }
 
 /* LOGO */
@@ -41,13 +67,13 @@
   width: 100%;
   max-width: 346px;
   height: 1px;
-  background-color: white;
+  background-color: #fff;
   margin-bottom: 24px;
 }
 
 .footer-line2 {
-  max-width: 60px;
-  margin-top: 8px;
+  max-width: 105px;
+  margin-top: 4px;
   margin-bottom: 4px;
 }
 
@@ -62,15 +88,7 @@
   pointer-events: none;
 }
 
-/* Bağlantı Listeleri */
-.footer-links-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-}
-
+/* Bağlantılar */
 .footer-link-block p:not(.footer-section-title):not(:first-of-type) {
   margin-top: 14px;
 }
@@ -93,7 +111,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  color: white;
+  color: #fff;
 }
 
 .footer-contact-item {
@@ -106,17 +124,12 @@
 }
 
 /* İkonlar */
-.icon.phone::before {
-  content: "📞";
-  font-size: clamp(14px, 1.3vw, 18px);
-}
+.icon.phone::before { content: "📞"; font-size: clamp(14px, 1.3vw, 18px); }
+.icon.mail::before { content: "✉️"; font-size: clamp(14px, 1.3vw, 18px); }
+.icon.location::before { content: "📍"; font-size: clamp(14px, 1.3vw, 18px); }
 
-.icon.mail::before {
-  content: "✉️";
-  font-size: clamp(14px, 1.3vw, 18px);
-}
-
-.icon.location::before {
-  content: "📍";
-  font-size: clamp(14px, 1.3vw, 18px);
+/* Küçük ekranlarda sütunların ortalanması */
+@media (max-width: 768px) {
+  .footer-col { justify-content: center; }
+  .footer-brand-block { max-width: 480px; }
 }
