@@ -103,7 +103,10 @@
 
   .hero-button {
     display: block;
-    margin: 0 auto !important;
+
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px !important;
+    margin-bottom: 60px;
   }
 }

@@ -109,23 +109,6 @@ const Home = () => {
           />
         </Col>
       </Row>
-
-      {/* Proje 3 */}
-      <Row className="project-row" gutter={[0, 0]} align="stretch">
-        <Col xs={24} md={12}>
-          <img src={proje5} alt="Proje 5" className="project-image" />
-        </Col>
-        <Col xs={24} md={12}>
-          <ProjectInfo
-            title="Proje 3"
-            description="Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet..."
-            buttonText="Detaylı Bilgi"
-            buttonLink="/projeler"
-            buttonClassName="project-detail-button"
-          />
-        </Col>
-      </Row>
-
       {/* İletişim */}
       <div className="contact-section">
         <div className="contact-content">

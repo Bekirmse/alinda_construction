@@ -99,25 +99,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <div className="catalog-arrow">→</div>
           </div>
         </a>
-        <div className="project-catalog-button">
-  {/* katalog kutusu */}
-</div>
+        <div className="project-catalog-button">{/* katalog kutusu */}</div>
 
-<div className="project-divider"></div>
-<div className="project-virtual-tour">
-  <div className="project-virtual-title">360° SANAL TUR</div>
-  <div className="project-virtual-subtitle">
-    PROJEYİ 360° PANORAMİK TUR İLE İNCELEYİN, D-POINT’İN ÇAĞDAŞ YAŞAM ALANLARINI YAKINDAN KEŞFEDİN.
-  </div>
-  <button className="project-virtual-button">
-    PROJE 1 360° SANAL TURU GÖRÜNTÜLE
-  </button>
-  <div className="project-virtual-note">
-    NOT: SANAL TUR YENİ BİR SEKMEDE AÇILACAKTIR.
-  </div>
-</div>
+        <div className="project-divider"></div>
+        <div className="project-virtual-tour">
+          <div className="project-virtual-title">360° SANAL TUR</div>
+          <div className="project-virtual-subtitle">
+            PROJEYİ 360° PANORAMİK TUR İLE İNCELEYİN, D-POINT’İN ÇAĞDAŞ YAŞAM
+            ALANLARINI YAKINDAN KEŞFEDİN.
+          </div>
+          <button className="project-virtual-button">
+            PROJE 1 360° SANAL TURU GÖRÜNTÜLE
+          </button>
+          <div className="project-virtual-note">
+            NOT: SANAL TUR YENİ BİR SEKMEDE AÇILACAKTIR.
+          </div>
+        </div>
 
-<div className="project-divider-bottom" />
+        <div className="project-divider-bottom" />
       </div>
 
       <div className="project-slider-section">
