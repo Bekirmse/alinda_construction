@@ -147,7 +147,7 @@ body {
 
 .contact-description {
   margin-top: clamp(24px, 4vh, 76px);
-   margin-bottom: clamp(24px, 4vh, 76px);
+  margin-bottom: clamp(24px, 4vh, 76px);
   font-family: 'Biondi Sans', sans-serif;
   font-weight: 300;
   font-size: clamp(16px, 2vw, 24px);
@@ -185,10 +185,11 @@ body {
 .project-detail-button:hover {
   background-color: #333;
 }
-  .iletisimButton{
-    margin-top: 20px;
-    
-  }
+
+.iletisimButton {
+  margin-top: 20px;
+
+}
 
 /* ====== Mobile ====== */
 @media (max-width: 768px) {
@@ -226,7 +227,8 @@ body {
     margin-top: 60px;
     margin-bottom: 105px;
   }
-  .iletisimButton{
+
+  .iletisimButton {
     margin-top: 0px;
   }
 
