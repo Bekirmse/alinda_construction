@@ -51,12 +51,38 @@
 /* Mobilde Ortalamak için */
 @media (max-width: 768px) {
   .project-info-container {
+    padding-bottom: 93px;
+    padding-top: 93px;
     align-items: center;
     text-align: center;
     background-color: #212121;
+    height: 400px;
   }
 
   .project-info-button-wrapper {
     align-self: center;
   }
+  /* Başlık */
+.project-info-title {
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 300; /* Light */
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%; /* yani 1 */
+  letter-spacing: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 0px !important;
+}
+
+/* Açıklama */
+.project-info-description {
+  font-family: 'Biondi Sans', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1;
+  color: #FFFFFF;
+  margin: 0;
+  width: 100%;
+}
 }
