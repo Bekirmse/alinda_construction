@@ -309,7 +309,9 @@
   height: 0;
   border-top: 2px solid #000000;
   margin: 186px auto 0 auto; /* üstten boşluk ve ortalama */
+  opacity: 0.2; 
 }
+
 .project-virtual-tour {
   margin-top: 216px;
   text-align: center;
@@ -378,6 +380,7 @@
   height: 0;
   border-top: 2px solid #000000;
   margin: 186px auto 0 auto; /* üstten boşluk ve ortalama */
+  opacity: 0.2; 
 }
 
 

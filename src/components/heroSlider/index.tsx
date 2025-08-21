@@ -131,12 +131,18 @@ const handleTransitionEnd = () => {
         style={{ transform: `translateX(-${index * 100}%)` }}
         onTransitionEnd={handleTransitionEnd}
       >
-        {extended.map((slide, i) => (
-          <div className="hero-slide" key={i}>
-            <img src={slide.image} alt={slide.title} className="hero-image" />
-            <SlideContent title={slide.title} description={slide.description} />
-          </div>
-        ))}
+      {extended.map((slide, i) => (
+  <div className="hero-slide" key={i}>
+    <img src={slide.image} alt={slide.title} className="hero-image" />
+
+    {/* Gradient overlay */}
+    <div className="hero-gradient"></div>
+
+    <SlideContent title={slide.title} description={slide.description} />
+  </div>
+))}
+
+
       </div>
 
       {/* Altta ortalanmış pill dot’lar */}

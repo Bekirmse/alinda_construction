@@ -14,6 +14,7 @@
 .hero-slider-track.no-transition {
   transition: none !important;
 }
+
 .hero-slide {
   min-width: 100%;
   height: 100%;
@@ -26,19 +27,35 @@
   object-fit: cover;
 }
 
-/* === OVERLAY === */
+/* === Gradient overlay (üstte header görünürlüğü için) === */
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* sadece üst kısım */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),  /* üst: koyu */
+    rgba(0, 0, 0, 0)     /* alta doğru şeffaf */
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* === Overlay içerik === */
 .hero-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   color: white;
-  z-index: 10;
+  z-index: 3; /* gradient’in üstünde */
   padding-left: 11.72vw;
   padding-bottom: clamp(32px, 15vh, 222px);
   max-width: 90%;
 }
 
-/* === BAŞLIK === */
+/* === Başlık === */
 .hero-title {
   font-size: clamp(32px, 5vw, 64px);
   font-weight: bold;
@@ -46,7 +63,7 @@
   margin-bottom: clamp(24px, 6vh, 40px);
 }
 
-/* === BUTON === */
+/* === Buton === */
 .hero-button {
   padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
   background: white;
@@ -57,11 +74,11 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-
 .hero-button:hover {
   background-color: #eee;
 }
-/* Dots container: altta, ortalanmış */
+
+/* === Dots container === */
 .hero-dots {
   position: absolute;
   left: 50%;
@@ -69,7 +86,7 @@
   transform: translateX(-50%);
   display: flex;
   gap: 16px;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* Dot (pill) – inaktif */
@@ -84,6 +101,7 @@
   cursor: pointer;
   transition: width 220ms ease, background-color 220ms ease, opacity 220ms ease;
   opacity: 0.9;
+  position: relative;
 }
 
 /* Aktif dot */
@@ -93,41 +111,25 @@
   opacity: 1;
 }
 
-/* Touch hedefini biraz büyütmek (opsiyonel, erişilebilirlik) */
+/* Touch alanını genişlet */
 .hero-dot::after {
   content: "";
   position: absolute;
-  inset: -8px 0 -8px 0; /* üst-alt 8px hit-area */
+  inset: -8px 0 -8px 0;
 }
 
-
+/* === Responsive === */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: clamp(32px, 5vw, 64px);
+    font-size: clamp(24px, 6vw, 36px);
     font-weight: bold;
-    line-height: 1.1;
-    margin-bottom: clamp(24px, 6vh, 40px);
-
-    width: fit-content;
-    /* kendi genişliği kadar */
-    margin: 0 auto;
-    /* yatayda ortala */
+    line-height: 1.2;
+    margin: 0 auto 20px auto;
     text-align: center;
-    /* birden fazla satır olursa ortala */
+    width: fit-content;
   }
-/* Dot (pill) – inaktif */
-.hero-dot {
-  width: 48px;
-  height: 8px;
-  border-radius: 3px;
-  background: #757575;
-  box-shadow: -1px 1px 4px 0px #00000040;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  transition: width 220ms ease, background-color 220ms ease, opacity 220ms ease;
-  opacity: 0.9;
-  margin-bottom: 20px;
-}
 
+  .hero-dot {
+    margin-bottom: 20px;
+  }
 }
