@@ -37,11 +37,13 @@
   background-color: #fff;
   min-height: clamp(900px, 80vh, 1232px);
   display: flex;
-  flex-direction: column; /* alt alta */
+  flex-direction: column;
+  /* alt alta */
   align-items: center;
   box-sizing: border-box;
   overflow-x: hidden;
-  padding-bottom: 48px; /* sosyal medya ile alt boşluk */
+  padding-bottom: 48px;
+  /* sosyal medya ile alt boşluk */
 }
 
 .contact-grid {
@@ -50,7 +52,7 @@
   margin: 0 auto;
 }
 
-.contact-grid > .ant-col {
+.contact-grid>.ant-col {
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -59,7 +61,8 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  height: 100%;              /* yüksekliği %100 */
+  height: 100%;
+  /* yüksekliği %100 */
   padding-left: 265px;
   padding-top: 0;
 }
@@ -67,8 +70,10 @@
 .contact-detail {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* üst, orta, alt dağılım */
-  height: 100%;                   /* parent yüksekliği kaplasın */
+  justify-content: space-between;
+  /* üst, orta, alt dağılım */
+  height: 100%;
+  /* parent yüksekliği kaplasın */
 }
 
 .contact-section-title {
@@ -86,16 +91,46 @@
   margin-bottom: 60px;
 }
 
-.contact-block {
-  margin: 0; /* ekstra boşluk kaldırıldı */
+.contact-block1 {
+  margin: 0;
+  /* ekstra boşluk kaldırıldı */
+}.contact-block2 {
+  margin: 0;
+  /* ekstra boşluk kaldırıldı */
+}.contact-block3 {
+margin-bottom: 100px;
 }
 
-.contact-subheading {
+.contact-subheading1 {
   font-family: 'Biondi Sans', sans-serif;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 0 0 12px 0;
+  margin: 0;
+}.contact-subheading2 {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+
+}
+.contact-subheading3 {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin:0;
+
+
+}.contact-subheading3.p {
+  font-family: 'Biondi Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 12px;
+
+
 }
 
 .contact-detail p {
@@ -106,7 +141,22 @@
   margin: 0;
 }
 
-.contact-heading-with-icon {
+.contact-heading-with-icon1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  margin-top: 100px;
+}
+
+.contact-heading-with-icon2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.contact-heading-with-icon3 {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -126,14 +176,17 @@
 .contact-social {
   width: 100%;
   margin-top: 60px;
-  text-align: left;       /* sola hizala */
-  padding-left: 265px;    /* soldan boşluk */
+  text-align: left;
+  /* sola hizala */
+  padding-left: 265px;
+  /* soldan boşluk */
   box-sizing: border-box;
 }
 
 .social-icons {
   display: flex;
-  justify-content: flex-start; /* ikonlar sola */
+  justify-content: flex-start;
+  /* ikonlar sola */
   gap: 12px;
   margin-top: 24px;
   padding-left: 0;
@@ -150,13 +203,15 @@
 .divider-108 {
   width: 108px;
   border-bottom: 3px solid #A4A4A4;
-  margin: 8px 0 0 0; /* sola hizalı */
+  margin: 8px 0 0 0;
+  /* sola hizalı */
 }
 
 .divider-54 {
   width: 54px;
   border-bottom: 3px solid #A4A4A4;
-  margin: 8px 0 0 0; /* sola hizalı */
+  margin: 8px 0 0 0;
+  /* sola hizalı */
 }
 
 /* === Harita === */

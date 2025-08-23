@@ -49,14 +49,14 @@ const Contact: React.FC = () => {
           <Col xs={24} md={12}>
             <div className="contact-info">
               <div className="contact-detail">
-                <div className="contact-block">
-                  <div className="contact-heading-with-icon">
+                <div className="contact-block1">
+                  <div className="contact-heading-with-icon1">
                     <img
                       src={addressIcon}
                       alt="Adres"
                       className="contact-icon"
                     />
-                    <h3 className="contact-subheading">ADRES</h3>
+                    <h3 className="contact-subheading1">ADRES</h3>
                   </div>
                   <p>
                     Sorularınız, önerileriniz veya işbirliği talepleriniz için
@@ -64,26 +64,26 @@ const Contact: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="contact-block">
-                  <div className="contact-heading-with-icon">
+                <div className="contact-block2">
+                  <div className="contact-heading-with-icon2">
                     <img
                       src={phoneIcon}
                       alt="Telefon"
                       className="contact-icon"
                     />
-                    <h3 className="contact-subheading">TELEFON</h3>
+                    <h3 className="contact-subheading2">TELEFON</h3>
                   </div>
                   <p>+90 533 XXX XX XX</p>
                 </div>
 
-                <div className="contact-block">
-                  <div className="contact-heading-with-icon">
+                <div className="contact-block3">
+                  <div className="contact-heading-with-icon3">
                     <img
                       src={mailIcon}
                       alt="E-Posta"
                       className="contact-icon"
                     />
-                    <h3 className="contact-subheading">E-POSTA</h3>
+                    <h3 className="contact-subheading3">E-POSTA</h3>
                   </div>
                   <p>alindaconstruction@mail.com</p>
                 </div>
