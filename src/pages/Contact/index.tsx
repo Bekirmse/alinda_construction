@@ -34,6 +34,7 @@ const Contact: React.FC = () => {
         <Row>
           <Col>
             <h2 className="contact-section-title">BİZE ULAŞIN</h2>
+            <div className="divider-54" />
             <p className="contact-section-desc">
               Sorularınız, önerileriniz veya işbirliği talepleriniz için bizimle
               iletişime geçebilirsiniz.
@@ -90,7 +91,19 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </Col>
-
+          <div className="contact-info">
+            {/* ✅ Mobilde görünecek sosyal medya (Row içinde, iki kolonun arasında) */}
+            <Col xs={24} className="contact-social contact-social--mobile">
+              <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+              <div className="divider-54" />
+              <div className="social-icons">
+                <div className="social-box" />
+                <div className="social-box" />
+                <div className="social-box" />
+                <div className="social-box" />
+              </div>
+            </Col>
+          </div>
           {/* Sağ Harita Bölgesi */}
           <Col xs={24} md={12}>
             <div className="contact-map">
@@ -105,8 +118,9 @@ const Contact: React.FC = () => {
           </Col>
         </Row>
 
-        {/* ✅ Sosyal medya Row'un dışında, altta */}
-        <div className="contact-social">
+        {/* ✅ Masaüstünde görünecek sosyal medya (Row’un dışında, altta) */}
+
+        <div className="contact-social contact-social--desktop">
           <h3 className="contact-subheading">SOSYAL MEDYA</h3>
           <div className="divider-54" />
           <div className="social-icons">
@@ -117,7 +131,9 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-
+<div className="about-footer-connector">
+        <div className="a-divider"></div>
+      </div>
       <Footer />
     </main>
   );

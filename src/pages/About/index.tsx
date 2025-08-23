@@ -83,7 +83,7 @@ const About: React.FC = () => {
 
       {/* Footer ile birleşen alt beyaz alan */}
       <div className="about-footer-connector">
-        <div className="about-divider"></div>
+        <div className="a-divider"></div>
       </div>
 
       <Footer />

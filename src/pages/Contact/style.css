@@ -7,6 +7,15 @@
   z-index: 1000;
 }
 
+/* Sosyal medya blokları için görünürlük kontrolü */
+.contact-social--mobile {
+  display: none;
+}
+
+.contact-social--desktop {
+  display: block;
+}
+
 .contact-hero-image {
   width: 100%;
   height: 100%;
@@ -42,7 +51,6 @@
   align-items: center;
   box-sizing: border-box;
   overflow-x: hidden;
-  padding-bottom: 48px;
   /* sosyal medya ile alt boşluk */
 }
 
@@ -93,12 +101,17 @@
 
 .contact-block1 {
   margin: 0;
+
   /* ekstra boşluk kaldırıldı */
-}.contact-block2 {
+}
+
+.contact-block2 {
   margin: 0;
   /* ekstra boşluk kaldırıldı */
-}.contact-block3 {
-margin-bottom: 100px;
+}
+
+.contact-block3 {
+  margin-bottom: 100px;
 }
 
 .contact-subheading1 {
@@ -107,7 +120,9 @@ margin-bottom: 100px;
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
-}.contact-subheading2 {
+}
+
+.contact-subheading2 {
   font-family: 'Biondi Sans', sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -115,15 +130,18 @@ margin-bottom: 100px;
   margin: 0;
 
 }
+
 .contact-subheading3 {
   font-family: 'Biondi Sans', sans-serif;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  margin:0;
+  margin: 0;
 
 
-}.contact-subheading3.p {
+}
+
+.contact-subheading3.p {
   font-family: 'Biondi Sans', sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -164,8 +182,8 @@ margin-bottom: 100px;
 }
 
 .contact-icon {
-  width: clamp(20px, 2.5vw, 25px);
-  height: clamp(20px, 2.5vw, 25px);
+  width: 25px;
+  height: 25px;
   object-fit: contain;
   flex-shrink: 0;
   display: inline-block;
@@ -250,29 +268,143 @@ margin-bottom: 100px;
 }
 
 @media (max-width: 992px) {
+
+  /* Sol bilgi kolonunun kenar boşlukları */
   .contact-info {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  /* Bilgi blokları mobilde serbest aksın (desktop'taki space-between'i kapat) */
+  .contact-detail {
+    justify-content: initial;
+    gap: 40px;
   }
 
   .contact-map {
+    display: flex;
     justify-content: center;
-    margin-right: 0;
     padding-top: 48px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    /* padding hesaba katılsın */
   }
 
   .responsive-map {
     width: 100%;
+    max-width: 100%;
+    /* soldan ve sağdan 25px boşluk bırak */
     height: 420px;
-    margin-right: 0;
   }
 
+  /* Başlık alanları */
   .contact-heading-wrapper {
     padding-top: 64px;
     padding-bottom: 64px;
   }
 
   .contact-main-title {
-    font-size: 48px;
+    font-family: 'Biondi Sans', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 0;
+    margin: 0;
   }
+
+  .contact-section-title {
+    font-family: 'Biondi Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .contact-section-desc {
+    font-family: 'Biondi Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 55px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  /* Üstteki başlık + ikon bloğu */
+  .contact-heading-with-icon1 {
+    margin-top: 0;
+  }
+
+  /* Blok aralıkları */
+  .contact-block1,
+  .contact-block2 {
+    margin: 0 0 24px 0;
+  }
+
+  .contact-block3 {
+    margin: 0 0 60px 0;
+  }
+
+  /* İkon ve alt başlık boyutları */
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+
+  .contact-subheading1,
+  .contact-subheading2,
+  .contact-subheading3 {
+    font-family: 'Biondi Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .contact-detail p {
+    font-family: 'Biondi Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    margin: 0 0 0 37px;
+    /* ikon ile metin hizası */
+  }
+
+  /* ==== Sosyal medya: mobilde map'ten önce göster ==== */
+  .contact-social--mobile {
+    /* Row içinde olan */
+    display: block;
+    padding-left: 0px;
+    margin-top: 0px;
+  }
+
+  .contact-social--desktop {
+    /* Row dışındaki (masaüstü için) */
+    display: none;
+  }
+
+  .contact-social--mobile .divider-54 {
+    margin: 8px 0 0 0;
+  }
+
+  .contact-social--mobile .social-icons {
+    justify-content: flex-start;
+    gap: 12px;
+    margin-top: 16px;
+    margin-left: 0px;
+  }
+  .about-footer-connector {
+    height: 200px;
+  }
+  .a-divider {
+  width: 218px;
+  height: 0;
+  border-top: 3px solid #9C9C9C;
+}
 }
