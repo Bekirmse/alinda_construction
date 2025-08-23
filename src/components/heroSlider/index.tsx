@@ -27,7 +27,6 @@ const slides = [
   },
 ];
 
-
 const HeroSlider: React.FC = () => {
   // Sonsuz kaydırma için klonlu dizi: [last, ...slides, first]
   const extended = [slides[slides.length - 1], ...slides, slides[0]];
@@ -78,47 +77,45 @@ const HeroSlider: React.FC = () => {
     if (Math.abs(diff) > 50) next(); // hep sağa
     touchStartX.current = null;
   };
-const jumpingRef = useRef(false);
+  const jumpingRef = useRef(false);
   // Klonlardan gerçek slayta "görünmez atlama" (no-transition ile)
-const jumpSilently = (to: number) => {
-  // Transition sırasındaki transitionend’i yok saymak için kilidi aç
-  jumpingRef.current = true;
+  const jumpSilently = (to: number) => {
+    // Transition sırasındaki transitionend’i yok saymak için kilidi aç
+    jumpingRef.current = true;
 
-  // Autoplay’i durdur
-  if (timerRef.current) clearInterval(timerRef.current);
+    // Autoplay’i durdur
+    if (timerRef.current) clearInterval(timerRef.current);
 
-  // Transition'ı kapatıp sessiz atla
-  setNoTransition(true);
-  // 1. RAF: transition'ı kapalıyken index'i değiştir
-  requestAnimationFrame(() => {
-    setIndex(to);
-
-    // 2. RAF: sonraki frame’de transition'ı tekrar aç, autoplay'i başlat, kilidi bırak
+    // Transition'ı kapatıp sessiz atla
+    setNoTransition(true);
+    // 1. RAF: transition'ı kapalıyken index'i değiştir
     requestAnimationFrame(() => {
-      setNoTransition(false);
-      // küçük bir gecikme autoplay'in hemen iteklemesini engeller
-      setTimeout(() => {
-        jumpingRef.current = false;
-        startTimer();
-      }, 30);
+      setIndex(to);
+
+      // 2. RAF: sonraki frame’de transition'ı tekrar aç, autoplay'i başlat, kilidi bırak
+      requestAnimationFrame(() => {
+        setNoTransition(false);
+        // küçük bir gecikme autoplay'in hemen iteklemesini engeller
+        setTimeout(() => {
+          jumpingRef.current = false;
+          startTimer();
+        }, 30);
+      });
     });
-  });
-};
+  };
 
+  const handleTransitionEnd = () => {
+    // Sessiz atlama sürecindeysek bu olayı tamamen yok say
+    if (jumpingRef.current) return;
 
-const handleTransitionEnd = () => {
-  // Sessiz atlama sürecindeysek bu olayı tamamen yok say
-  if (jumpingRef.current) return;
-
-  if (index === extended.length - 1) {
-    // sondaki clone → gerçek 1. slayt
-    jumpSilently(1);
-  } else if (index === 0) {
-    // baştaki clone → gerçek son slayt
-    jumpSilently(extended.length - 2);
-  }
-};
-
+    if (index === extended.length - 1) {
+      // sondaki clone → gerçek 1. slayt
+      jumpSilently(1);
+    } else if (index === 0) {
+      // baştaki clone → gerçek son slayt
+      jumpSilently(extended.length - 2);
+    }
+  };
 
   return (
     <div
@@ -131,18 +128,16 @@ const handleTransitionEnd = () => {
         style={{ transform: `translateX(-${index * 100}%)` }}
         onTransitionEnd={handleTransitionEnd}
       >
-      {extended.map((slide, i) => (
-  <div className="hero-slide" key={i}>
-    <img src={slide.image} alt={slide.title} className="hero-image" />
+        {extended.map((slide, i) => (
+          <div className="hero-slide" key={i}>
+            <img src={slide.image} alt={slide.title} className="hero-image" />
 
-    {/* Gradient overlay */}
-    <div className="hero-gradient"></div>
+            {/* Gradient overlay */}
+            <div className="hero-gradient"></div>
 
-    <SlideContent title={slide.title} description={slide.description} />
-  </div>
-))}
-
-
+            <SlideContent title={slide.title} description={slide.description} />
+          </div>
+        ))}
       </div>
 
       {/* Altta ortalanmış pill dot’lar */}

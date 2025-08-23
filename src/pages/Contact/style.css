@@ -26,10 +26,7 @@
 .contact-main-title {
   font-family: 'Biondi Sans', sans-serif;
   font-weight: 300;
-  font-style: Light;
   font-size: 80px;
-  line-height: 100%;
-  letter-spacing: 0%;
   text-align: center;
   margin: 0;
 }
@@ -40,9 +37,11 @@
   background-color: #fff;
   min-height: clamp(900px, 80vh, 1232px);
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* alt alta */
+  align-items: center;
   box-sizing: border-box;
   overflow-x: hidden;
+  padding-bottom: 48px; /* sosyal medya ile alt boşluk */
 }
 
 .contact-grid {
@@ -60,17 +59,22 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  height: 100%;              /* yüksekliği %100 */
+  padding-left: 265px;
   padding-top: 0;
-  padding-left: 205px;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* üst, orta, alt dağılım */
+  height: 100%;                   /* parent yüksekliği kaplasın */
 }
 
 .contact-section-title {
   font-family: 'Biondi Sans', sans-serif;
   font-size: 36px;
   font-weight: 400;
-  font-style: Book;
-  line-height: 100%;
   text-transform: uppercase;
   margin: 0;
 }
@@ -79,71 +83,80 @@
   font-family: 'Biondi Sans', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  font-style: Light;
-  line-height: 100%;
-  margin: 0;
+  margin-bottom: 60px;
 }
 
 .contact-block {
-  margin-top: 48px;
+  margin: 0; /* ekstra boşluk kaldırıldı */
 }
 
 .contact-subheading {
   font-family: 'Biondi Sans', sans-serif;
   font-size: 20px;
   font-weight: 400;
-  font-style: Book;
   text-transform: uppercase;
-  line-height: 100%;
-  margin-bottom: 20px;
+  margin: 0 0 12px 0;
 }
 
 .contact-detail p {
   font-family: 'Biondi Sans', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  font-style: Light;
-  line-height: 100%;
   color: #000;
   margin: 0;
 }
 
+.contact-heading-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.contact-icon {
+  width: clamp(20px, 2.5vw, 25px);
+  height: clamp(20px, 2.5vw, 25px);
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+
+/* === Sosyal Medya Alanı === */
 .contact-social {
-  margin-top: 12px;
+  width: 100%;
+  margin-top: 60px;
+  text-align: left;       /* sola hizala */
+  padding-left: 265px;    /* soldan boşluk */
+  box-sizing: border-box;
 }
 
 .social-icons {
   display: flex;
+  justify-content: flex-start; /* ikonlar sola */
   gap: 12px;
-  margin-top: 48px;
+  margin-top: 24px;
+  padding-left: 0;
 }
 
 .social-box {
   width: 24px;
   height: 24px;
   background-color: #ccc;
+  border-radius: 4px;
 }
-.contact-icon {
-  width: clamp(20px, 2.5vw, 25px);
-  height: clamp(20px, 2.5vw, 25px);
-  object-fit: contain;
-  margin-right: 12px;
-  flex-shrink: 0;
-  display: inline-block;
-}
-
 
 /* === Divider Alanları === */
 .divider-108 {
   width: 108px;
   border-bottom: 3px solid #A4A4A4;
-  margin-top: 8px;
+  margin: 8px 0 0 0; /* sola hizalı */
 }
 
 .divider-54 {
   width: 54px;
   border-bottom: 3px solid #A4A4A4;
-  margin-top: 8px;
+  margin: 8px 0 0 0; /* sola hizalı */
 }
 
 /* === Harita === */
@@ -165,6 +178,22 @@
 }
 
 /* === Responsive Ayarlar === */
+@media (max-width: 1200px) {
+  .contact-info {
+    padding-left: 64px;
+  }
+
+  .contact-map {
+    margin-right: 64px;
+  }
+
+  .responsive-map {
+    width: 100%;
+    height: 500px;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 992px) {
   .contact-info {
     padding-left: 16px;
@@ -190,9 +219,5 @@
 
   .contact-main-title {
     font-size: 48px;
-  }
-
-  .social-icons {
-    justify-content: center;
   }
 }

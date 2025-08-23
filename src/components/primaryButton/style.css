@@ -16,3 +16,19 @@
   background-color: #eee;
 }
 
+.primary-button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  font-family: 'BiondiSans', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.primary-button-link:hover {
+  background-color: #eee;
+}

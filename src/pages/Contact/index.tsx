@@ -16,7 +16,11 @@ const Contact: React.FC = () => {
     <main className="contact-page">
       {/* Hero Görsel */}
       <div className="contact-hero">
-        <img src={iletisimImage} alt="İletişim" className="contact-hero-image" />
+        <img
+          src={iletisimImage}
+          alt="İletişim"
+          className="contact-hero-image"
+        />
       </div>
 
       <Header />
@@ -26,29 +30,47 @@ const Contact: React.FC = () => {
         <h1 className="contact-main-title">İLETİŞİM</h1>
       </section>
 
+      <div className="contact-info">
+        <Row>
+          <Col>
+            <h2 className="contact-section-title">BİZE ULAŞIN</h2>
+            <p className="contact-section-desc">
+              Sorularınız, önerileriniz veya işbirliği talepleriniz için bizimle
+              iletişime geçebilirsiniz.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
       {/* Beyaz Alan */}
       <section className="contact-white-wrapper">
         <Row gutter={[0, 0]} className="contact-grid">
           {/* Sol Bilgi Bölgesi */}
           <Col xs={24} md={12}>
             <div className="contact-info">
-              <h2 className="contact-section-title">BİZE ULAŞIN</h2>
-              <p className="contact-section-desc">
-                Sorularınız, önerileriniz veya işbirliği talepleriniz için bizimle iletişime geçebilirsiniz.
-              </p>
-
               <div className="contact-detail">
                 <div className="contact-block">
                   <div className="contact-heading-with-icon">
-                    <img src={addressIcon} alt="Adres" className="contact-icon" />
+                    <img
+                      src={addressIcon}
+                      alt="Adres"
+                      className="contact-icon"
+                    />
                     <h3 className="contact-subheading">ADRES</h3>
                   </div>
-                  <p>Sorularınız, önerileriniz veya işbirliği talepleriniz için bizimle iletişime geçebilirsiniz.</p>
+                  <p>
+                    Sorularınız, önerileriniz veya işbirliği talepleriniz için
+                    bizimle iletişime geçebilirsiniz.
+                  </p>
                 </div>
 
                 <div className="contact-block">
                   <div className="contact-heading-with-icon">
-                    <img src={phoneIcon} alt="Telefon" className="contact-icon" />
+                    <img
+                      src={phoneIcon}
+                      alt="Telefon"
+                      className="contact-icon"
+                    />
                     <h3 className="contact-subheading">TELEFON</h3>
                   </div>
                   <p>+90 533 XXX XX XX</p>
@@ -56,21 +78,14 @@ const Contact: React.FC = () => {
 
                 <div className="contact-block">
                   <div className="contact-heading-with-icon">
-                    <img src={mailIcon} alt="E-Posta" className="contact-icon" />
+                    <img
+                      src={mailIcon}
+                      alt="E-Posta"
+                      className="contact-icon"
+                    />
                     <h3 className="contact-subheading">E-POSTA</h3>
                   </div>
                   <p>alindaconstruction@mail.com</p>
-                </div>
-              </div>
-
-              <div className="contact-social">
-                <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-                <div className="divider-54" />
-                <div className="social-icons">
-                  <div className="social-box" />
-                  <div className="social-box" />
-                  <div className="social-box" />
-                  <div className="social-box" />
                 </div>
               </div>
             </div>
@@ -89,6 +104,18 @@ const Contact: React.FC = () => {
             </div>
           </Col>
         </Row>
+
+        {/* ✅ Sosyal medya Row'un dışında, altta */}
+        <div className="contact-social">
+          <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+          <div className="divider-54" />
+          <div className="social-icons">
+            <div className="social-box" />
+            <div className="social-box" />
+            <div className="social-box" />
+            <div className="social-box" />
+          </div>
+        </div>
       </section>
 
       <Footer />
