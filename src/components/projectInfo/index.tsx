@@ -24,7 +24,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
       <div className="project-info-button-wrapper">
         <PrimaryButton
           text={buttonText}
-          href={buttonLink}
+          to={buttonLink}
           className={buttonClassName} // ✅ className kullanıldı
         />
       </div>

@@ -65,7 +65,7 @@ const Home = () => {
                 <div className="intro-button-wrapper">
                   <PrimaryButton
                     text="İncele"
-                    href="/about"
+                    to="/about"
                     style={sharedButtonStyle}
                   />
                 </div>

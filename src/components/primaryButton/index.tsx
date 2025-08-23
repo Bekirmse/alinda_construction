@@ -3,7 +3,7 @@ import { Button, ButtonProps } from "antd";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-interface PrimaryButtonProps extends ButtonProps {
+interface PrimaryButtonProps extends Omit<ButtonProps, "type"> {
   text: string;
   to?: string;   // İç sayfa yönlendirme
   href?: string; // Dış link
@@ -19,16 +19,20 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   style,
   ...rest
 }) => {
-  // Eğer to varsa → React Router Link'i direkt AntD Button gibi göster
+  // İç sayfa yönlendirme (React Router Link)
   if (to) {
     return (
-      <Link to={to} className={`primary-button-link ${className ?? ""}`} style={style}>
+      <Link
+        to={to}
+        className={`primary-button-link ${className ?? ""}`}
+        style={style}
+      >
         {text}
       </Link>
     );
   }
 
-  // Eğer href varsa → klasik anchor
+  // Dış link (anchor)
   if (href) {
     return (
       <a
@@ -45,7 +49,11 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 
   // Normal AntD Button
   return (
-    <Button className={`primary-button ${className ?? ""}`} style={style} {...rest}>
+    <Button
+      {...rest}
+      className={`primary-button ${className ?? ""}`}
+      style={style}
+    >
       {text}
     </Button>
   );
