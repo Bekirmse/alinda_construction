@@ -43,97 +43,84 @@ const Contact: React.FC = () => {
         </Row>
       </div>
 
-      {/* Beyaz Alan */}
-      <section className="contact-white-wrapper">
-        <Row gutter={[0, 0]} className="contact-grid">
-          {/* Sol Bilgi Bölgesi */}
-          <Col xs={24} md={12}>
-            <div className="contact-info">
-              <div className="contact-detail">
-                <div className="contact-block1">
-                  <div className="contact-heading-with-icon1">
-                    <img
-                      src={addressIcon}
-                      alt="Adres"
-                      className="contact-icon"
-                    />
-                    <h3 className="contact-subheading1">ADRES</h3>
-                  </div>
-                  <p>
-                    Sorularınız, önerileriniz veya işbirliği talepleriniz için
-                    bizimle iletişime geçebilirsiniz.
-                  </p>
-                </div>
-
-                <div className="contact-block2">
-                  <div className="contact-heading-with-icon2">
-                    <img
-                      src={phoneIcon}
-                      alt="Telefon"
-                      className="contact-icon"
-                    />
-                    <h3 className="contact-subheading2">TELEFON</h3>
-                  </div>
-                  <p>+90 533 XXX XX XX</p>
-                </div>
-
-                <div className="contact-block3">
-                  <div className="contact-heading-with-icon3">
-                    <img
-                      src={mailIcon}
-                      alt="E-Posta"
-                      className="contact-icon"
-                    />
-                    <h3 className="contact-subheading3">E-POSTA</h3>
-                  </div>
-                  <p>alindaconstruction@mail.com</p>
-                </div>
-              </div>
+    {/* Beyaz Alan */}
+<section className="contact-white-wrapper">
+  <Row gutter={[0, 0]} className="contact-grid">
+    {/* Sol Bilgi Bölgesi */}
+    <Col xs={24} md={12}>
+      <div className="contact-info">
+        <div className="contact-detail">
+          <div className="contact-block1">
+            <div className="contact-heading-with-icon1">
+              <img src={addressIcon} alt="Adres" className="contact-icon" />
+              <h3 className="contact-subheading1">ADRES</h3>
             </div>
-          </Col>
-          <div className="contact-info">
-            {/* ✅ Mobilde görünecek sosyal medya (Row içinde, iki kolonun arasında) */}
-            <Col xs={24} className="contact-social contact-social--mobile">
-              <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-              <div className="divider-54" />
-              <div className="social-icons">
-                <div className="social-box" />
-                <div className="social-box" />
-                <div className="social-box" />
-                <div className="social-box" />
-              </div>
-            </Col>
+            <p> Sorularınız, önerileriniz veya işbirliği talepleriniz için bizimle iletişime geçebilirsiniz. </p>
           </div>
-          {/* Sağ Harita Bölgesi */}
-          <Col xs={24} md={12}>
-            <div className="contact-map">
-              <iframe
-                title="Harita"
-                src="https://maps.google.com/maps?q=lefkosa&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                className="responsive-map"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+
+          <div className="contact-block2">
+            <div className="contact-heading-with-icon2">
+              <img src={phoneIcon} alt="Telefon" className="contact-icon" />
+              <h3 className="contact-subheading2">TELEFON</h3>
             </div>
-          </Col>
-        </Row>
+            <p>+90 533 XXX XX XX</p>
+          </div>
 
-        {/* ✅ Masaüstünde görünecek sosyal medya (Row’un dışında, altta) */}
-
-        <div className="contact-social contact-social--desktop">
-          <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-          <div className="divider-54" />
-          <div className="social-icons">
-            <div className="social-box" />
-            <div className="social-box" />
-            <div className="social-box" />
-            <div className="social-box" />
+          <div className="contact-block3">
+            <div className="contact-heading-with-icon3">
+              <img src={mailIcon} alt="E-Posta" className="contact-icon" />
+              <h3 className="contact-subheading3">E-POSTA</h3>
+            </div>
+            <p>alindaconstruction@mail.com</p>
           </div>
         </div>
-      </section>
-<div className="about-footer-connector">
-        <div className="a-divider"></div>
       </div>
+    </Col>
+
+    {/* ✅ Mobil sosyal medya: Row içinde ama masaüstünde gizli */}
+    <Col xs={24} md={0} className="contact-social contact-social--mobile">
+      <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+      <div className="divider-54" />
+      <div className="social-icons">
+        <div className="social-box" />
+        <div className="social-box" />
+        <div className="social-box" />
+        <div className="social-box" />
+      </div>
+    </Col>
+
+    {/* Sağ Harita Bölgesi */}
+    <Col xs={24} md={12}>
+      <div className="contact-map">
+        <iframe
+          title="Harita"
+          src="https://maps.google.com/maps?q=lefkosa&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          className="responsive-map"
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </Col>
+  </Row>
+
+  {/* ✅ Masaüstü sosyal medya: Row’un dışında, altta */}
+  <div className="contact-social contact-social--desktop">
+    <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+    <div className="divider-54" />
+    <div className="social-icons">
+      <div className="social-box" />
+      <div className="social-box" />
+      <div className="social-box" />
+      <div className="social-box" />
+    </div>
+  </div>
+</section>
+
+{/* sadece mobilde görünsün */}
+<div className="about-footer-connector mobile-only">
+  <div className="a-divider"></div>
+</div>
+
       <Footer />
     </main>
   );
