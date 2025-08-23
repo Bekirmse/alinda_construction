@@ -129,6 +129,7 @@
   height: 0;
   border-top: 2px solid #A4A4A4;
 }
+
 /* === Responsive Ayarlar === */
 @media (max-width: 992px) {
   .about-section {
@@ -143,28 +144,42 @@
   }
 
   /* Mobilde sıralama: Açıklama → Siyah → Açıklama → Siyah */
-  .about-section.first .about-left  { order: 1; }
-  .about-section.first .about-right { order: 2; }
+  .about-section.first .about-left {
+    order: 1;
+  }
 
-  .about-section.second .about-right { order: 1; }
-  .about-section.second .about-left  { order: 2; }
+  .about-section.first .about-right {
+    order: 2;
+  }
+
+  .about-section.second .about-right {
+    order: 1;
+  }
+
+  .about-section.second .about-left {
+    order: 2;
+  }
 
   .about-heading-wrapper {
     height: auto;
-    padding: 64px 16px;
+
+    padding-top: 64px;
+    padding-bottom: 40px;
   }
 
   .about-main-title {
     font-size: 48px;
   }
-.about-subtitle {
-  font-family: 'Biondi Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 12px;
-}
+
+  .about-subtitle {
+    font-family: 'Biondi Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
   .about-subsubtitle {
     font-size: 20px;
   }
@@ -176,10 +191,11 @@
   .about-footer-connector {
     height: 200px;
   }
+
   /* === Koyu Arka Planlar === */
-.about-section .dark {
-  background-color: #181818;
-  height: 405px !important;
- 
-}
+  .about-section .dark {
+    background-color: #181818;
+    height: 405px !important;
+
+  }
 }
