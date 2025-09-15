@@ -27,11 +27,11 @@ const projectData: Project[] = [
   {
     slug: "proje-1",
     image: iletisimImage,
-    title: "PROJELERİMİZ",
+    title: "PROJE ISMI!",
     subtitle: "PROJE 1",
     stats: [
       { label: "DAİRE", value: "105" },
-      { label: "ALAN", value: "36657 M2" },
+      { label: "ALAN", value: "36657 M²" },
     ],
     buttonText: "PROJE 1 KATALOG →",
     location: "İskele, KKTC",
@@ -50,28 +50,28 @@ const projectData: Project[] = [
     ],
     roomTypes: ["Stüdyo", "1+1", "2+1", "3+1"],
   },
-  {
-    slug: "proje-2",
-    image: iletisimImage,
-    title: "PROJELERİMİZ",
-    subtitle: "PROJE 2",
-    stats: [
-      { label: "DAİRE", value: "90" },
-      { label: "ALAN", value: "29850 M2" },
-    ],
-    buttonText: "PROJE 2 KATALOG →",
-    location: "Girne, KKTC",
-    completionDate: "Haziran 2025",
-    price: "Başlangıç 2.500.000 TL",
-    features: [
-      "Doğaya Yakın",
-      "Manzaralı Teras",
-      "Fitness Salonu",
-      "Çocuk Parkı",
-      "Site Güvenliği",
-    ],
-    roomTypes: ["1+1", "2+1", "Dublex"],
-  },
+  // {
+  //   slug: "proje-2",
+  //   image: iletisimImage,
+  //   title: "PROJELERİMİZ",
+  //   subtitle: "PROJE 2",
+  //   stats: [
+  //     { label: "DAİRE", value: "90" },
+  //     { label: "ALAN", value: "29850 M2" },
+  //   ],
+  //   buttonText: "PROJE 2 KATALOG →",
+  //   location: "Girne, KKTC",
+  //   completionDate: "Haziran 2025",
+  //   price: "Başlangıç 2.500.000 TL",
+  //   features: [
+  //     "Doğaya Yakın",
+  //     "Manzaralı Teras",
+  //     "Fitness Salonu",
+  //     "Çocuk Parkı",
+  //     "Site Güvenliği",
+  //   ],
+  //   roomTypes: ["1+1", "2+1", "Dublex"],
+  // },
 ];
 
 const ProjectPage: React.FC = () => {
