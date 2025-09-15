@@ -37,12 +37,6 @@ const SlideContent: React.FC<SlideContentProps> = ({
           </Col>
         </Row>
 
-        <Row justify="start" style={{ width: "100%" }}>
-          <Col xs={24} sm={20} md={16} lg={12} xl={10}>
-            <p className="hero-desc">{description}</p>
-          </Col>
-        </Row>
-
         <Row justify="start">
           <Col xs={24} sm={20} md={16} lg={12} xl={10}>
             <Link

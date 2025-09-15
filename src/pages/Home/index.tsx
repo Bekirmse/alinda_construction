@@ -46,15 +46,7 @@ const Home = () => {
             <Row justify="center">
               <Col span={24}>
                 <p className="intro-description">
-                  Alinda Construction, Kuzey Kıbrıs’ta inşaat sektörünün
-                  güvenilir ve yenilikçi temsilcilerinden biridir. Kurulduğumuz
-                  günden bu yana kalite, estetik ve sürdürülebilirliği ön planda
-                  tutarak konut, ticari ve altyapı projelerine imzamızı attık.
-                  Alanında uzman ekibimiz ve modern mühendislik
-                  yaklaşımlarımızla; sadece yapılar değil, yaşam alanları inşa
-                  ediyoruz. Müşteri memnuniyetini temel ilke olarak benimseyen
-                  firmamız, her projeye özel çözümler geliştirerek sektörde fark
-                  yaratmayı hedeflemektedir.
+                  HER TUĞLADA GÜVEN, HER DETAYDA KALİTE VERİYORUZ..!
                 </p>
               </Col>
             </Row>
@@ -85,8 +77,8 @@ const Home = () => {
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo
-            title="Proje 1"
-            description="Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet..."
+            title="İlk Adım, Güçlü Bir Gelecek"
+            description="Bugün, hayalini kurduğumuz yolculuğun ilk adımını atıyoruz. Bu proje, sadece bir inşaat değil; güvenin, emeğin ve geleceğe duyduğumuz inancın bir simgesi..."
             buttonText="Detaylı Bilgi"
             buttonLink="/projeler"
             buttonClassName="project-detail-button"
@@ -101,8 +93,23 @@ const Home = () => {
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo
-            title="Proje 2"
-            description="Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet..."
+            title="Her Tuğla Bir Umut, Her Yapı Bir Hikaye"
+            description="İnşa ettiğimiz her yapı, sadece taşlardan ya da betonlardan oluşmaz. Her tuğla, bir hayalin temeli, bir umudun başlangıcıdır"
+            buttonText="Detaylı Bilgi"
+            buttonLink="/projeler"
+            buttonClassName="project-detail-button"
+          />
+        </Col>
+      </Row>
+      {/* Proje 3 */}
+      <Row className="project-row" gutter={[0, 0]} align="stretch">
+        <Col xs={24} md={12}>
+          <img src={proje4} alt="Proje 4" className="project-image" />
+        </Col>
+        <Col xs={24} md={12}>
+          <ProjectInfo
+            title="Toprağa Değdik, Zirveye Yürüyoruz"
+            description="Bu proje, sadece bir temel kazısıyla başlamadı; bir hayalin, bir hedefin ilk adımı oldu. Toprağa dokunduğumuz an, başarıya uzanan yolculuğumuz da başladı. Her tuğlada azim, her katmanda kararlılık var. Şimdi, sağlam adımlarla zirveye yürüme zamanı!"
             buttonText="Detaylı Bilgi"
             buttonLink="/projeler"
             buttonClassName="project-detail-button"

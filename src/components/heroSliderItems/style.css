@@ -28,18 +28,6 @@
 }
 
 
-/* Açıklama */
-.hero-desc {
-  font-size: clamp(14px, 1.2vw, 16px);
-  font-family: 'BiondiSans', sans-serif;
-  line-height: 1.5;
-  margin-bottom: 5.56vh;
-  margin-top: 2.78vh;
-  width: 100%;
-  max-width: 100%;
-}
-
-
 /* Buton */
 .hero-button {
   display: inline-flex;              /* yazıyı dikey/yatay ortala */
@@ -72,10 +60,6 @@
 
 @media (max-width: 768px) {
 
-  /* Açıklamayı gizle */
-  .hero-desc {
-    display: none !important;
-  }
 
   /* Overlay'i tam ortaya getir: soldaki margin/padding etkisini iptal et */
   .hero-overlay {
