@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
               <img src={addressIcon} alt="Adres" className="contact-icon" />
               <h3 className="contact-subheading1">ADRES</h3>
             </div>
-            <p> Sorularınız, önerileriniz veya işbirliği talepleriniz için bizimle iletişime geçebilirsiniz. </p>
+            <p> Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli </p>
           </div>
 
           <div className="contact-block2">
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
               <img src={phoneIcon} alt="Telefon" className="contact-icon" />
               <h3 className="contact-subheading2">TELEFON</h3>
             </div>
-            <p>+90 533 XXX XX XX</p>
+            <p>+90 548 811 09 09</p>
           </div>
 
           <div className="contact-block3">
