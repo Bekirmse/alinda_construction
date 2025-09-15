@@ -1,16 +1,15 @@
-/* Bu blokta Canyon'u kesin olarak kapatıyoruz */
+/* Bu blokta Biondi’yi tamamen kaldırıyoruz */
 .hero-overlay,
 .hero-overlay * {
-  font-family: 'Biondi Sans', sans-serif !important;
+  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-weight: 300 !important;
 }
 
 /* Overlay: slider görseli üzerinde, sayfa iç boşluklarıyla hizalı */
 .hero-overlay {
   position: absolute;
   bottom: clamp(24px, 10vh, 80px);
-  /* alta yasla */
   left: clamp(24px, 6vw, 11.72vw);
-  /* soldan boşluk */
   z-index: 10;
 
   display: flex;
@@ -20,15 +19,13 @@
   margin: 0;
   padding: 0;
   max-width: 40vw;
-  /* isteğe göre sınırlayabilirsin */
   color: #fff;
 }
 
-
-/* Başlık: desktop'ta tek satır; mobilde sar */
+/* Başlık */
 .hero-title {
-  font-weight: 800;
-  /* Biondi’de yoksa sentetik bold olur */
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: .04em;
   font-size: clamp(42px, 7vw, 80px);
@@ -36,17 +33,12 @@
   margin: 0 0 18px 0;
 
   white-space: nowrap;
-  /* geniş alanlarda satır atma */
   width: fit-content;
 
   text-align: left;
-  /* SOLA YASLA */
   display: block;
-  /* satır bazlı hizalama */
   margin-left: 0;
-  /* solda boşluk kalmasın */
 }
-
 
 /* Buton */
 .hero-button {
@@ -64,7 +56,8 @@
   border: none;
   cursor: pointer;
 
-  font-weight: 600;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
   letter-spacing: .06em;
   font-size: clamp(14px, 1.6vw, 18px);
   text-transform: uppercase;
@@ -76,7 +69,7 @@
   background-color: #eee;
 }
 
-/* Mobil düzen: ortala ve sarılmaya izin ver */
+/* Mobil düzen */
 @media (max-width: 992px) {
   .hero-overlay {
     left: 50%;
@@ -88,13 +81,16 @@
   }
 
   .hero-title {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-weight: 300;
     white-space: normal;
-    /* mobilde satır atabilir */
     width: 100%;
     font-size: clamp(28px, 8vw, 40px);
   }
 
   .hero-button {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-weight: 300;
     width: 160px;
     height: 44px;
     font-size: 16px;
