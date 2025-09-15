@@ -8,7 +8,6 @@ import "./style.css";
 
 import proje3 from "../../assets/projects/proje3.png";
 import proje4 from "../../assets/projects/proje4.png";
-import proje5 from "../../assets/projects/proje5.png";
 import PrimaryButton from "../../components/primaryButton";
 import { Link } from "react-router-dom";
 

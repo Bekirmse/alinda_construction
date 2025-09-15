@@ -1,107 +1,103 @@
-.hero-overlay {
-  position: absolute;
-  z-index: 10;
-  padding-bottom: clamp(24px, 12vh, 94px);
-  padding-top: clamp(16px, 8vh, 150px);
-  padding-left: 0px;
-  margin-left: 11.72vw;
-  margin-right: 11.72vw;
-  max-width: 100%;
-  color: white;
-  box-sizing: border-box;
-
-
-  flex-direction: column;
-  align-items: flex-start;
+/* Bu blokta Canyon'u kesin olarak kapatıyoruz */
+.hero-overlay,
+.hero-overlay * {
+  font-family: 'Biondi Sans', sans-serif !important;
 }
 
+/* Overlay: slider görseli üzerinde, sayfa iç boşluklarıyla hizalı */
+.hero-overlay {
+  position: absolute;
+  bottom: clamp(24px, 10vh, 80px);
+  /* alta yasla */
+  left: clamp(24px, 6vw, 11.72vw);
+  /* soldan boşluk */
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+  max-width: 40vw;
+  /* isteğe göre sınırlayabilirsin */
+  color: #fff;
+}
+
+
+/* Başlık: desktop'ta tek satır; mobilde sar */
 .hero-title {
+  font-weight: 800;
+  /* Biondi’de yoksa sentetik bold olur */
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: clamp(42px, 7vw, 80px);
+  line-height: 1.05;
+  margin: 0 0 18px 0;
+
+  white-space: nowrap;
+  /* geniş alanlarda satır atma */
+  width: fit-content;
+
+  text-align: left;
+  /* SOLA YASLA */
   display: block;
-  /* veya inline-block değilse */
-  width: 100%;
-  font-size: clamp(32px, 5vw, 64px);
-  font-weight: bold;
-  font-family: 'BiondiSans', sans-serif;
-  line-height: 1.2;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  /* satır bazlı hizalama */
+  margin-left: 0;
+  /* solda boşluk kalmasın */
 }
 
 
 /* Buton */
 .hero-button {
-  display: inline-flex;              /* yazıyı dikey/yatay ortala */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
 
-  height: clamp(40px, 5vh, 52px);    /* sabit yerine biraz daha esnek */
-  width: clamp(140px, 12vw, 211px);  /* min 140px, max 211px */
-
-  font-size: clamp(14px, 1.5vw, 18px);
+  height: clamp(40px, 5vh, 10px);
+  width: clamp(160px, 14vw, 100px);
   padding: clamp(8px, 1.5vh, 12px) clamp(16px, 3vw, 24px);
 
   background: #fff;
   color: #000;
-
-  font-family: "Biondi Sans", sans-serif;
-  font-weight: 600;
+  text-decoration: none;
   border: none;
   cursor: pointer;
-  text-align: center;
 
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 20px auto 40px auto; /* yukarıdan aşağıdan boşluk */
+  font-weight: 600;
+  letter-spacing: .06em;
+  font-size: clamp(14px, 1.6vw, 18px);
+  text-transform: uppercase;
+
+  transition: background-color .25s ease, transform .15s ease;
 }
 
 .hero-button:hover {
   background-color: #eee;
 }
 
-@media (max-width: 768px) {
-
-
-  /* Overlay'i tam ortaya getir: soldaki margin/padding etkisini iptal et */
+/* Mobil düzen: ortala ve sarılmaya izin ver */
+@media (max-width: 992px) {
   .hero-overlay {
-    left: 50% !important;
-    /* absolute konteksi içinde merkezle */
+    left: 50%;
     transform: translateX(-50%);
-    /* X ekseninde tam ortala */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
     padding-left: 16px;
-    padding-bottom: 48px;
-    padding-top: 0px;
-    /* mobilde küçük yanal padding */
     padding-right: 16px;
-    width: 100%;
-    max-width: 100%;
     align-items: center;
-    /* içeriği ortala */
     text-align: center;
   }
 
-  /* AntD Row'ları mobilde ortala (desktop etkilenmez) */
-  .hero-overlay .ant-row {
-    justify-content: center !important;
-    width: 100%;
-  }
-
-  /* Başlık ve buton ortalı kalsın */
   .hero-title {
-    width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-    font-size: 36px;
+    white-space: normal;
+    /* mobilde satır atabilir */
+    width: 100%;
+    font-size: clamp(28px, 8vw, 40px);
   }
 
   .hero-button {
-    width: 150px;
-    max-width: 100%;
-    height: 40px;
+    width: 160px;
+    height: 44px;
     font-size: 16px;
-
-    margin-top: 24px;   /* mobilde üst boşluk */
-    margin-bottom: 48px; /* mobilde alt boşluk */
+    margin-top: 20px;
   }
 }

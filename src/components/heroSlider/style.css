@@ -57,11 +57,11 @@
 
 /* === Başlık === */
 .hero-title {
-  font-family: 'Canyon', sans-serif;
+  font-family: 'Greycliff CF', sans-serif;
   font-weight: 700; /* Canyon Bold */
-  font-size: clamp(32px, 5vw, 64px);
+  font-size: clamp(32px, 5vw, 64px) !important;
   line-height: 1.1;
-  margin-bottom: clamp(24px, 6vh, 40px);
+  margin-bottom: clamp(24px, 6vh, 30px) !important;
 }
 
 
@@ -71,7 +71,7 @@
   color: black;
   font-family: 'Greycliff CF', Arial, sans-serif; /* daha okunaklı */
   font-weight: 500;
-  font-size: clamp(14px, 1.2vw, 16px);
+  font-size: clamp(14px, 1.0vw, 0px) !important;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
