@@ -1,3 +1,10 @@
+/* === Global Font Override === */
+.project-wrapper,
+.project-wrapper * {
+  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-weight: 300 !important;
+}
+
 /* === Genel Wrapper === */
 .project-wrapper {
   width: 100%;
@@ -24,12 +31,8 @@
   bottom: 69px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-style: Book;
   font-size: 75px;
   line-height: 100%;
-  letter-spacing: 0%;
   text-align: center;
   color: #ffffff;
   margin: 0;
@@ -78,12 +81,7 @@
   position: absolute;
   top: 40px;
   left: 143px;
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-style: Book;
   font-size: 13px;
-  line-height: 100%;
-  letter-spacing: 0%;
   text-transform: uppercase;
   color: #4E4E4E;
 }
@@ -93,12 +91,7 @@
   position: absolute;
   top: 62px;
   left: 143px;
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-style: Book;
   font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 0%;
   text-transform: uppercase;
   color: #000;
   white-space: nowrap;
@@ -157,13 +150,11 @@
 .project-column-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Tüm içeriği sola yaslar */
+  align-items: flex-start;
 }
 
 .project-column-block h4 {
-  font-family: 'Biondi Sans', sans-serif;
   font-size: 14px;
-  font-weight: 400;
   margin-bottom: 4px;
   margin-top: 0;
   color: #4E4E4E;
@@ -171,13 +162,14 @@
   line-height: 1;
 }
 .project-column-block h4:first-of-type {
-  margin-top: 0; /* İlk başlıkta yukarıdan boşluk olmasın */
+  margin-top: 0;
 }
+
 /* Sütun hizalamaları */
 .project-column-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Başlık ve açıklamaları sola yasla */
+  align-items: flex-start;
   text-align: left;
 }
 
@@ -199,17 +191,14 @@
 .project-column-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Başlık ve açıklamaları sağa yasla */
+  align-items: flex-end;
   text-align: right;
 }
 
-
 .project-column-block p,
 .project-column-block li {
-  font-family: 'Biondi Sans', sans-serif;
   font-size: 18px;
-  font-weight: 300;
-  margin: 0 0 24px 0; /* her açıklama ile bir sonraki başlık/özellik arasında 24px boşluk */
+  margin: 0 0 24px 0;
   color: #000;
   line-height: 1.4;
   list-style: none;
@@ -217,14 +206,15 @@
 }
 
 .project-column-block h4 {
-  margin-bottom: 8px; /* başlık ile açıklama arasına 8px boşluk */
+  margin-bottom: 8px;
 }
 
 .project-detail-grid {
   margin-top: 80px;
   margin-bottom: 60px;
-  row-gap: 90px; /* Her satır arasında 90px boşluk */
+  row-gap: 90px;
 }
+
 /* === Tıklanabilir Proje Katalog Butonu === */
 .project-catalog-button {
   margin-top: 135px;
@@ -239,7 +229,7 @@
   cursor: pointer;
 }
 
-/* Proje kutusu (tamamı tıklanabilir alan) */
+/* Proje kutusu */
 .project-catalog-box {
   width: 772px;
   height: 124px;
@@ -257,7 +247,6 @@
   background-color: #e0e0e0;
 }
 
-/* Sol ikon kutusu */
 .catalog-icon {
   width: 84px;
   height: 84px;
@@ -267,7 +256,6 @@
   margin-bottom: 20px;
 }
 
-/* Yazı alanı */
 .catalog-texts {
   display: flex;
   flex-direction: column;
@@ -276,39 +264,32 @@
   flex-grow: 1;
 }
 
-/* Başlık */
 .catalog-title {
-  font-family: 'Biondi Sans', sans-serif;
   font-size: 32px;
-  font-weight: 400;
   margin-bottom: 10px;
   color: #000;
   line-height: 100%;
 }
 
-/* Alt yazı */
 .catalog-subtitle {
-  font-family: 'Biondi Sans', sans-serif;
   font-size: 14px;
-  font-weight: 300;
   color: #4E4E4E;
   margin-bottom: 20px;
 }
 
-/* Sağ ok → */
 .catalog-arrow {
   font-size: 40px;
-  font-weight: 300;
   color: #000;
   margin-left: 20px;
   flex-shrink: 0;
 }
+
 .project-divider {
-  width: 91.51vw; /* 1759px / 1920px ≈ %91.51 */
+  width: 91.51vw;
   max-width: 1759px;
   height: 0;
   border-top: 2px solid #000000;
-  margin: 186px auto 0 auto; /* üstten boşluk ve ortalama */
+  margin: 186px auto 0 auto;
   opacity: 0.2; 
 }
 
@@ -317,15 +298,11 @@
   text-align: center;
   color: #000000;
   padding: 0 16px;
-  background-color: transparent; /* HATA buydu: Eskiden tüm alan siyah yapılıyordu */
+  background-color: transparent;
 }
 
 .project-virtual-title {
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-style: Book;
   font-size: 48px;
-  line-height: 100%;
   text-transform: uppercase;
   margin-bottom: 28px;
 }
@@ -333,11 +310,7 @@
 .project-virtual-subtitle {
   max-width: 977px;
   margin: 0 auto 28px auto;
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-style: Book;
   font-size: 16px;
-  line-height: 100%;
   text-transform: uppercase;
   color: #000000;
 }
@@ -346,13 +319,9 @@
   width: 772px;
   height: 70px;
   max-width: 95%;
-  background-color: #000000; /* sadece buton siyah */
+  background-color: #000000;
   color: #FFFFFF;
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-style: Book;
   font-size: 32px;
-  line-height: 100%;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
@@ -363,26 +332,20 @@
 .project-virtual-note {
   max-width: 369px;
   margin: 0 auto;
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-style: Book;
   font-size: 13px;
-  line-height: 100%;
   text-transform: uppercase;
   color: #4E4E4E;
   text-align: center;
 }
 
-
 .project-divider-bottom {
-  width: 91.51vw; /* 1759px / 1920px ≈ %91.51 */
+  width: 91.51vw;
   max-width: 1759px;
   height: 0;
   border-top: 2px solid #000000;
-  margin: 186px auto 0 auto; /* üstten boşluk ve ortalama */
+  margin: 186px auto 0 auto;
   opacity: 0.2; 
 }
-
 
 /* === Responsive Ayarlar === */
 @media (max-width: 768px) {
