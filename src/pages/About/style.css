@@ -25,12 +25,11 @@
 }
 
 .about-main-title {
-  font-family: 'Biondi Sans', sans-serif;
+  font-family: 'Encode Sans Expanded', sans-serif;
   font-weight: 300;
-  font-style: Light;
   font-size: 80px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   margin: 0;
 }
@@ -66,31 +65,27 @@
 }
 
 .about-subtitle {
-  font-family: 'Biondi Sans', sans-serif;
+  font-family: 'Encode Sans Expanded', sans-serif;
   font-size: 20px;
-  font-weight: 400;
-  font-style: Book;
+  font-weight: 300;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 22px;
 }
 
 .about-subsubtitle {
-  font-family: 'Biondi Sans', sans-serif;
+  font-family: 'Encode Sans Expanded', sans-serif;
   font-size: 36px;
-  font-weight: 400;
-  font-style: Book;
+  font-weight: 300;
   line-height: 100%;
-  text-transform: none;
   margin: 0;
   margin-bottom: 22px;
 }
 
 .about-paragraph {
-  font-family: 'Biondi Sans', sans-serif;
+  font-family: 'Encode Sans Expanded', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  font-style: Light;
   line-height: 160%;
   margin: 0;
   max-width: 700px;
@@ -99,7 +94,6 @@
 /* === Koyu Arka Planlar === */
 .about-section .dark {
   background-color: #181818;
-  /* veya Figma’ya göre özelleştirilebilir */
 }
 
 /* === Alt Beyaz Blok === */
@@ -109,11 +103,8 @@
   background-color: #fff;
 
   display: flex;
-  /* içerikleri ortalamak için */
   align-items: center;
-  /* dikeyde ortalar */
   justify-content: center;
-  /* yatayda ortalar */
 }
 
 /* Divider */
@@ -143,7 +134,7 @@
     padding: 32px 24px;
   }
 
-  /* Mobilde sıralama: Açıklama → Siyah → Açıklama → Siyah */
+  /* Mobilde sıralama */
   .about-section.first .about-left {
     order: 1;
   }
@@ -162,7 +153,6 @@
 
   .about-heading-wrapper {
     height: auto;
-
     padding-top: 64px;
     padding-bottom: 40px;
   }
@@ -172,9 +162,9 @@
   }
 
   .about-subtitle {
-    font-family: 'Biondi Sans', sans-serif;
+    font-family: 'Encode Sans Expanded', sans-serif;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 300;
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 12px;
@@ -182,20 +172,20 @@
 
   .about-subsubtitle {
     font-size: 20px;
+    font-weight: 300;
   }
 
   .about-paragraph {
     font-size: 16px;
+    font-weight: 300;
   }
 
   .about-footer-connector {
     height: 200px;
   }
 
-  /* === Koyu Arka Planlar === */
   .about-section .dark {
     background-color: #181818;
     height: 405px !important;
-
   }
 }
