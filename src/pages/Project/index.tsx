@@ -50,28 +50,6 @@ const projectData: Project[] = [
     ],
     roomTypes: ["Stüdyo", "1+1", "2+1", "3+1"],
   },
-  // {
-  //   slug: "proje-2",
-  //   image: iletisimImage,
-  //   title: "PROJELERİMİZ",
-  //   subtitle: "PROJE 2",
-  //   stats: [
-  //     { label: "DAİRE", value: "90" },
-  //     { label: "ALAN", value: "29850 M2" },
-  //   ],
-  //   buttonText: "PROJE 2 KATALOG →",
-  //   location: "Girne, KKTC",
-  //   completionDate: "Haziran 2025",
-  //   price: "Başlangıç 2.500.000 TL",
-  //   features: [
-  //     "Doğaya Yakın",
-  //     "Manzaralı Teras",
-  //     "Fitness Salonu",
-  //     "Çocuk Parkı",
-  //     "Site Güvenliği",
-  //   ],
-  //   roomTypes: ["1+1", "2+1", "Dublex"],
-  // },
 ];
 
 const ProjectPage: React.FC = () => {
@@ -93,10 +71,9 @@ const ProjectPage: React.FC = () => {
       return false;
     };
 
-    // Render sonrası kaydır
     requestAnimationFrame(() => {
       if (!scrollTo()) {
-        setTimeout(scrollTo, 150); // Yavaş render için tekrar dene
+        setTimeout(scrollTo, 150);
       }
     });
   }, [hash, state]);
