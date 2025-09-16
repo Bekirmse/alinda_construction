@@ -19,7 +19,7 @@ const sharedButtonStyle: React.CSSProperties = {
   backgroundColor: "black",
   color: "white",
   border: "none",
-  fontFamily: "Biondi Sans, sans-serif",
+  fontFamily: "Encode Sans Expanded, sans-serif",
 };
 
 const Home = () => {
@@ -100,6 +100,7 @@ const Home = () => {
           />
         </Col>
       </Row>
+
       {/* Proje 3 */}
       <Row className="project-row" gutter={[0, 0]} align="stretch">
         <Col xs={24} md={12}>
@@ -115,6 +116,7 @@ const Home = () => {
           />
         </Col>
       </Row>
+
       {/* İletişim */}
       <div className="contact-section">
         <div className="contact-content">
@@ -132,7 +134,7 @@ const Home = () => {
               height: "clamp(40px, 5vh, 50px)",
               backgroundColor: "black",
               color: "white",
-              fontFamily: "Biondi Sans, sans-serif",
+              fontFamily: "Encode Sans Expanded, sans-serif",
               fontWeight: 300,
               fontSize: "clamp(16px, 2vw, 24px)",
               border: "none",

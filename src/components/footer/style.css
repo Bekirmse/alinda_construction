@@ -16,12 +16,15 @@
 
 /* ---- Col hizalama ---- */
 .footer-col {
-  display: flex;                /* Col’u flex yap */
-  align-items: flex-start;      /* üstten hizala */
+  display: flex;
+  /* Col’u flex yap */
+  align-items: flex-start;
+  /* üstten hizala */
 }
 
 .footer-col--center {
-  justify-content: center;      /* içeriği yatayda ortala */
+  justify-content: center;
+  /* içeriği yatayda ortala */
 }
 
 /* İç bloklar */
@@ -36,8 +39,10 @@
 /* Merkezde görünsün ve metin ortalansın */
 .footer-col--center .footer-link-block {
   margin: 0 auto;
-  align-items: center;           /* öğeleri ortala */
-  text-align: center;            /* metni ortala */
+  align-items: center;
+  /* öğeleri ortala */
+  text-align: center;
+  /* metni ortala */
 }
 
 /* LOGO */
@@ -124,12 +129,28 @@
 }
 
 /* İkonlar */
-.icon.phone::before { content: "📞"; font-size: clamp(14px, 1.3vw, 18px); }
-.icon.mail::before { content: "✉️"; font-size: clamp(14px, 1.3vw, 18px); }
-.icon.location::before { content: "📍"; font-size: clamp(14px, 1.3vw, 18px); }
+.icon.phone::before {
+  content: "📞";
+  font-size: clamp(14px, 1.3vw, 18px);
+}
+
+.icon.mail::before {
+  content: "✉️";
+  font-size: clamp(14px, 1.3vw, 18px);
+}
+
+.icon.location::before {
+  content: "📍";
+  font-size: clamp(14px, 1.3vw, 18px);
+}
 
 /* Küçük ekranlarda sütunların ortalanması */
 @media (max-width: 768px) {
-  .footer-col { justify-content: center; }
-  .footer-brand-block { max-width: 480px; }
+  .footer-col {
+    justify-content: center;
+  }
+
+  .footer-brand-block {
+    max-width: 480px;
+  }
 }

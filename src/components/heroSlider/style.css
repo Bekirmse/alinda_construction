@@ -11,6 +11,7 @@
   transition: transform 0.6s ease-in-out;
   will-change: transform;
 }
+
 .hero-slider-track.no-transition {
   transition: none !important;
 }
@@ -33,12 +34,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 40%; /* sadece üst kısım */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6),  /* üst: koyu */
-    rgba(0, 0, 0, 0)     /* alta doğru şeffaf */
-  );
+  height: 40%;
+  /* sadece üst kısım */
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.6),
+      /* üst: koyu */
+      rgba(0, 0, 0, 0)
+      /* alta doğru şeffaf */
+    );
   z-index: 2;
   pointer-events: none;
 }
@@ -49,33 +52,37 @@
   bottom: 0;
   left: 0;
   color: white;
-  z-index: 3; /* gradient’in üstünde */
+  z-index: 3;
+  /* gradient’in üstünde */
   padding-left: 11.72vw;
   padding-bottom: clamp(32px, 15vh, 222px);
   max-width: 90%;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
 }
 
 /* === Başlık === */
 .hero-title {
-  font-family: 'Greycliff CF', sans-serif;
-  font-weight: 700; /* Canyon Bold */
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
   font-size: clamp(32px, 5vw, 64px) !important;
   line-height: 1.1;
   margin-bottom: clamp(24px, 6vh, 30px) !important;
 }
 
-
+/* === Buton === */
 .hero-button {
   padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
   background: white;
   color: black;
-  font-family: 'Greycliff CF', Arial, sans-serif; /* daha okunaklı */
-  font-weight: 500;
-  font-size: clamp(14px, 1.0vw, 0px) !important;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
+  font-size: clamp(14px, 1.2vw, 18px) !important;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .hero-button:hover {
   background-color: #eee;
 }
@@ -123,8 +130,9 @@
 /* === Responsive === */
 @media (max-width: 768px) {
   .hero-title {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-weight: 300;
     font-size: clamp(24px, 6vw, 36px);
-    font-weight: bold;
     line-height: 1.2;
     margin: 0 auto 20px auto;
     text-align: center;

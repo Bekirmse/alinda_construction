@@ -62,7 +62,7 @@
   margin: 0 auto;
 }
 
-.contact-grid > .ant-col {
+.contact-grid>.ant-col {
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -108,12 +108,16 @@
 .contact-block3 {
   margin: 0;
 }
+
 .contact-middle {
-  flex: 1; /* boşluğu eşit dağıtır */
+  flex: 1;
+  /* boşluğu eşit dağıtır */
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; /* eşit aralık */
+  justify-content: space-evenly;
+  /* eşit aralık */
 }
+
 .contact-subheading1,
 .contact-subheading2,
 .contact-subheading3 {
@@ -123,12 +127,15 @@
   text-transform: uppercase;
   margin: 0;
 }
+
 h3.contact-subheading,
 h3.contact-subheading1,
 h3.contact-subheading2,
 h3.contact-subheading3 {
-  margin-top: 0 !important;     /* Üst boşluk sıfır */
-  margin-bottom: 12px !important; /* Sadece altta boşluk */
+  margin-top: 0 !important;
+  /* Üst boşluk sıfır */
+  margin-bottom: 12px !important;
+  /* Sadece altta boşluk */
 }
 
 

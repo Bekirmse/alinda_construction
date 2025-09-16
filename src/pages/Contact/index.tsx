@@ -53,7 +53,11 @@ const Contact: React.FC = () => {
                 {/* Üst: Adres */}
                 <div className="contact-block1">
                   <div className="contact-heading-with-icon1">
-                    <img src={addressIcon} alt="Adres" className="contact-icon" />
+                    <img
+                      src={addressIcon}
+                      alt="Adres"
+                      className="contact-icon"
+                    />
                     <h3 className="contact-subheading1">ADRES</h3>
                   </div>
                   <p> Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli </p>
@@ -63,7 +67,11 @@ const Contact: React.FC = () => {
                 <div className="contact-middle">
                   <div className="contact-block2">
                     <div className="contact-heading-with-icon2">
-                      <img src={phoneIcon} alt="Telefon" className="contact-icon" />
+                      <img
+                        src={phoneIcon}
+                        alt="Telefon"
+                        className="contact-icon"
+                      />
                       <h3 className="contact-subheading2">TELEFON</h3>
                     </div>
                     <p>+90 548 811 09 09</p>
@@ -71,7 +79,11 @@ const Contact: React.FC = () => {
 
                   <div className="contact-block3">
                     <div className="contact-heading-with-icon3">
-                      <img src={mailIcon} alt="E-Posta" className="contact-icon" />
+                      <img
+                        src={mailIcon}
+                        alt="E-Posta"
+                        className="contact-icon"
+                      />
                       <h3 className="contact-subheading3">E-POSTA</h3>
                     </div>
                     <p>alindaconstruction@mail.com</p>

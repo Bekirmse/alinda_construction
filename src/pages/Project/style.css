@@ -34,7 +34,9 @@
   font-weight: 300 !important;
   margin: 0;
 }
+
 .
+
 /* Stat kutuları (DAİRE / ALAN) */
 .project-page .stat-box,
 .project-page .stat-box * {
@@ -61,7 +63,7 @@
 .project-page button,
 .project-page .btn,
 .project-page a {
-  font-family: 'Encode Sans Expanded'!important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
   text-decoration: none;
 }

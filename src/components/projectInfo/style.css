@@ -1,5 +1,6 @@
 .project-info-container {
-  height: 100%; /* 🔥 Col'un yüksekliğini kaplayacak */
+  height: 100%;
+  /* 🔥 Col'un yüksekliğini kaplayacak */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,11 +9,10 @@
   background-color: white;
 }
 
-
 /* Başlık */
 .project-info-title {
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
   font-size: clamp(20px, 2.5vw, 32px);
   line-height: 1.2;
   color: black;
@@ -22,9 +22,9 @@
 
 /* Açıklama */
 .project-info-description {
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 400;
-  font-size: clamp(16px, 1.8vw, 24px);
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
+  font-size: clamp(16px, 1.8vw, 20px);
   line-height: 1.4;
   color: black;
   margin: 0;
@@ -41,7 +41,7 @@
   width: clamp(150px, 25vw, 191px);
   height: clamp(40px, 7vh, 60px);
   font-size: clamp(16px, 2vw, 24px);
-  font-weight: 400;
+  font-weight: 300;
   background-color: black;
   color: white;
   border: none;
@@ -62,27 +62,30 @@
   .project-info-button-wrapper {
     align-self: center;
   }
-  /* Başlık */
-.project-info-title {
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 300; /* Light */
-  font-style: normal;
-  font-size: 24px;
-  line-height: 100%; /* yani 1 */
-  letter-spacing: 0;
-  margin: 0;
-  width: 100%;
-  margin-top: 0px !important;
-}
 
-/* Açıklama */
-.project-info-description {
-  font-family: 'Biondi Sans', sans-serif;
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 1;
-  color: #FFFFFF;
-  margin: 0;
-  width: 100%;
-}
+  /* Başlık */
+  .project-info-title {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-weight: 300;
+    /* Light */
+    font-style: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* yani 1 */
+    letter-spacing: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: 0px !important;
+  }
+
+  /* Açıklama */
+  .project-info-description {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin: 0;
+    width: 100%;
+  }
 }
