@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import alindaLogo from "../../assets/icons/Alinda-logo.png";
+import alindaLogo from "../../assets/icons/Alinda-logo-Black.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
