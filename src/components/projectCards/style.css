@@ -1,7 +1,7 @@
 /* === Global Font Override === */
 .project-wrapper,
 .project-wrapper * {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-family: 'Encode Sans Expanded'!important;
   font-weight: 300 !important;
 }
 
@@ -142,11 +142,13 @@
   height: 525px;
   background-color: #fff;
 }
+
 .project-grid-content {
   max-width: 1200px;
   margin: 100px auto 0;
   padding: 0 16px;
 }
+
 .project-column-block {
   display: flex;
   flex-direction: column;
@@ -161,6 +163,7 @@
   text-transform: uppercase;
   line-height: 1;
 }
+
 .project-column-block h4:first-of-type {
   margin-top: 0;
 }
@@ -179,6 +182,7 @@
   align-items: center;
   text-align: center;
 }
+
 .project-column-center ul {
   display: flex;
   flex-direction: column;
@@ -290,7 +294,7 @@
   height: 0;
   border-top: 2px solid #000000;
   margin: 186px auto 0 auto;
-  opacity: 0.2; 
+  opacity: 0.2;
 }
 
 .project-virtual-tour {
@@ -344,7 +348,7 @@
   height: 0;
   border-top: 2px solid #000000;
   margin: 186px auto 0 auto;
-  opacity: 0.2; 
+  opacity: 0.2;
 }
 
 /* === Responsive Ayarlar === */
@@ -410,6 +414,7 @@
     height: auto;
     padding: 32px 16px;
   }
+
   .project-catalog-box {
     flex-direction: column;
     height: auto;

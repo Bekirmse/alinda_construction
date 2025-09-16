@@ -1,8 +1,7 @@
 /* === Tüm ProjectPage yazıları Encode Sans Expanded 300 === */
 .project-page,
 .project-page * {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
-  font-weight: 300 !important;
+  font-family: 'Encode Sans Expanded' !important;
   font-style: normal;
   letter-spacing: normal;
   color: #000;
@@ -15,7 +14,7 @@
 .project-page h4,
 .project-page h5,
 .project-page h6 {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
   margin: 0;
 }
@@ -26,15 +25,15 @@
 .project-page label,
 .project-page strong,
 .project-page li {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
   margin: 0;
 }
-
+.
 /* Stat kutuları (DAİRE / ALAN) */
 .project-page .stat-box,
 .project-page .stat-box * {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
 }
 
@@ -42,14 +41,14 @@
 .project-page .project-location,
 .project-page .project-date,
 .project-page .project-price {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
 }
 
 /* Özellikler + oda tipleri */
 .project-page .project-features,
 .project-page .project-rooms {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
 }
 
@@ -57,7 +56,7 @@
 .project-page button,
 .project-page .btn,
 .project-page a {
-  font-family: 'Encode Sans Expanded', sans-serif !important;
+  font-family: 'Encode Sans Expanded'!important;
   font-weight: 300 !important;
   text-decoration: none;
 }
