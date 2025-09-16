@@ -72,7 +72,7 @@
 
 .footer-line2 {
   max-width: 105px;
-  margin: 4px 0;
+  margin: 8px 0;
 }
 
 /* Başlık */
@@ -179,7 +179,20 @@
   margin-right: 12px;
   margin-top: 45px;
 }
+/* Footer linkleri p ile aynı gözüksün */
+.footer-link-block a {
+  display: block;           /* p gibi alt alta gelsin */
+  margin: 0 0 16px 0;        /* eski boşlukları koru */
+  font-size: inherit;       /* p ile aynı boyutta */
+  font-weight: inherit;     /* kalınlık aynı */
+  color: inherit;           /* mavi yerine mevcut yazı rengini kullan */
+  text-decoration: none;    /* alt çizgiyi kaldır */
+  cursor: pointer;
+}
 
+.footer-link-block a:hover {
+  text-decoration: underline; /* opsiyonel, hover efekti */
+}
 .footer-link-block--right .footer-line2 {
   margin-left: auto;
 }

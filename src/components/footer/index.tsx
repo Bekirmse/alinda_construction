@@ -1,7 +1,8 @@
 import React from "react";
 import { Row, Col } from "antd";
+import { Link } from "react-router-dom"; // ✅ Link import edildi
 import "./style.css";
-import alindaWhiteLogo from "../../assets/icons/Alinda-logo-White.png"; // ✅ logo eklendi
+import alindaWhiteLogo from "../../assets/icons/Alinda-logo-White.png";
 
 const Footer = () => {
   return (
@@ -11,7 +12,6 @@ const Footer = () => {
           {/* Sol Blok */}
           <Col xs={24} md={12} lg={10} className="footer-col">
             <div className="footer-brand-block">
-              {/* ✅ Logo görseli */}
               <img
                 src={alindaWhiteLogo}
                 alt="Alinda Construction Logo"
@@ -24,7 +24,9 @@ const Footer = () => {
 
               <div className="footer-line" />
 
-              <p className="footer-section-title">SATIŞ VE MÜŞTERİ HİZMETLERİ</p>
+              <p className="footer-section-title">
+                SATIŞ VE MÜŞTERİ HİZMETLERİ
+              </p>
 
               <div className="footer-contact-list">
                 <div className="footer-contact-item">
@@ -34,7 +36,8 @@ const Footer = () => {
                   <span className="icon mail" /> alindaconstruction@mail.com
                 </div>
                 <div className="footer-contact-item">
-                  <span className="icon location" /> Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli
+                  <span className="icon location" /> Atatürk Caddesi, H. Şakir
+                  Kompleks, Dükkan 3, Gönyeli
                 </div>
               </div>
 
@@ -57,7 +60,7 @@ const Footer = () => {
             <div className="footer-link-block footer-links--projects">
               <p className="footer-section-title">PROJELERİMİZ</p>
               <div className="footer-line2" />
-              <p>Proje 1</p>
+              <Link to="/projeler">Proje 1</Link> {/* ✅ yönlendirme */}
             </div>
           </Col>
 
@@ -66,9 +69,9 @@ const Footer = () => {
             <div className="footer-link-block footer-link-block--right">
               <p className="footer-section-title">HIZLI ERİŞİM</p>
               <div className="footer-line2" />
-              <p>Biz kimiz</p>
-              <p>Projeler</p>
-              <p>İletişim</p>
+              <Link to="/about">Biz kimiz</Link>
+              <Link to="/projeler">Projeler</Link>
+              <Link to="/iletisim">İletişim</Link>
             </div>
           </Col>
         </Row>
@@ -84,10 +87,9 @@ const Footer = () => {
             © 2025 Alinda Construction. Tüm hakları saklıdır.
           </div>
           <div className="footer-bottom-right">
-            <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
-<a href="/kvkk">KVKK</a>
-<a href="/kullanim-kosullari">Kullanım Koşulları</a>
-
+            <Link to="/gizlilik-politikasi">Gizlilik Politikası</Link>
+            <Link to="/kvkk">KVKK</Link>
+            <Link to="/kullanim-kosullari">Kullanım Koşulları</Link>
           </div>
         </div>
       </div>
