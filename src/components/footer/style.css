@@ -2,8 +2,9 @@
   width: 100%;
   background-color: #1d1d1d;
   color: #fff;
-  padding: 64px 0;
-  font-family: 'Biondi Sans', sans-serif;
+  padding: 32px 0 32px;
+  font-family: "Encode Sans Expanded";
+  font-weight: 300;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -13,18 +14,21 @@
   margin: 0 auto;
   padding: 0;
 }
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 0px;
+  object-fit: contain;
+}
 
 /* ---- Col hizalama ---- */
 .footer-col {
   display: flex;
-  /* Col’u flex yap */
   align-items: flex-start;
-  /* üstten hizala */
 }
 
 .footer-col--center {
   justify-content: center;
-  /* içeriği yatayda ortala */
 }
 
 /* İç bloklar */
@@ -36,34 +40,23 @@
   flex-direction: column;
 }
 
-/* Merkezde görünsün ve metin ortalansın */
-.footer-col--center .footer-link-block {
-  margin: 0 auto;
-  align-items: center;
-  /* öğeleri ortala */
-  text-align: center;
-  /* metni ortala */
-}
-
-/* LOGO */
+/* Logo */
 .footer-logo-placeholder {
   width: 100%;
   max-width: 210px;
-  height: auto;
   aspect-ratio: 3 / 1;
   background-color: #ccc;
   margin-bottom: 29px;
 }
 
-/* Açıklama Yazısı */
+/* Açıklama */
 .footer-desc {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: clamp(12px, 1.2vw, 16px);
   line-height: 1.4;
   text-transform: uppercase;
-  max-width: 100%;
   margin-bottom: 16px;
+  margin-left: 12px;
 }
 
 /* Çizgiler */
@@ -74,35 +67,31 @@
   height: 1px;
   background-color: #fff;
   margin-bottom: 24px;
+  margin-left: 12px;
 }
 
 .footer-line2 {
   max-width: 105px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin: 4px 0;
 }
 
-/* Başlıklar */
+/* Başlık */
 .footer-section-title {
+  font-weight: 300;
   font-size: clamp(14px, 1.3vw, 16px);
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: #fff;
-  cursor: default;
-  pointer-events: none;
+  margin-bottom: 8px;
+  margin-left: 12px;
 }
 
-/* Bağlantılar */
+/* Linkler */
 .footer-link-block p:not(.footer-section-title):not(:first-of-type) {
   margin-top: 14px;
 }
 
 .footer-link-block p {
   font-size: clamp(12px, 1.1vw, 14px);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  line-height: 1.4;
+  font-weight: 300;
   cursor: pointer;
   margin: 0;
 }
@@ -111,12 +100,13 @@
   color: #aaa;
 }
 
-/* İletişim Alanı */
+/* İletişim */
 .footer-contact-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  color: #fff;
+  margin-bottom: 16px;
+  margin-left: 12px;
 }
 
 .footer-contact-item {
@@ -124,27 +114,126 @@
   align-items: center;
   gap: 13px;
   font-size: clamp(12px, 1.1vw, 14px);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
 }
 
-/* İkonlar */
+/* İkonlar (geçici) */
 .icon.phone::before {
   content: "📞";
-  font-size: clamp(14px, 1.3vw, 18px);
 }
 
 .icon.mail::before {
   content: "✉️";
-  font-size: clamp(14px, 1.3vw, 18px);
 }
 
 .icon.location::before {
   content: "📍";
-  font-size: clamp(14px, 1.3vw, 18px);
 }
 
-/* Küçük ekranlarda sütunların ortalanması */
+/* Sosyal Medya */
+.footer-social-block {
+  margin-top: 0px;
+}
+
+.footer-divider {
+  width: 346px;
+  height: 1px;
+  background: #fff;
+  margin: 8px 0 16px 12px;
+  /* üstüne dayalı ve sola yaslı */
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-left: 12px;
+}
+
+.social-box {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+}
+
+/* ------- Özel hizalamalar -------- */
+
+/* PROJELERİMİZ: ortala (başlık, çizgi, linkler) */
+.footer-links--projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* alt maddeler ve çizgi sağa yaslanır */
+  text-align: right;
+  margin-top: 45px;
+}
+
+.footer-links--projects .footer-line2 {
+  margin-left: auto;
+  /* çizgi sağdan başlar */
+}
+
+/* HIZLI ERİŞİM: sağa yasla */
+.footer-link-block--right {
+  margin-left: auto;
+  align-items: flex-end;
+  text-align: right;
+  margin-right: 12px;
+  margin-top: 45px;
+}
+
+.footer-link-block--right .footer-line2 {
+  margin-left: auto;
+}
+
+/* ------- Bottom ------- */
+
+/* Sadece “uzun divider” (üst çizgi) — altındaki metinleri etkilemez */
+.footer-bottom-line {
+  height: 1px;
+  background: #fff;
+  opacity: 0.5;
+  /* Sağ/sol boşluğu burada rahatça ayarlayın */
+  margin: 40px 200px 0 200px;
+  /* ör: 200px */
+}
+
+/* Alt metin satırı */
+.footer-bottom {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom-left {
+  text-align: left;
+  margin-left: 12px;
+}
+
+.footer-bottom-right {
+  display: flex;
+  gap: 35px;
+  margin-right: 12px;
+  /* aralarındaki boşluk 35px */
+}
+
+.footer-bottom-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-bottom-right a:hover {
+  color: #aaa;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .footer-col {
     justify-content: center;
@@ -152,5 +241,20 @@
 
   .footer-brand-block {
     max-width: 480px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-bottom-right {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom-line {
+    margin: 32px 24px 0 24px;
+    /* mobilde çizgiyi biraz genişlet */
   }
 }
