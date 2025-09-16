@@ -24,7 +24,7 @@
 .project-info-description {
   font-family: 'Encode Sans Expanded', sans-serif;
   font-weight: 300;
-  font-size: clamp(16px, 1.8vw, 24px);
+  font-size: clamp(16px, 1.8vw, 20px);
   line-height: 1.4;
   color: black;
   margin: 0;
