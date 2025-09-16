@@ -39,32 +39,34 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Sidebar */}
-      <div className={`sidebar ${menuOpen ? "open" : ""}`}>
-        <div className="sidebar-header">
-          <Link to="/" onClick={() => setMenuOpen(false)}>
-            <img src={currentLogo} alt="Alinda Logo" className="sidebar-logo" />
-          </Link>
-        </div>
+    {/* Sidebar */}
+<div className={`sidebar ${menuOpen ? "open" : ""}`}>
+  <div className="sidebar-header">
+    <Link to="/" onClick={() => setMenuOpen(false)}>
+      {/* Sidebar'da her zaman siyah logo */}
+      <img src={alindaLogoBlack} alt="Alinda Logo" className="sidebar-logo" />
+    </Link>
+  </div>
 
-        <div className="sidebar-divider"></div>
+  <div className="sidebar-divider"></div>
 
-        <nav className="sidebar-menu">
-          <Link to="/projeler" onClick={() => setMenuOpen(false)}>
-            Projeler
-          </Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>
-            Hakkımızda
-          </Link>
-          <Link to="/iletisim" onClick={() => setMenuOpen(false)}>
-            Bize Ulaşın
-          </Link>
-        </nav>
+  <nav className="sidebar-menu">
+    <Link to="/projeler" onClick={() => setMenuOpen(false)}>
+      Projeler
+    </Link>
+    <Link to="/about" onClick={() => setMenuOpen(false)}>
+      Hakkımızda
+    </Link>
+    <Link to="/iletisim" onClick={() => setMenuOpen(false)}>
+      Bize Ulaşın
+    </Link>
+  </nav>
 
-        <button className="sidebar-close" onClick={() => setMenuOpen(false)}>
-          ✕
-        </button>
-      </div>
+  <button className="sidebar-close" onClick={() => setMenuOpen(false)}>
+    ✕
+  </button>
+</div>
+
 
       {/* Overlay */}
       {menuOpen && (
