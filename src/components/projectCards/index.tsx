@@ -49,7 +49,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
 
         <div className="project-grid-content">
-          {/* 3 sütunlu 2. Satır */}
           <Row gutter={[48, 32]}>
             <Col xs={24} md={8}>
               <div className="project-column-block project-column-left">
@@ -61,6 +60,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <p>{price}</p>
               </div>
             </Col>
+
             <Col xs={24} md={8}>
               <div className="project-column-block project-column-center">
                 <h4>PROJE ÖZELLİKLERİ</h4>
@@ -71,6 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </ul>
               </div>
             </Col>
+
             <Col xs={24} md={8}>
               <div className="project-column-block project-column-right">
                 <h4>KONUT TİPLERİ</h4>
@@ -83,25 +84,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </Col>
           </Row>
         </div>
-        {/* Proje Katalog Kartı - 830px uzaklıkla */}
-        {/* <a
-          href="/katalog-linki"
-          className="project-catalog-button"
-          role="button"
-          aria-label="Proje Kataloğu"
-        >
-          <div className="project-catalog-box">
-            <div className="catalog-icon" />
-            <div className="catalog-texts">
-              <div className="catalog-title">PROJE 1 KATALOG</div>
-              <div className="catalog-subtitle">GÖRMEK İÇİN TIKLA</div>
-            </div>
-            <div className="catalog-arrow">→</div>
-          </div>
-        </a>
-        <div className="project-catalog-button">{}</div> */}
 
-        <div className="project-divider"></div>
+        <div className="project-divider" />
+
         <div className="project-virtual-tour">
           <div className="project-virtual-title">360° SANAL TUR</div>
           <div className="project-virtual-subtitle">
@@ -119,10 +104,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="project-divider-bottom" />
       </div>
 
+      {/* SLIDER */}
       <div className="project-slider-section">
-        <button className="slider-arrow left">{"<"}</button>
+        <button className="slider-arrow left" aria-label="Önceki" type="button" />
         <img src={image} alt="Slide Görsel" className="project-slider-image" />
-        <button className="slider-arrow right">{">"}</button>
+        <button className="slider-arrow right" aria-label="Sonraki" type="button" />
       </div>
 
       <div className="project-bottom-white" />

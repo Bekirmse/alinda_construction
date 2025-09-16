@@ -1,440 +1,111 @@
 /* === Global Font Override === */
 .project-wrapper,
 .project-wrapper * {
-  font-family: 'Encode Sans Expanded'!important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
 }
 
 /* === Genel Wrapper === */
-.project-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
+.project-wrapper { width: 100%; overflow: hidden; }
 
-/* === Üstteki Geniş Görsel (Başlık İçerir) === */
-.project-top-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 686px;
-  overflow: hidden;
-}
-
-.project-top-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+/* === Üstteki Geniş Görsel === */
+.project-top-image-wrapper { position: relative; width: 100%; height: 686px; overflow: hidden; }
+.project-top-image { width: 100%; height: 100%; object-fit: cover; }
 
 /* Görsel üzerindeki başlık */
-.project-overlay-title {
-  position: absolute;
-  bottom: 69px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 75px;
-  line-height: 100%;
-  text-align: center;
-  color: #ffffff;
-  margin: 0;
-  white-space: nowrap;
+.project-overlay-title{
+  position:absolute; bottom:69px; left:50%; transform:translateX(-50%);
+  font-size:75px; line-height:100%; text-align:center; color:#fff; margin:0; white-space:nowrap;
 }
 
 /* === Ortadaki Beyaz İçerik Alanı === */
-.project-white-block {
-  width: 100%;
-  height: 1800px;
-  background-color: #fff;
-  position: relative;
-}
+.project-white-block { width:100%; height:1800px; background:#fff; position:relative; }
 
 /* === İki adet İstatistik Kutusu === */
-.project-stats-container {
-  position: relative;
-  margin-top: 0px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 467px;
-  gap: 106px;
-  margin-top: 100px;
+.project-stats-container{
+  position:relative; display:flex; justify-content:space-between;
+  padding:0 467px; gap:106px; margin-top:100px;
 }
+.project-stat-box{ width:440px; height:150px; background:#EFEFEF; display:flex; flex-direction:column; position:relative; }
+.project-stat-icon{ width:84px; height:84px; background:#D9D9D9; position:absolute; top:33px; left:34px; }
+.project-stat-label{ position:absolute; top:40px; left:143px; font-size:13px; text-transform:uppercase; color:#4E4E4E; }
+.project-stat-value{ position:absolute; top:62px; left:143px; font-size:40px; text-transform:uppercase; color:#000; white-space:nowrap; }
 
-.project-stat-box {
-  width: 440px;
-  height: 150px;
-  background-color: #EFEFEF;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+/* === Slider === */
+.project-slider-section{
+  width:100%; height:866px; position:relative; display:flex; align-items:center; justify-content:center; background:#eee;
 }
+.project-slider-image{ width:100%; height:100%; object-fit:cover; }
 
-/* Kare iç kutu (ikon) */
-.project-stat-icon {
-  width: 84px;
-  height: 84px;
-  background-color: #D9D9D9;
-  position: absolute;
-  top: 33px;
-  left: 34px;
+/* Figma tarzı beyaz oklar */
+.slider-arrow{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:70px; height:70px; background:transparent; border:none; padding:0; cursor:pointer; z-index:10;
 }
+.slider-arrow.left{ left:24px; }
+.slider-arrow.right{ right:24px; }
 
-/* Kutudaki başlık */
-.project-stat-label {
-  position: absolute;
-  top: 40px;
-  left: 143px;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #4E4E4E;
+.slider-arrow::before{
+  content:""; position:absolute; left:50%; top:50%;
+  width:35px; height:35px;
+  transform:translate(-50%,-50%) rotate(-45deg); /* default: sağ ok */
+  border-right:12px solid #fff; border-bottom:12px solid #fff; border-radius:2px;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.25));
 }
-
-/* Kutudaki değer */
-.project-stat-value {
-  position: absolute;
-  top: 62px;
-  left: 143px;
-  font-size: 40px;
-  text-transform: uppercase;
-  color: #000;
-  white-space: nowrap;
-}
-
-/* === Alt Slider Alanı === */
-.project-slider-section {
-  width: 100%;
-  height: 866px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #eee;
-}
-
-.project-slider-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  font-size: 24px;
-  z-index: 10;
-}
-
-.slider-arrow.left {
-  left: 16px;
-}
-
-.slider-arrow.right {
-  right: 16px;
-}
+/* sol ok dönüşü */
+.slider-arrow.left::before{ transform:translate(-50%,-50%) rotate(135deg); }
+/* hover ufak büyütme */
+.slider-arrow:hover::before{ transform:translate(-50%,-50%) scale(1.06) rotate(var(--rot,-45deg)); }
+.slider-arrow.left:hover::before{ --rot:135deg; }
 
 /* === Slider Altı Beyaz Alan === */
-.project-bottom-white {
-  width: 100%;
-  height: 525px;
-  background-color: #fff;
+.project-bottom-white{ width:100%; height:525px; background:#fff; }
+
+/* === İçerik grid === */
+.project-grid-content{ max-width:1200px; margin:100px auto 0; padding:0 16px; }
+.project-column-block{ display:flex; flex-direction:column; align-items:flex-start; }
+.project-column-block h4{ font-size:14px; margin:0 0 4px; color:#4E4E4E; text-transform:uppercase; line-height:1; }
+.project-column-left{ align-items:flex-start; text-align:left; }
+.project-column-center{ align-items:center; text-align:center; }
+.project-column-center ul{ display:flex; flex-direction:column; align-items:center; text-align:center; padding:0; margin:0; }
+.project-column-right{ align-items:flex-end; text-align:right; }
+.project-column-block p, .project-column-block li{ font-size:18px; margin:0 0 24px 0; color:#000; line-height:1.4; list-style:none; padding-left:0; }
+.project-detail-grid{ margin-top:80px; margin-bottom:60px; row-gap:90px; }
+
+/* === Bölücü çizgiler & sanal tur === */
+.project-divider{
+  width:91.51vw; max-width:1759px; height:0; border-top:2px solid #000; margin:93px auto 0; opacity:.2;
+}
+.project-virtual-tour{ margin-top:216px; text-align:center; color:#000; padding:0 16px; background:transparent; }
+.project-virtual-title{ font-size:48px; text-transform:uppercase; margin-bottom:28px; }
+.project-virtual-subtitle{ max-width:977px; margin:0 auto 28px; font-size:16px; text-transform:uppercase; color:#000; }
+.project-virtual-button{
+  width:772px; height:70px; max-width:95%; background:#000; color:#fff; font-size:32px; text-transform:uppercase; border:none; cursor:pointer; margin:0 auto 38px; display:block;
+}
+.project-virtual-note{ max-width:369px; margin:0 auto; font-size:13px; text-transform:uppercase; color:#4E4E4E; text-align:center; }
+.project-divider-bottom{
+  width:91.51vw; max-width:1759px; height:0; border-top:2px solid #000; margin:186px auto 0; opacity:.2;
 }
 
-.project-grid-content {
-  max-width: 1200px;
-  margin: 100px auto 0;
-  padding: 0 16px;
-}
+/* === Responsive === */
+@media (max-width: 768px){
+  .project-top-image-wrapper{ height:400px; }
+  .project-overlay-title{ font-size:36px; padding:0 16px; white-space:normal; }
+  .project-white-block{ height:auto; padding:32px 16px; }
+  .project-stats-container{ flex-direction:column; padding:0 16px; gap:32px; margin-top:64px; }
+  .project-stat-box{ width:100%; height:auto; padding:120px 16px 32px; }
+  .project-stat-icon{ width:64px; height:64px; top:24px; left:16px; }
+  .project-stat-label{ top:28px; left:96px; font-size:12px; }
+  .project-stat-value{ top:52px; left:96px; font-size:36px; }
+  .project-slider-section{ height:420px; }
 
-.project-column-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  /* okları küçült */
+  .slider-arrow{ width:64px; height:64px; }
+  .slider-arrow::before{ width:28px; height:28px; border-right:8px solid #fff; border-bottom:8px solid #fff; }
+  .slider-arrow.left{ left:12px; }
+  .slider-arrow.right{ right:12px; }
 
-.project-column-block h4 {
-  font-size: 14px;
-  margin-bottom: 4px;
-  margin-top: 0;
-  color: #4E4E4E;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.project-column-block h4:first-of-type {
-  margin-top: 0;
-}
-
-/* Sütun hizalamaları */
-.project-column-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.project-column-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.project-column-center ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-.project-column-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-}
-
-.project-column-block p,
-.project-column-block li {
-  font-size: 18px;
-  margin: 0 0 24px 0;
-  color: #000;
-  line-height: 1.4;
-  list-style: none;
-  padding-left: 0;
-}
-
-.project-column-block h4 {
-  margin-bottom: 8px;
-}
-
-.project-detail-grid {
-  margin-top: 80px;
-  margin-bottom: 60px;
-  row-gap: 90px;
-}
-
-/* === Tıklanabilir Proje Katalog Butonu === */
-/* .project-catalog-button {
-  margin-top: 135px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-decoration: none;
-} */
-/* 
-.project-catalog-button:hover {
-  cursor: pointer;
-}
-
-/* Proje kutusu */
-/* .project-catalog-box {
-  width: 772px;
-  height: 124px;
-  background-color: #EFEFEF;
-  display: flex;
-  align-items: center;
-  padding-left: 41px;
-  padding-right: 32px;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-}
-
-.project-catalog-box:hover {
-  background-color: #e0e0e0;
-}
-
-.catalog-icon {
-  width: 84px;
-  height: 84px;
-  background-color: #D9D9D9;
-  flex-shrink: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.catalog-texts {
-  display: flex;
-  flex-direction: column;
-  margin-left: 44px;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-.catalog-title {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #000;
-  line-height: 100%;
-}
-
-.catalog-subtitle {
-  font-size: 14px;
-  color: #4E4E4E;
-  margin-bottom: 20px;
-}
-
-.catalog-arrow {
-  font-size: 40px;
-  color: #000;
-  margin-left: 20px;
-  flex-shrink: 0;
-}  */
-
-.project-divider {
-  width: 91.51vw;
-  max-width: 1759px;
-  height: 0;
-  border-top: 2px solid #000000;
-  margin: 186px auto 0 auto;
-  opacity: 0.2;
-}
-
-.project-virtual-tour {
-  margin-top: 216px;
-  text-align: center;
-  color: #000000;
-  padding: 0 16px;
-  background-color: transparent;
-}
-
-.project-virtual-title {
-  font-size: 48px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-
-.project-virtual-subtitle {
-  max-width: 977px;
-  margin: 0 auto 28px auto;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.project-virtual-button {
-  width: 772px;
-  height: 70px;
-  max-width: 95%;
-  background-color: #000000;
-  color: #FFFFFF;
-  font-size: 32px;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  margin: 0 auto 38px auto;
-  display: block;
-}
-
-.project-virtual-note {
-  max-width: 369px;
-  margin: 0 auto;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #4E4E4E;
-  text-align: center;
-}
-
-.project-divider-bottom {
-  width: 91.51vw;
-  max-width: 1759px;
-  height: 0;
-  border-top: 2px solid #000000;
-  margin: 186px auto 0 auto;
-  opacity: 0.2;
-}
-
-/* === Responsive Ayarlar === */
-@media (max-width: 768px) {
-  .project-top-image-wrapper {
-    height: 400px;
-  }
-
-  .project-overlay-title {
-    font-size: 36px;
-    padding: 0 16px;
-    white-space: normal;
-  }
-
-  .project-white-block {
-    height: auto;
-    padding: 32px 16px;
-  }
-
-  .project-stats-container {
-    flex-direction: column;
-    padding: 0 16px;
-    gap: 32px;
-    margin-top: 64px;
-  }
-
-  .project-stat-box {
-    width: 100%;
-    height: auto;
-    padding: 120px 16px 32px;
-  }
-
-  .project-stat-icon {
-    width: 64px;
-    height: 64px;
-    top: 24px;
-    left: 16px;
-  }
-
-  .project-stat-label {
-    top: 28px;
-    left: 96px;
-    font-size: 12px;
-  }
-
-  .project-stat-value {
-    top: 52px;
-    left: 96px;
-    font-size: 36px;
-  }
-
-  .project-slider-section {
-    height: 420px;
-  }
-
-  .slider-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-
-  .project-bottom-white {
-    height: auto;
-    padding: 32px 16px;
-  }
-
-  .project-catalog-box {
-    flex-direction: column;
-    height: auto;
-    padding: 24px 16px;
-    width: 100%;
-  }
-
-  .catalog-icon {
-    margin: 0 0 16px 0;
-  }
-
-  .catalog-texts {
-    margin-left: 0;
-    align-items: center;
-    text-align: center;
-  }
-
-  .catalog-arrow {
-    margin-top: 12px;
-    margin-left: 0;
-  }
+  .project-bottom-white{ height:auto; padding:32px 16px; }
+  .project-catalog-box{ flex-direction:column; height:auto; padding:24px 16px; width:100%; }
+  .catalog-texts{ margin-left:0; align-items:center; text-align:center; }
 }
