@@ -84,7 +84,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Row>
         </div>
         {/* Proje Katalog Kartı - 830px uzaklıkla */}
-        <a
+        {/* <a
           href="/katalog-linki"
           className="project-catalog-button"
           role="button"
@@ -99,7 +99,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <div className="catalog-arrow">→</div>
           </div>
         </a>
-        <div className="project-catalog-button">{/* katalog kutusu */}</div>
+        <div className="project-catalog-button">{}</div> */}
 
         <div className="project-divider"></div>
         <div className="project-virtual-tour">

@@ -6,7 +6,12 @@
   letter-spacing: normal;
   color: #000;
 }
-
+.project-page ul,
+.project-page ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* noktaları da kaldırır */
+}
 /* Başlıklar */
 .project-page h1,
 .project-page h2,
