@@ -58,8 +58,6 @@ const Footer = () => {
               <p className="footer-section-title">PROJELERİMİZ</p>
               <div className="footer-line2" />
               <p>Proje 1</p>
-              <p>Proje 2</p>
-              <p>Proje 3</p>
             </div>
           </Col>
 
