@@ -86,9 +86,9 @@ const Footer = () => {
             © 2025 Alinda Construction. Tüm hakları saklıdır.
           </div>
           <div className="footer-bottom-right">
-           <a href="javascript:void(0)">Gizlilik Politikası</a>
-<a href="javascript:void(0)">KVKK</a>
-<a href="javascript:void(0)">Kullanım Koşulları</a>
+            <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
+<a href="/kvkk">KVKK</a>
+<a href="/kullanim-kosullari">Kullanım Koşulları</a>
 
           </div>
         </div>
