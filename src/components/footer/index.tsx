@@ -15,7 +15,9 @@ const Footer = () => {
                 MİMARİ ESTETİK İLE MÜHENDİSLİK GÜCÜNÜ BİR ARAYA GETİRİYORUZ.
               </p>
               <div className="footer-line" />
-              <p className="footer-section-title">SATIŞ VE MÜŞTERİ HİZMETLERİ</p>
+              <p className="footer-section-title">
+                SATIŞ VE MÜŞTERİ HİZMETLERİ
+              </p>
 
               <div className="footer-contact-list">
                 <div className="footer-contact-item">

@@ -5,7 +5,7 @@ import "./style.css";
 
 interface PrimaryButtonProps extends Omit<ButtonProps, "type"> {
   text: string;
-  to?: string;   // İç sayfa yönlendirme
+  to?: string; // İç sayfa yönlendirme
   href?: string; // Dış link
   className?: string;
   style?: React.CSSProperties;

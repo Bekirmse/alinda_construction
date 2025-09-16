@@ -18,7 +18,8 @@
   font-size: clamp(16px, 2vw, 24px);
 
   border: none;
-  border-radius: 0; /* tasarıma göre istersen 6px yapabilirsin */
+  border-radius: 0;
+  /* tasarıma göre istersen 6px yapabilirsin */
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -35,6 +36,7 @@
 
 /* Responsive uyum */
 @media (max-width: 768px) {
+
   .primary-button,
   .primary-button-link {
     width: 100%;

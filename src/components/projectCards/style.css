@@ -1,7 +1,7 @@
 /* === Global Font Override === */
 .project-wrapper,
 .project-wrapper * {
-  font-family: 'Encode Sans Expanded'!important;
+  font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
 }
 

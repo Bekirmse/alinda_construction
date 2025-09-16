@@ -1,5 +1,6 @@
 .project-info-container {
-  height: 100%; /* 🔥 Col'un yüksekliğini kaplayacak */
+  height: 100%;
+  /* 🔥 Col'un yüksekliğini kaplayacak */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,10 +66,12 @@
   /* Başlık */
   .project-info-title {
     font-family: 'Encode Sans Expanded', sans-serif;
-    font-weight: 300; /* Light */
+    font-weight: 300;
+    /* Light */
     font-style: normal;
     font-size: 24px;
-    line-height: 100%; /* yani 1 */
+    line-height: 100%;
+    /* yani 1 */
     letter-spacing: 0;
     margin: 0;
     width: 100%;
