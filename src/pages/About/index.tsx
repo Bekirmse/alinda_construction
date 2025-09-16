@@ -27,26 +27,10 @@ const About: React.FC = () => {
             TARİHÇE VE HAKKIMIZDA<div className="subtitle-divider"></div>
           </h3>
           <p className="about-paragraph">
-            Firmamız, inşaat sektöründeki tecrübemizi ve mühendislik
-            birikimimizi kurumsal bir yapıya taşıma hedefiyle 2010 yılında
-            kurulmuştur. Kuruluşumuzdan bu yana, konut projelerinden ticari
-            yapılara, kentsel dönüşümden altyapı işlerine kadar birçok farklı
-            alanda başarılı projelere imza attık. Her geçen yıl büyüyerek
-            gelişen yapımız, hem teknik kapasite hem de insan kaynağı açısından
-            güç kazanmış; kaliteyi ve güveni ön planda tutarak sektörde kendine
-            sağlam bir yer edinmiştir. Bugün, farklı ölçeklerde birçok projeyi
-            eş zamanlı yürütebilecek deneyime ve donanıma sahip bir ekip ile
-            hizmet vermeye devam ediyoruz. Firmamız, güvenli, estetik ve
-            sürdürülebilir yapılar inşa etme vizyonuyla hareket eden, müşteri
-            memnuniyetini esas alan bir inşaat şirketidir. Mühendislik
-            disiplinine olan bağlılığımız, modern mimari anlayışımız ve
-            yenilikçi çözümlerimizle, her projede yüksek kalite standartlarını
-            hedefliyoruz., Projelerimizi yalnızca betonarme yapılar olarak
-            değil; yaşam alanı, değer ve sorumluluk olarak görüyor; şehir
-            dokusuna katkı sağlayan, uzun ömürlü yapılar üretmeyi amaçlıyoruz.
-            Planlama aşamasından anahtar teslimine kadar tüm süreçleri
-            titizlikle yöneten firmamız, teknolojiyi ve çağın gerekliliklerini
-            yakından takip ederek sektörde fark yaratmaktadır.
+            25 yılı aşkın iş tecrübemizle, bugün de inşaat sektöründe güven ve
+            kaliteyi bir araya getiriyoruz. “Sağlam temeller, güçlü yapılar”
+            anlayışıyla hayata geçirdiğimiz apartman ve villa projelerinde,
+            yap-sat modelini başarıyla uygulamaya devam ediyoruz.
           </p>
         </div>
         <div className="about-right dark" />
@@ -61,22 +45,11 @@ const About: React.FC = () => {
             ÇALIŞMA POLİTİKAMIZ<div className="subtitle-divider"></div>
           </h3>
           <p className="about-paragraph">
-            Başlıca çalışma ilkelerimiz şunlardır: Kalite Odaklılık: Tüm yapı
-            malzemelerinde ve uygulamalarda kalite standartlarına tam uyum
-            sağlar, uzun ömürlü ve dayanıklı yapılar inşa ederiz. Zamanında
-            Teslimat: Proje planlamasında gerçekçi ve etkin süreç yönetimi ile
-            işleri söz verilen sürede tamamlarız. Güvenlik ve Yasal Uyum: İş
-            sağlığı ve güvenliği kurallarına titizlikle uyar, yürürlükteki tüm
-            yasal düzenlemelere ve teknik şartnamelere uygun çalışırız. Müşteri
-            Memnuniyeti: Müşteri taleplerini dikkatle dinler, ihtiyaçlara özel
-            çözümler üretir, her aşamada açık ve sürekli iletişim kurarız.
-            Sürdürülebilirlik: Çevre dostu malzeme ve uygulamalara öncelik
-            verir, gelecek nesillere saygılı yapılar üretmeyi hedefleriz. Ekip
-            Ruhu ve Uzmanlık: Deneyimli kadromuz ile işbirliği içinde,
-            disiplinli ve koordineli bir şekilde çalışarak her projeye en uygun
-            çözümleri üretiriz. Bu ilkeler doğrultusunda, her projeyi sadece bir
-            inşaat değil, bir sorumluluk bilinciyle ele alıyor; kalıcı değerler
-            üretmeyi amaçlıyoruz.
+            Müşteri memnuniyetini öncelik olarak benimseyen ekibimiz, her detayı
+            titizlikle planlayarak sizlere yalnızca bugünün değil, yarının
+            ihtiyaçlarına da uygun yaşam alanları sunmayı hedeflemektedir.
+            Tecrübemizden aldığımız güçle, geleceğin güvenli ve modern
+            yapılarının inşasına kararlılıkla devam ediyoruz.
           </p>
         </div>
       </section>

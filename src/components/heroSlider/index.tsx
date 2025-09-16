@@ -13,18 +13,18 @@ const slides = [
     description:
       "Proje 1, şehir merkezine yürüme mesafesinde, sakin bir yerleşim bölgesinde konumlanmış modern bir konut projesidir. 5 katlı tek bloktan oluşan yapı, toplam 10 daireden oluşmaktadır. Projede hem 2+1 hem de 3+1 daire seçenekleri sunulmakta olup, her daireye özel balkon ve depo alanı yer almaktadır.",
   },
-  {
-    image: require("../../assets/projects/proje2.jpg"),
-    title: "PROJE 2",
-    description:
-      "Proje 2, şehir merkezine yürüme mesafesinde, sakin bir yerleşim bölgesinde konumlanmış modern bir konut projesidir. 5 katlı tek bloktan oluşan yapı, toplam 10 daireden oluşmaktadır. Projede hem 2+1 hem de 3+1 daire seçenekleri sunulmakta olup, her daireye özel balkon ve depo alanı yer almaktadır.",
-  },
-  {
-    image: require("../../assets/projects/proje2.jpg"),
-    title: "PROJE 3",
-    description:
-      "Proje 2, şehir merkezine yürüme mesafesinde, sakin bir yerleşim bölgesinde konumlanmış modern bir konut projesidir. 5 katlı tek bloktan oluşan yapı, toplam 10 daireden oluşmaktadır. Projede hem 2+1 hem de 3+1 daire seçenekleri sunulmakta olup, her daireye özel balkon ve depo alanı yer almaktadır.",
-  },
+  // {
+  //   image: require("../../assets/projects/proje2.jpg"),
+  //   title: "PROJE 2",
+  //   description:
+  //     "Proje 2, şehir merkezine yürüme mesafesinde, sakin bir yerleşim bölgesinde konumlanmış modern bir konut projesidir. 5 katlı tek bloktan oluşan yapı, toplam 10 daireden oluşmaktadır. Projede hem 2+1 hem de 3+1 daire seçenekleri sunulmakta olup, her daireye özel balkon ve depo alanı yer almaktadır.",
+  // },
+  // {
+  //   image: require("../../assets/projects/proje2.jpg"),
+  //   title: "PROJE 3",
+  //   description:
+  //     "Proje 2, şehir merkezine yürüme mesafesinde, sakin bir yerleşim bölgesinde konumlanmış modern bir konut projesidir. 5 katlı tek bloktan oluşan yapı, toplam 10 daireden oluşmaktadır. Projede hem 2+1 hem de 3+1 daire seçenekleri sunulmakta olup, her daireye özel balkon ve depo alanı yer almaktadır.",
+  // },
 ];
 
 const HeroSlider: React.FC = () => {
