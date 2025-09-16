@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { MenuOutlined } from "@ant-design/icons"; // ✅ antd ikonu
 import alindaLogoBlack from "../../assets/icons/Alinda-logo-Black.png";
 import alindaLogoWhite from "../../assets/icons/Alinda-logo-White.png";
 
@@ -12,7 +13,6 @@ const Header: React.FC = () => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -28,6 +28,7 @@ const Header: React.FC = () => {
             <img src={currentLogo} alt="Alinda Logo" className="header-logo" />
           </Link>
 
+          {/* Masaüstü butonlar */}
           <div className="header-buttons">
             <Link to="/projeler" className="header-button">
               Projeler
@@ -36,42 +37,49 @@ const Header: React.FC = () => {
               Menü
             </button>
           </div>
+
+          {/* Mobil burger */}
+         <button
+  className={`mobile-burger ${scrolled ? "scrolled" : ""}`}
+  onClick={() => setMenuOpen(true)}
+  aria-label="Menüyü Aç"
+>
+  <MenuOutlined style={{ fontSize: "28px" }} />
+</button>
+
         </div>
       </header>
 
-    {/* Sidebar */}
-<div className={`sidebar ${menuOpen ? "open" : ""}`}>
-  <div className="sidebar-header">
-    <Link to="/" onClick={() => setMenuOpen(false)}>
-      {/* Sidebar'da her zaman siyah logo */}
-      <img src={alindaLogoBlack} alt="Alinda Logo" className="sidebar-logo" />
-    </Link>
-  </div>
+      {/* Sidebar */}
+      <div className={`sidebar ${menuOpen ? "open" : ""}`}>
+        <div className="sidebar-header">
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            {/* Sidebar'da her zaman siyah logo */}
+            <img src={alindaLogoBlack} alt="Alinda Logo" className="sidebar-logo" />
+          </Link>
+        </div>
 
-  <div className="sidebar-divider"></div>
+        <div className="sidebar-divider"></div>
 
-  <nav className="sidebar-menu">
-    <Link to="/projeler" onClick={() => setMenuOpen(false)}>
-      Projeler
-    </Link>
-    <Link to="/about" onClick={() => setMenuOpen(false)}>
-      Hakkımızda
-    </Link>
-    <Link to="/iletisim" onClick={() => setMenuOpen(false)}>
-      Bize Ulaşın
-    </Link>
-  </nav>
+        <nav className="sidebar-menu">
+          <Link to="/projeler" onClick={() => setMenuOpen(false)}>
+            Projeler
+          </Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
+            Hakkımızda
+          </Link>
+          <Link to="/iletisim" onClick={() => setMenuOpen(false)}>
+            Bize Ulaşın
+          </Link>
+        </nav>
 
-  <button className="sidebar-close" onClick={() => setMenuOpen(false)}>
-    ✕
-  </button>
-</div>
-
+        <button className="sidebar-close" onClick={() => setMenuOpen(false)}>
+          ✕
+        </button>
+      </div>
 
       {/* Overlay */}
-      {menuOpen && (
-        <div className="overlay" onClick={() => setMenuOpen(false)} />
-      )}
+      {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)} />}
     </>
   );
 };

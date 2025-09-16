@@ -245,29 +245,72 @@
 .footer-bottom-right a:hover {
   color: #aaa;
 }
-
 /* Responsive */
 @media (max-width: 768px) {
+  .footer-wrapper {
+    padding-left: 16px;   /* ✅ tüm içerikler için tek hiza */
+    padding-right: 16px;  /* sağdan da eşitle */
+  }
+
   .footer-col {
-    justify-content: center;
+    justify-content: flex-start; /* ✅ sola yasla */
+    align-items: flex-start;
   }
 
-  .footer-brand-block {
-    max-width: 480px;
+  .footer-brand-block,
+  .footer-link-block,
+  .footer-contact-list,
+  .footer-social,
+  .footer-bottom-left,
+  .footer-bottom-right {
+    align-items: flex-start;
+    text-align: left;   
+    margin-left: 0;      /* ❌ artık margin yok */
+    margin-right: 0;
   }
 
+  /* Divider mobilde sola hizalı */
+  .footer-line,
+  .footer-line2,
+  .footer-divider,
+  .footer-bottom-line {
+    margin-left: 0; 
+    margin-right: 0;
+  }
+
+  /* === PROJELERİMİZ & HIZLI ERİŞİM BLOKLARI === */
+  .footer-links-wrapper {
+    display: flex;
+    flex-direction: column; /* ✅ alt alta */
+    gap: 32px;              
+    margin-top: 24px;
+  }
+
+  .footer-link-block {
+    align-items: flex-start;
+    text-align: left;
+    margin: 0;
+  }
+
+  .footer-link-block .footer-section-title {
+    margin-bottom: 8px;
+  }
+
+  /* Divider başlığın hemen altında */
+  .footer-link-block .footer-line2 {
+    width: 100px; 
+    margin: 8px 0 16px 0;
+  }
+
+  /* === BOTTOM === */
   .footer-bottom-inner {
     flex-direction: column;
+    align-items: flex-start; 
     gap: 12px;
   }
 
   .footer-bottom-right {
     gap: 20px;
     flex-wrap: wrap;
-  }
-
-  .footer-bottom-line {
-    margin: 32px 24px 0 24px;
-    /* mobilde çizgiyi biraz genişlet */
   }
 }

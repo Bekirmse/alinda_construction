@@ -25,8 +25,9 @@ const sharedButtonStyle: React.CSSProperties = {
 const Home = () => {
   return (
     <div>
-      <HeroSlider />
       <Header />
+      <HeroSlider />
+      
       <div className="page-container">
         <Row
           className="section-wrapper"

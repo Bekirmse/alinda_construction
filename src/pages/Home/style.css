@@ -179,7 +179,9 @@ body {
     margin-left: 24px;
     margin-right: 24px;
   }
-
+.project-info-title{
+  color: #fff;
+}
   .intro-section {
     gap: 24px;
   }
@@ -239,7 +241,7 @@ body {
   }
 
   .project-detail-button {
-    width: 100%;
+    width: 120px;
     height: 40px;
     font-size: 16px;
   }

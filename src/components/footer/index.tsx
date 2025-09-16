@@ -56,24 +56,25 @@ const Footer = () => {
           </Col>
 
           {/* Orta Blok — PROJELERİMİZ */}
-          <Col xs={12} md={6} lg={7} className="footer-col">
-            <div className="footer-link-block footer-links--projects">
-              <p className="footer-section-title">PROJELERİMİZ</p>
-              <div className="footer-line2" />
-              <Link to="/projeler">Proje 1</Link> {/* ✅ yönlendirme */}
-            </div>
-          </Col>
+<Col xs={24} md={6} lg={7} className="footer-col">
+  <div className="footer-link-block footer-links--projects">
+    <p className="footer-section-title">PROJELERİMİZ</p>
+    <div className="footer-line2" />
+    <Link to="/projeler">Proje 1</Link>
+  </div>
+</Col>
 
-          {/* Sağ Blok — HIZLI ERİŞİM */}
-          <Col xs={12} md={6} lg={7} className="footer-col">
-            <div className="footer-link-block footer-link-block--right">
-              <p className="footer-section-title">HIZLI ERİŞİM</p>
-              <div className="footer-line2" />
-              <Link to="/about">Biz kimiz</Link>
-              <Link to="/projeler">Projeler</Link>
-              <Link to="/iletisim">İletişim</Link>
-            </div>
-          </Col>
+{/* Sağ Blok — HIZLI ERİŞİM */}
+<Col xs={24} md={6} lg={7} className="footer-col">
+  <div className="footer-link-block footer-link-block--right">
+    <p className="footer-section-title">HIZLI ERİŞİM</p>
+    <div className="footer-line2" />
+    <Link to="/about">Biz kimiz</Link>
+    <Link to="/projeler">Projeler</Link>
+    <Link to="/iletisim">İletişim</Link>
+  </div>
+</Col>
+
         </Row>
       </div>
 

@@ -169,3 +169,76 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 1500;
 }
+.mobile-burger {
+    display: none;
+  
+  }
+@media (max-width: 768px) {
+  .header-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-left: 10px;
+  }
+
+  .header-buttons {
+    display: none; /* Projeler & Menü gizlensin */
+  }
+
+  .mobile-burger {
+    display: block;
+    margin-right: 16px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: white; /* default beyaz */
+    font-size: 28px;
+  }
+
+  .mobile-burger.scrolled {
+    color: black; /* scroll sonrası siyah */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    padding: 40px 24px;
+  }
+
+  .sidebar.open {
+    right: 0;
+  }
+
+  .sidebar-header {
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-logo {
+    width: 160px;
+    height: auto;
+  }
+
+  /* 🔽 Menü ortalanmış ve 50px boşluklu */
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* ✅ yatayda ortala */
+    gap: 50px;             /* ✅ 50px boşluk */
+    margin-top: 32px;      /* logo altı boşluk */
+  }
+
+  .sidebar-menu a {
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center; /* ✅ metin ortalı */
+  }
+
+  .sidebar-close {
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+  }
+}

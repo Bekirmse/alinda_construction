@@ -81,18 +81,21 @@
   }
 
   .hero-title {
-    font-family: 'Encode Sans Expanded', sans-serif;
-    font-weight: 300;
-    white-space: normal;
-    width: 100%;
-    font-size: clamp(28px, 8vw, 40px);
-  }
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 300;
+  white-space: normal;
+  width: 100%;
+  font-size: clamp(28px, 8vw, 40px);
+  text-align: center; /* ✅ yatayda ortalar */
+  margin: 0 auto;     /* ✅ kutuyu ortalar */
+}
+
 
   .hero-button {
     font-family: 'Encode Sans Expanded', sans-serif;
     font-weight: 300;
-    width: 160px;
-    height: 44px;
+    width: 120px;
+    height: 28px;
     font-size: 16px;
     margin-top: 20px;
   }
