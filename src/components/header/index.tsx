@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import alindaLogo from "../../assets/icons/Alinda-logo-Black.png";
+import alindaLogoBlack from "../../assets/icons/Alinda-logo-Black.png";
+import alindaLogoWhite from "../../assets/icons/Alinda-logo-White.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,12 +17,15 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // logoyu state'e göre belirle
+  const currentLogo = scrolled ? alindaLogoBlack : alindaLogoWhite;
+
   return (
     <>
       <header className={`header ${scrolled ? "header-scrolled" : ""}`}>
         <div className="header-content">
           <Link to="/">
-            <img src={alindaLogo} alt="Alinda Logo" className="header-logo" />
+            <img src={currentLogo} alt="Alinda Logo" className="header-logo" />
           </Link>
 
           <div className="header-buttons">
@@ -39,7 +43,7 @@ const Header: React.FC = () => {
       <div className={`sidebar ${menuOpen ? "open" : ""}`}>
         <div className="sidebar-header">
           <Link to="/" onClick={() => setMenuOpen(false)}>
-            <img src={alindaLogo} alt="Alinda Logo" className="sidebar-logo" />
+            <img src={currentLogo} alt="Alinda Logo" className="sidebar-logo" />
           </Link>
         </div>
 
