@@ -43,57 +43,57 @@ const Contact: React.FC = () => {
         </Row>
       </div>
 
-    {/* Beyaz Alan */}
-<section className="contact-white-wrapper">
-  <Row gutter={[0, 0]} className="contact-grid">
-    {/* Sol Bilgi Bölgesi */}
-    <Col xs={24} md={12}>
-      <div className="contact-info">
-        <div className="contact-detail">
-          <div className="contact-block1">
-            <div className="contact-heading-with-icon1">
-              <img src={addressIcon} alt="Adres" className="contact-icon" />
-              <h3 className="contact-subheading1">ADRES</h3>
-            </div>
-            <p> Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli </p>
-          </div>
-
-          <div className="contact-block2">
-            <div className="contact-heading-with-icon2">
-              <img src={phoneIcon} alt="Telefon" className="contact-icon" />
-              <h3 className="contact-subheading2">TELEFON</h3>
-            </div>
-            <p>+90 548 811 09 09</p>
-          </div>
-
-                <div className="contact-block3">
-                  <div className="contact-heading-with-icon3">
-                    <img
-                      src={mailIcon}
-                      alt="E-Posta"
-                      className="contact-icon"
-                    />
-                    <h3 className="contact-subheading3">E-POSTA</h3>
+      {/* Beyaz Alan */}
+      <section className="contact-white-wrapper">
+        <Row gutter={[0, 0]} className="contact-grid">
+          {/* Sol Bilgi Bölgesi */}
+          <Col xs={24} md={12}>
+            <div className="contact-info">
+              <div className="contact-detail">
+                {/* Üst: Adres */}
+                <div className="contact-block1">
+                  <div className="contact-heading-with-icon1">
+                    <img src={addressIcon} alt="Adres" className="contact-icon" />
+                    <h3 className="contact-subheading1">ADRES</h3>
                   </div>
-                  <p>alindaconstruction@mail.com</p>
+                  <p> Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli </p>
                 </div>
-            <div className="contact-social contact-social--desktop">
-          <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-          <div className="divider-54" />
-          <div className="social-icons">
-            <div className="social-box" />
-            <div className="social-box" />
-            <div className="social-box" />
-            <div className="social-box" />
-          </div>
-        </div>
 
+                {/* Orta: Telefon + E-posta */}
+                <div className="contact-middle">
+                  <div className="contact-block2">
+                    <div className="contact-heading-with-icon2">
+                      <img src={phoneIcon} alt="Telefon" className="contact-icon" />
+                      <h3 className="contact-subheading2">TELEFON</h3>
+                    </div>
+                    <p>+90 548 811 09 09</p>
+                  </div>
+
+                  <div className="contact-block3">
+                    <div className="contact-heading-with-icon3">
+                      <img src={mailIcon} alt="E-Posta" className="contact-icon" />
+                      <h3 className="contact-subheading3">E-POSTA</h3>
+                    </div>
+                    <p>alindaconstruction@mail.com</p>
+                  </div>
+                </div>
+
+                {/* Alt: Sosyal medya */}
+                <div className="contact-social contact-social--desktop">
+                  <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+                  <div className="divider-54" />
+                  <div className="social-icons">
+                    <div className="social-box" />
+                    <div className="social-box" />
+                    <div className="social-box" />
+                    <div className="social-box" />
+                  </div>
+                </div>
               </div>
             </div>
-            
           </Col>
 
-          {/* ✅ Mobil sosyal medya: Row içinde ama masaüstünde gizli */}
+          {/* ✅ Mobil sosyal medya */}
           <Col xs={24} md={0} className="contact-social contact-social--mobile">
             <h3 className="contact-subheading">SOSYAL MEDYA</h3>
             <div className="divider-54" />
@@ -118,17 +118,6 @@ const Contact: React.FC = () => {
             </div>
           </Col>
         </Row>
-
-        {/* <div className="contact-social contact-social--desktop">
-          <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-          <div className="divider-54" />
-          <div className="social-icons">
-            <div className="social-box" />
-            <div className="social-box" />
-            <div className="social-box" />
-            <div className="social-box" />
-          </div>
-        </div> */}
       </section>
 
       {/* sadece mobilde görünsün */}
