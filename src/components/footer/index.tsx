@@ -48,8 +48,7 @@ const Footer = () => {
                 <div className="footer-social">
                   <div className="social-box" />
                   <div className="social-box" />
-                  <div className="social-box" />
-                  <div className="social-box" />
+
                 </div>
               </div>
             </div>
@@ -60,7 +59,7 @@ const Footer = () => {
   <div className="footer-link-block footer-links--projects">
     <p className="footer-section-title">PROJELERİMİZ</p>
     <div className="footer-line2" />
-    <Link to="/projeler">Proje 1</Link>
+    <Link to="/projeler">Alinda 08</Link>
   </div>
 </Col>
 
