@@ -263,6 +263,7 @@
   .footer-wrapper {
     padding-left: 16px;   /* ✅ tüm içerikler için tek hiza */
     padding-right: 16px;  /* sağdan da eşitle */
+    font-family: 'Encode Sans Expanded'; /* ✅ sadece Encode Sans Expanded */
   }
 
   .footer-col {
@@ -270,7 +271,14 @@
     align-items: flex-start;
   }
 
-  .footer-brand-block,
+  .footer-brand-block {
+    align-items: flex-start;
+    text-align: left;   
+    margin-left: 0px;      
+    margin-right: 0;
+    font-family: 'Encode Sans Expanded';
+  }
+
   .footer-link-block,
   .footer-contact-list,
   .footer-social,
@@ -278,8 +286,9 @@
   .footer-bottom-right {
     align-items: flex-start;
     text-align: left;   
-    margin-left: 0;      /* ❌ artık margin yok */
+    margin-left: 12px;
     margin-right: 0;
+    font-family: 'Encode Sans Expanded';
   }
 
   /* Divider mobilde sola hizalı */
@@ -287,7 +296,7 @@
   .footer-line2,
   .footer-divider,
   .footer-bottom-line {
-    margin-left: 0; 
+    margin-left: 12px; 
     margin-right: 0;
   }
 
@@ -297,16 +306,19 @@
     flex-direction: column; /* ✅ alt alta */
     gap: 32px;              
     margin-top: 24px;
+    font-family: 'Encode Sans Expanded';
   }
 
   .footer-link-block {
     align-items: flex-start;
     text-align: left;
     margin: 0;
+    margin-left: 12px;
   }
 
   .footer-link-block .footer-section-title {
     margin-bottom: 8px;
+    font-family: 'Encode Sans Expanded';
   }
 
   /* Divider başlığın hemen altında */
@@ -320,6 +332,7 @@
     flex-direction: column;
     align-items: flex-start; 
     gap: 12px;
+    font-family: 'Encode Sans Expanded';
   }
 
   .footer-bottom-right {
