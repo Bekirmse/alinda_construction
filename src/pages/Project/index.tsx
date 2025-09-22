@@ -17,8 +17,8 @@ type Project = {
   stats: [StatBox, StatBox];
   buttonText: string;
   location: string;
-  completionDate: string;
-  price: string;
+  // completionDate: string;
+  // price: string;
   features: string[];
   roomTypes: string[];
 };
@@ -27,28 +27,27 @@ const projectData: Project[] = [
   {
     slug: "proje-1",
     image: iletisimImage,
-    title: "PROJE ISMI!",
+    title: "Alinda 08",
     subtitle: "PROJE 1",
     stats: [
-      { label: "DAİRE", value: "105" },
-      { label: "ALAN", value: "36657 M²" },
+      { label: "DAİRE", value: "9" },
+      { label: "ALAN", value: "680 M²" },
     ],
     buttonText: "PROJE 1 KATALOG →",
-    location: "İskele, KKTC",
-    completionDate: "Aralık 2026",
-    price: "100.000 STG",
+    location: "Lefkoşa, KKTC",
+    // completionDate: "Aralık 2026",
+    // price: "100.000 STG",
     features: [
-      "Merkezi Konum",
+      "Türk Koçanlı Daireler",
       "Modern Tasarım",
-      "Akıllı Ev Sistemleri",
-      "24/7 Güvenlik",
-      "Sosyal Alanlar",
-      "Spor Merkezi",
-      "Yüzme Havuzu",
       "Kapalı Otopark",
-      "Ticari Alanlar",
+      "Önü Kapanmaz Yeşil Alan",
+      "Ana Yola 2 Dakika Mesafe",
+      "Tüm Daireler Yol Cepheli",
+      "Yatırıma ve Oturmaya Uygun",
+      "Deprem Standartlarına Uygun",
     ],
-    roomTypes: ["Stüdyo", "1+1", "2+1", "3+1"],
+    roomTypes: ["2+1"],
   },
 ];
 

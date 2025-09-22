@@ -54,10 +54,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <div className="project-column-block project-column-left">
                 <h4>KONUM</h4>
                 <p>{location}</p>
-                <h4>TAMAMLANMA</h4>
+                {/* <h4>TAMAMLANMA</h4>
                 <p>{completionDate}</p>
                 <h4>BAŞLANGIÇ FİYATI</h4>
-                <p>{price}</p>
+                <p>{price}</p> */}
               </div>
             </Col>
 
