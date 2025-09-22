@@ -1,10 +1,16 @@
 import React from "react";
 import { Row, Col } from "antd";
-import { Link } from "react-router-dom"; // ✅ Link import edildi
+import { Link } from "react-router-dom";
 import "./style.css";
-import alindaWhiteLogo from "../../assets/icons/Alinda-logo-White.png";
 
-const Footer = () => {
+import alindaWhiteLogo from "../../assets/icons/Alinda-logo-White.png";
+import instaWhite from "../../assets/icons/insta_white.png";
+import facebookWhite from "../../assets/icons/facebook_white.png";
+import phoneIcon from "../../assets/icons/phone.png";
+import mailIcon from "../../assets/icons/mail.png";
+import locationIcon from "../../assets/icons/location.png";
+
+const Footer: React.FC = () => {
   return (
     <div className="footer-wrapper">
       <div className="footer-container">
@@ -28,52 +34,65 @@ const Footer = () => {
                 SATIŞ VE MÜŞTERİ HİZMETLERİ
               </p>
 
-              <div className="footer-contact-list">
-                <div className="footer-contact-item">
-                  <span className="icon phone" /> +90 548 811 09 09
-                </div>
-                <div className="footer-contact-item">
-                  <span className="icon mail" /> alindaconstruction@mail.com
-                </div>
-                <div className="footer-contact-item">
-                  <span className="icon location" /> Atatürk Caddesi, H. Şakir
-                  Kompleks, Dükkan 3, Gönyeli
-                </div>
-              </div>
+             <div className="footer-contact-list">
+  <div className="footer-contact-item">
+    <img src={phoneIcon} alt="Telefon" className="footer-contact-icon" />
+    +90 548 811 09 09
+  </div>
+  <div className="footer-contact-item">
+    <img src={mailIcon} alt="E-posta" className="footer-contact-icon" />
+    info@alindaconstruction.com
+  </div>
+  <div className="footer-contact-item">
+    <img src={locationIcon} alt="Adres" className="footer-contact-icon" />
+    Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli
+  </div>
+</div>
+
 
               {/* Sosyal Medya */}
               <div className="footer-social-block">
                 <p className="footer-section-title">SOSYAL MEDYA</p>
                 <div className="footer-divider" />
                 <div className="footer-social">
-                  <div className="social-box" />
-                  <div className="social-box" />
-
+                  <a
+                    href="https://www.instagram.com/alinda"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={instaWhite} alt="Instagram" className="social-icon" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/alinda"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={facebookWhite} alt="Facebook" className="social-icon" />
+                  </a>
                 </div>
               </div>
             </div>
           </Col>
 
           {/* Orta Blok — PROJELERİMİZ */}
-<Col xs={24} md={6} lg={7} className="footer-col">
-  <div className="footer-link-block footer-links--projects">
-    <p className="footer-section-title">PROJELERİMİZ</p>
-    <div className="footer-line2" />
-    <Link to="/projeler">Alinda 08</Link>
-  </div>
-</Col>
+          <Col xs={24} md={6} lg={7} className="footer-col">
+            <div className="footer-link-block footer-links--projects">
+              <p className="footer-section-title">PROJELERİMİZ</p>
+              <div className="footer-line2" />
+              <Link to="/projeler">Alinda 08</Link>
+            </div>
+          </Col>
 
-{/* Sağ Blok — HIZLI ERİŞİM */}
-<Col xs={24} md={6} lg={7} className="footer-col">
-  <div className="footer-link-block footer-link-block--right">
-    <p className="footer-section-title">HIZLI ERİŞİM</p>
-    <div className="footer-line2" />
-    <Link to="/about">Biz kimiz</Link>
-    <Link to="/projeler">Projeler</Link>
-    <Link to="/iletisim">İletişim</Link>
-  </div>
-</Col>
-
+          {/* Sağ Blok — HIZLI ERİŞİM */}
+          <Col xs={24} md={6} lg={7} className="footer-col">
+            <div className="footer-link-block footer-link-block--right">
+              <p className="footer-section-title">HIZLI ERİŞİM</p>
+              <div className="footer-line2" />
+              <Link to="/about">Biz kimiz</Link>
+              <Link to="/projeler">Projeler</Link>
+              <Link to="/iletisim">İletişim</Link>
+            </div>
+          </Col>
         </Row>
       </div>
 

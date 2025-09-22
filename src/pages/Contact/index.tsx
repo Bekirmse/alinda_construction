@@ -5,11 +5,13 @@ import Header from "../../components/header";
 import iletisimImage from "../../assets/projects/iletisim.png";
 
 // İkonlar
-import addressIcon from "../../assets/icons/location_icon.png";
-import phoneIcon from "../../assets/icons/phone_icon.png";
-import mailIcon from "../../assets/icons/mail_icon.png";
+import addressIcon from "../../assets/icons/location.png";
+import phoneIcon from "../../assets/icons/phone.png";
+import mailIcon from "../../assets/icons/mail.png";
 
 import { Row, Col } from "antd";
+import instaBlack from "../../assets/icons/insta_black.png";
+import facebookBlack from "../../assets/icons/facebook_black.png";
 
 const Contact: React.FC = () => {
   return (
@@ -86,36 +88,43 @@ const Contact: React.FC = () => {
                       />
                       <h3 className="contact-subheading3">E-POSTA</h3>
                     </div>
-                    <p>alindaconstruction@mail.com</p>
+                    <p>info@alindaconstruction.com</p>
                   </div>
                 </div>
 
                 {/* Alt: Sosyal medya */}
-                <div className="contact-social contact-social--desktop">
-                  <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-                  <div className="divider-54" />
-                  <div className="social-icons">
-                    <div className="social-box" />
-                    <div className="social-box" />
-                    <div className="social-box" />
-                    <div className="social-box" />
-                  </div>
-                </div>
+               {/* Alt: Sosyal medya */}
+<div className="contact-social contact-social--desktop">
+  <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+  <div className="divider-54" />
+  <div className="social-icons">
+    <a href="https://www.instagram.com/alinda" target="_blank" rel="noopener noreferrer">
+      <img src={instaBlack} alt="Instagram" className="contact-social-icon" />
+    </a>
+    <a href="https://www.facebook.com/alinda" target="_blank" rel="noopener noreferrer">
+      <img src={facebookBlack} alt="Facebook" className="contact-social-icon" />
+    </a>
+  </div>
+</div>
+
               </div>
             </div>
           </Col>
 
           {/* ✅ Mobil sosyal medya */}
-          <Col xs={24} md={0} className="contact-social contact-social--mobile">
-            <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-            <div className="divider-54" />
-            <div className="social-icons">
-              <div className="social-box" />
-              <div className="social-box" />
-              <div className="social-box" />
-              <div className="social-box" />
-            </div>
-          </Col>
+<Col xs={24} md={0} className="contact-social contact-social--mobile">
+  <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+  <div className="divider-54" />
+  <div className="social-icons">
+    <a href="https://www.instagram.com/alinda" target="_blank" rel="noopener noreferrer">
+      <img src={instaBlack} alt="Instagram" className="contact-social-icon" />
+    </a>
+    <a href="https://www.facebook.com/alinda" target="_blank" rel="noopener noreferrer">
+      <img src={facebookBlack} alt="Facebook" className="contact-social-icon" />
+    </a>
+  </div>
+</Col>
+
 
           {/* Sağ Harita Bölgesi */}
           <Col xs={24} md={12}>

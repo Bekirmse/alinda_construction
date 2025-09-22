@@ -66,7 +66,7 @@
   max-width: 346px;
   height: 1px;
   background-color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
   margin-left: 12px;
 }
 
@@ -80,8 +80,15 @@
   font-weight: 300;
   font-size: clamp(14px, 1.3vw, 16px);
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   margin-left: 12px;
+  margin-top: 32px;
+}
+.footer-contact-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* Linkler */
@@ -105,7 +112,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   margin-left: 12px;
 }
 
@@ -144,10 +151,16 @@
 
 .footer-social {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   margin-left: 12px;
 }
-
+.social-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
 .social-box {
   width: 24px;
   height: 24px;

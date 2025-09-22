@@ -34,15 +34,15 @@
 
 /* === Logo === */
 .header-logo {
-  width: clamp(48px, 5vw, 80px);
-  height: clamp(48px, 5vw, 80px);
+  width:  110px;
+  height: 110px;
   object-fit: contain;
 }
 
 /* === Butonlar === */
 .header-buttons {
   display: flex;
-  gap: 50px;
+  gap: 10px;
   /* butonlar arası mesafe */
   align-items: center;
   /* dikey ortalama */
@@ -51,7 +51,7 @@
 .header-button {
   min-width: clamp(80px, 8vw, 106px);
   height: clamp(30px, 4vw, 34px);
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
   font-family: "Encode Sans Expanded";
   border: none;
