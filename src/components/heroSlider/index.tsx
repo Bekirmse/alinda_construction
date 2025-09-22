@@ -1,11 +1,45 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+// src/components/heroSlider/index.tsx
+/* eslint-disable no-console */
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import "./style.css";
 import SlideContent from "../heroSliderItems";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// ===== Debug helpers =====
+const DEBUG = true;
+const HS = "[HeroSlider]";
 
-// Görseller
+function log(tag: string, ...args: any[]) {
+  if (!DEBUG) return;
+  // collapsed group daha okunaklı
+  // @ts-ignore
+  console.groupCollapsed?.(`${HS} ${tag}`);
+  console.log(...args);
+  // @ts-ignore
+  console.groupEnd?.();
+}
+
+function logError(tag: string, error: unknown) {
+  console.error(`${HS} ${tag}:`, error);
+  // stack’i mutlaka göster
+  try {
+    console.error(`${HS} ${tag} stack:`, (error as any)?.stack);
+  } catch {}
+  console.trace?.();
+}
+
+// herhangi bir handler’ı güvenle sarmalamak için
+function safe<T extends (...a: any[]) => any>(fn: T, label: string): T {
+  // @ts-ignore
+  return ((...args: any[]) => {
+    try {
+      return fn(...args);
+    } catch (e) {
+      logError(label, e);
+    }
+  }) as T;
+}
+
+// ===== Slides (örnek) =====
 const slides = [
   {
     image: require("../../assets/projects/proje1.jpg"),
@@ -16,94 +50,179 @@ const slides = [
 ];
 
 const HeroSlider: React.FC = () => {
-  const extended = [slides[slides.length - 1], ...slides, slides[0]];
+  const isSingle = slides.length <= 1;
 
+  // Hook'lar (koşulsuz)
+  const extended = [slides[slides.length - 1], ...slides, slides[0]];
   const [index, setIndex] = useState(1);
   const [noTransition, setNoTransition] = useState(false);
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const touchStartX = useRef<number | null>(null);
   const jumpingRef = useRef(false);
+  const mountedRef = useRef(true);
 
-  // Daima sağa adım
-  const next = useCallback(() => {
-    if (noTransition || jumpingRef.current) return;
-    setIndex((i) => i + 1);
-  }, [noTransition]);
-
-  // Autoplay başlat
-  const startTimer = useCallback(() => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(next, 4000);
-  }, [next]);
-
+  // Mount/unmount
   useEffect(() => {
-    startTimer();
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [startTimer]);
+    mountedRef.current = true;
+    log("MOUNT", { isSingle, slides: slides.length, extended: extended.length });
 
-  // Aktif slide hesaplama
+    // global error yakalayıcılar (sadece komponent yaşarken)
+    const onWinError = (ev: ErrorEvent) => {
+      logError("window.onerror", ev.error || ev.message);
+    };
+    const onUnhandled = (ev: PromiseRejectionEvent) => {
+      logError("window.unhandledrejection", ev.reason);
+    };
+    window.addEventListener("error", onWinError);
+    window.addEventListener("unhandledrejection", onUnhandled);
+
+    return () => {
+      mountedRef.current = false;
+      if (timerRef.current) clearInterval(timerRef.current);
+      window.removeEventListener("error", onWinError);
+      window.removeEventListener("unhandledrejection", onUnhandled);
+      log("UNMOUNT");
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Sonraki slayt
+  const next = safe(
+    useCallback(() => {
+      if (isSingle || noTransition || jumpingRef.current) {
+        log("next: skipped", { isSingle, noTransition, jumping: jumpingRef.current });
+        return;
+      }
+      setIndex((i) => {
+        const ni = i + 1;
+        log("next: setIndex", { from: i, to: ni });
+        return ni;
+      });
+    }, [isSingle, noTransition]),
+    "next()"
+  );
+
+  // Autoplay
+  const startTimer = safe(
+    useCallback(() => {
+      if (isSingle) {
+        log("startTimer: skipped (single slide)");
+        return;
+      }
+      if (timerRef.current) {
+        log("startTimer: clear existing");
+        clearInterval(timerRef.current);
+      }
+      timerRef.current = setInterval(next, 4000);
+      log("startTimer: started");
+    }, [isSingle, next]),
+    "startTimer()"
+  );
+
+  useEffect(
+    safe(() => {
+      if (isSingle) {
+        log("autoplay effect: single slide, no timer");
+        return () => {};
+      }
+      startTimer();
+      return () => {
+        if (timerRef.current) {
+          log("autoplay effect cleanup: clear timer");
+          clearInterval(timerRef.current);
+        }
+      };
+    }, "autoplay useEffect"),
+    [isSingle, startTimer]
+  );
+
   const realActive = (index - 1 + slides.length) % slides.length;
 
-  // Dot click → ileriye kaydır
-  const goToDot = (targetReal: number) => {
+  const goToDot = safe((targetReal: number) => {
+    if (isSingle) return;
     const n = slides.length;
     const stepsForward = (targetReal - realActive + n) % n;
+    log("goToDot", { targetReal, realActive, stepsForward });
     if (stepsForward === 0) return;
-    setIndex((idx) => idx + stepsForward);
-  };
+    setIndex((idx) => {
+      const ni = idx + stepsForward;
+      log("goToDot: setIndex", { from: idx, to: ni });
+      return ni;
+    });
+  }, "goToDot()");
 
-  // Swipe hareketi
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchStart = safe((e: React.TouchEvent<HTMLDivElement>) => {
+    if (isSingle) return;
     touchStartX.current = e.touches[0].clientX;
-  };
-  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    log("touchStart", { x: touchStartX.current });
+  }, "handleTouchStart()");
+
+  const handleTouchEnd = safe((e: React.TouchEvent<HTMLDivElement>) => {
+    if (isSingle) return;
     if (touchStartX.current === null) return;
     const diff = touchStartX.current - e.changedTouches[0].clientX;
+    log("touchEnd", { start: touchStartX.current, end: e.changedTouches[0].clientX, diff });
     if (Math.abs(diff) > 50) next();
     touchStartX.current = null;
-  };
+  }, "handleTouchEnd()");
 
-  // Sessiz atlama
+  const jumpSilently = safe((to: number) => {
+    if (isSingle) return;
+    log("jumpSilently:start", { to });
+    jumpingRef.current = true;
+    if (timerRef.current) clearInterval(timerRef.current);
 
-const jumpSilently = (to: number) => {
-  // kilidi aç
-  jumpingRef.current = true;
-
-  if (timerRef.current) clearInterval(timerRef.current);
-
-  setNoTransition(true);
-
-  requestAnimationFrame(() => {
-    setIndex(to);
-
+    setNoTransition(true);
     requestAnimationFrame(() => {
-      setNoTransition(false);
+      if (!mountedRef.current) return;
+      setIndex(to);
+      log("jumpSilently:setIndex", { to });
 
-      // burada kilidi hemen kapatma!
-      setTimeout(() => {
-        jumpingRef.current = false; // ✅ sadece gecikmeyle kapat
-        startTimer();
-      }, 100); // 100ms → transition event bitmiş olur
+      requestAnimationFrame(() => {
+        if (!mountedRef.current) return;
+        setNoTransition(false);
+        setTimeout(() => {
+          if (!mountedRef.current) return;
+          jumpingRef.current = false;
+          log("jumpSilently:end → restart timer");
+          startTimer();
+        }, 120);
+      });
     });
-  });
-};
+  }, "jumpSilently()");
 
-  // Transition bittiğinde kontrol
-const handleTransitionEnd = () => {
-  // Eğer zıplama sürecindeysek hiçbir şey yapma
-  if (jumpingRef.current) return;
+  const handleTransitionEnd = safe(() => {
+    if (isSingle) return;
+    if (jumpingRef.current) {
+      log("transitionEnd: ignored (jumping)");
+      return;
+    }
+    log("transitionEnd", { index, extLen: extended.length });
 
-  if (index === extended.length - 1) {
-    // sondaki clone → gerçek 1. slayt
-    jumpSilently(1);
-  } else if (index === 0) {
-    // baştaki clone → gerçek son slayt
-    jumpSilently(extended.length - 2);
+    if (index === extended.length - 1) {
+      jumpSilently(1);
+    } else if (index === 0) {
+      jumpSilently(extended.length - 2);
+    }
+  }, "handleTransitionEnd()");
+
+  // Tek slayt: statik render
+  if (isSingle) {
+    const s = slides[0];
+    log("render: single slide", { index });
+    return (
+      <div className="hero-slider">
+        <div className="hero-slide">
+          <img src={s.image} alt={s.title} className="hero-image" />
+          <div className="hero-gradient" />
+          <SlideContent title={s.title} description={s.description} />
+        </div>
+      </div>
+    );
   }
-};
+
+  log("render", { index, noTransition, realActive });
 
   return (
     <div
@@ -119,7 +238,7 @@ const handleTransitionEnd = () => {
         {extended.map((slide, i) => (
           <div className="hero-slide" key={i}>
             <img src={slide.image} alt={slide.title} className="hero-image" />
-            <div className="hero-gradient"></div>
+            <div className="hero-gradient" />
             <SlideContent title={slide.title} description={slide.description} />
           </div>
         ))}
