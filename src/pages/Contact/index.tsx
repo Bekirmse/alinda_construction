@@ -9,11 +9,43 @@ import addressIcon from "../../assets/icons/location.png";
 import phoneIcon from "../../assets/icons/phone.png";
 import mailIcon from "../../assets/icons/mail.png";
 
-import { Row, Col } from "antd";
+import { Row, Col, message } from "antd";
 import instaBlack from "../../assets/icons/insta_black.png";
 import facebookBlack from "../../assets/icons/facebook_black.png";
 
+// ✅ Form bileşeni
+import ContactForm from "../../components/contactForm";
+
 const Contact: React.FC = () => {
+  // Form submit – Formspree endpoint’e gönder
+  const handleContactSubmit = async (values: {
+    fullName: string;
+    email: string;
+    phone: string;
+    subject: string;
+    message: string;
+  }) => {
+    try {
+      const resp = await fetch("https://formspree.io/f/xeorqggj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({}));
+        throw new Error(err?.error || "Gönderim başarısız oldu.");
+      }
+
+      message.success("Mesajınız başarıyla gönderildi.");
+    } catch (e: any) {
+      message.error(e?.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
+    }
+  };
+
   return (
     <main className="contact-page">
       {/* Hero Görsel */}
@@ -92,39 +124,68 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Alt: Sosyal medya */}
-               {/* Alt: Sosyal medya */}
-<div className="contact-social contact-social--desktop">
-  <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-  <div className="divider-54" />
-  <div className="social-icons">
-    <a href="https://www.instagram.com/alinda" target="_blank" rel="noopener noreferrer">
-      <img src={instaBlack} alt="Instagram" className="contact-social-icon" />
-    </a>
-    <a href="https://www.facebook.com/alinda" target="_blank" rel="noopener noreferrer">
-      <img src={facebookBlack} alt="Facebook" className="contact-social-icon" />
-    </a>
-  </div>
-</div>
-
+                {/* Alt: Sosyal medya (desktop) */}
+                <div className="contact-social contact-social--desktop">
+                  <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+                  <div className="divider-54" />
+                  <div className="social-icons">
+                    <a
+                      href="https://www.instagram.com/alinda"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={instaBlack}
+                        alt="Instagram"
+                        className="contact-social-icon"
+                      />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/alinda"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={facebookBlack}
+                        alt="Facebook"
+                        className="contact-social-icon"
+                      />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </Col>
 
-          {/* ✅ Mobil sosyal medya */}
-<Col xs={24} md={0} className="contact-social contact-social--mobile">
-  <h3 className="contact-subheading">SOSYAL MEDYA</h3>
-  <div className="divider-54" />
-  <div className="social-icons">
-    <a href="https://www.instagram.com/alinda" target="_blank" rel="noopener noreferrer">
-      <img src={instaBlack} alt="Instagram" className="contact-social-icon" />
-    </a>
-    <a href="https://www.facebook.com/alinda" target="_blank" rel="noopener noreferrer">
-      <img src={facebookBlack} alt="Facebook" className="contact-social-icon" />
-    </a>
-  </div>
-</Col>
-
+          {/* Mobil sosyal medya */}
+          <Col xs={24} md={0} className="contact-social contact-social--mobile">
+            <h3 className="contact-subheading">SOSYAL MEDYA</h3>
+            <div className="divider-54" />
+            <div className="social-icons">
+              <a
+                href="https://www.instagram.com/alinda"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={instaBlack}
+                  alt="Instagram"
+                  className="contact-social-icon"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/alinda"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={facebookBlack}
+                  alt="Facebook"
+                  className="contact-social-icon"
+                />
+              </a>
+            </div>
+          </Col>
 
           {/* Sağ Harita Bölgesi */}
           <Col xs={24} md={12}>
@@ -139,6 +200,22 @@ const Contact: React.FC = () => {
             </div>
           </Col>
         </Row>
+      </section>
+
+      {/* ✅ HARİTA ALTINA FORM */}
+      <section
+        className="contact-form-wrapper"
+        aria-label="İletişim Formu Bölümü"
+      >
+        <div className="contact-form-container">
+          <ContactForm
+            subtitle="Hızlı İletişim"
+            title="İletişim Formu"
+            submitText="Gönder"
+            onSubmit={handleContactSubmit}
+            className="alinda-form-override"
+          />
+        </div>
       </section>
 
       {/* sadece mobilde görünsün */}
