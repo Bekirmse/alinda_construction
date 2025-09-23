@@ -1,5 +1,5 @@
-import React from "react";
-import { Form, Input, Button, Row, Col, Typography } from "antd";
+import React, { useState } from "react";
+import { Form, Input, Button, Row, Col, Typography, Alert } from "antd";
 import "./style.css";
 
 const { Title, Text } = Typography;
@@ -17,7 +17,6 @@ type ContactFormProps = {
   subtitle?: string;
   submitText?: string;
   onSubmit?: (values: ContactFormValues) => Promise<void> | void;
-  loading?: boolean;
   className?: string;
 };
 
@@ -29,20 +28,27 @@ const ContactForm: React.FC<ContactFormProps> = ({
   subtitle = "Hızlı iletişim",
   submitText = "Gönder",
   onSubmit,
-  loading = false,
   className = "",
 }) => {
   const [form] = Form.useForm<ContactFormValues>();
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
 
   const handleFinish = async (values: ContactFormValues) => {
-    if (onSubmit) {
-      await onSubmit(values);
-    } else {
-      // Şimdilik sadece konsola yaz – backend ekleyince burayı bağlayacağız
-      // eslint-disable-next-line no-console
-      console.log("Contact form:", values);
+    try {
+      setLoading(true);
+      setStatus(null);
+
+      if (onSubmit) {
+        await onSubmit(values);
+        setStatus("success");
+        form.resetFields();
+      }
+    } catch (err) {
+      setStatus("error");
+    } finally {
+      setLoading(false);
     }
-    form.resetFields(["subject", "message"]);
   };
 
   return (
@@ -59,6 +65,24 @@ const ContactForm: React.FC<ContactFormProps> = ({
             {title}
           </Title>
         </div>
+
+        {/* ✅ Başarı/Hata mesajları */}
+        {status === "success" && (
+          <Alert
+            message="Mesajınız başarıyla gönderildi."
+            type="success"
+            showIcon
+            className="mb-16"
+          />
+        )}
+        {status === "error" && (
+          <Alert
+            message="Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
+            type="error"
+            showIcon
+            className="mb-16"
+          />
+        )}
 
         <Form<ContactFormValues>
           form={form}
@@ -145,6 +169,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   size="large"
                   loading={loading}
                   className="alinda-submit-btn"
+                  block
                 >
                   {submitText}
                 </Button>

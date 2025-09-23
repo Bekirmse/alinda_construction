@@ -9,7 +9,7 @@ import addressIcon from "../../assets/icons/location.png";
 import phoneIcon from "../../assets/icons/phone.png";
 import mailIcon from "../../assets/icons/mail.png";
 
-import { Row, Col, message } from "antd";
+import { Row, Col } from "antd";
 import instaBlack from "../../assets/icons/insta_black.png";
 import facebookBlack from "../../assets/icons/facebook_black.png";
 
@@ -17,7 +17,7 @@ import facebookBlack from "../../assets/icons/facebook_black.png";
 import ContactForm from "../../components/contactForm";
 
 const Contact: React.FC = () => {
-  // Form submit – Formspree endpoint’e gönder
+  // Form submit – sadece Formspree endpoint’e gönder
   const handleContactSubmit = async (values: {
     fullName: string;
     email: string;
@@ -25,24 +25,18 @@ const Contact: React.FC = () => {
     subject: string;
     message: string;
   }) => {
-    try {
-      const resp = await fetch("https://formspree.io/f/xeorqggj", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+    const resp = await fetch("https://formspree.io/f/xeorqggj", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(values),
+    });
 
-      if (!resp.ok) {
-        const err = await resp.json().catch(() => ({}));
-        throw new Error(err?.error || "Gönderim başarısız oldu.");
-      }
-
-      message.success("Mesajınız başarıyla gönderildi.");
-    } catch (e: any) {
-      message.error(e?.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err?.error || "Gönderim başarısız oldu.");
     }
   };
 
