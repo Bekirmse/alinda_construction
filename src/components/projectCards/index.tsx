@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
 
         <div className="project-grid-content">
-          <Row gutter={[48, 32]}>
+          <Row gutter={[0, 32]}>
             <Col xs={24} md={8}>
               <div className="project-column-block project-column-left">
                 <h4>KONUM</h4>
@@ -94,7 +94,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             ALANLARINI YAKINDAN KEŞFEDİN.
           </div>
           <button className="project-virtual-button">
-            PROJE 1 360° SANAL TURU GÖRÜNTÜLE
+            Alinda 08 360° SANAL TURU GÖRÜNTÜLE
           </button>
           <div className="project-virtual-note">
             NOT: SANAL TUR YENİ BİR SEKMEDE AÇILACAKTIR.

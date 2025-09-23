@@ -19,7 +19,7 @@
 }
 
 /* === Ortadaki Beyaz İçerik Alanı === */
-.project-white-block { width:100%; height:1800px; background:#fff; position:relative; }
+.project-white-block { width:100%; height:1800px; background:#fff; position:relative; margin: 0px !important; }
 
 /* === İki adet İstatistik Kutusu === */
 .project-stats-container{
@@ -62,7 +62,7 @@
 .project-bottom-white{ width:100%; height:525px; background:#fff; }
 
 /* === İçerik grid === */
-.project-grid-content{ max-width:1200px; margin:100px auto 0; padding:0 16px; }
+.project-grid-content{ max-width:1200px; margin:100px auto 0; padding:0 0px; }
 .project-column-block{ display:flex; flex-direction:column; align-items:flex-start; }
 .project-column-block h4{ font-size:14px; margin:0 0 4px; color:#4E4E4E; text-transform:uppercase; line-height:1; }
 .project-column-left{ align-items:flex-start; text-align:left; }
@@ -91,9 +91,9 @@
 @media (max-width: 768px){
   .project-top-image-wrapper{ height:400px; }
   .project-overlay-title{ font-size:36px; padding:0 16px; white-space:normal; }
-  .project-white-block{ height:auto; padding:32px 16px; }
-  .project-stats-container{ flex-direction:column; padding:0 16px; gap:32px; margin-top:64px; }
-  .project-stat-box{ width:100%; height:auto; padding:120px 16px 32px; }
+  .project-white-block{ height:auto; margin-left: 20px; margin-right: 20px; }
+  .project-stats-container{ flex-direction:column; padding:0 0px; gap:32px; margin-top:64px; }
+  .project-stat-box{ width:100%; height:auto; padding:120px 0px 32px; }
   .project-stat-icon{ width:64px; height:64px; top:24px; left:16px; }
   .project-stat-label{ top:28px; left:96px; font-size:12px; }
   .project-stat-value{ top:52px; left:96px; font-size:36px; }

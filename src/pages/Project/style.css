@@ -35,8 +35,6 @@
   margin: 0;
 }
 
-.
-
 /* Stat kutuları (DAİRE / ALAN) */
 .project-page .stat-box,
 .project-page .stat-box * {
@@ -66,4 +64,116 @@
   font-family: 'Encode Sans Expanded' !important;
   font-weight: 300 !important;
   text-decoration: none;
+}
+/* === Responsive — sadece mobilde her şey ortalansın === */
+@media (max-width: 768px) {
+  /* Üst görsel */
+  .project-top-image-wrapper { height: 400px; }
+  .project-overlay-title {
+    font-size: 36px;
+    padding: 0 16px;
+    white-space: normal;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  /* Beyaz içerik alanı */
+  .project-white-block {
+    height: auto;
+    margin: 0 0px;           /* kenarlıklar eşit */
+    text-align: center;       /* varsayılan ortalama */
+  }
+
+  /* Stat kutuları (DAİRE / ALAN) */
+  .project-stats-container {
+    flex-direction: column;
+    align-items: center;      /* kutuları yatayda ortala */
+    gap: 32px;
+    padding: 0;
+    margin-top: 64px;
+  }
+  .project-stat-box {
+    width: 100%;
+    max-width: 360px;         /* güzel bir mobil genişliği */
+    height: auto;
+    padding: 120px 0 32px;
+    position: relative;
+    text-align: center;
+  }
+  .project-stat-icon {
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);   /* ikon ortada */
+    width: 64px;
+    height: 64px;
+  }
+  .project-stat-label,
+  .project-stat-value {
+    left: 50%;
+    transform: translateX(-50%);   /* metinler de ortada */
+    text-align: center;
+  }
+  .project-stat-label { top: 28px; font-size: 12px; }
+  .project-stat-value { top: 52px; font-size: 36px; }
+
+  /* İçerik grid’i ve kolonlar */
+  .project-grid-content {
+    margin-top: 64px;
+    padding: 0 16px;
+  }
+  .project-column-block {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .project-column-left,
+  .project-column-center,
+  .project-column-right {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .project-column-center ul,
+  .project-column-right ul {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Bölücüler */
+  .project-divider,
+  .project-divider-bottom {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1759px;
+    margin-top: 48px !important;
+    margin-bottom: 64px !important;
+  }
+
+  /* Sanal tur alanı */
+  .project-virtual-tour {
+    margin-top: 48px !important;
+    padding: 0 16px;
+    text-align: center;
+  }
+  .project-virtual-title { font-size: 32px !important; margin-bottom: 16px; }
+  .project-virtual-subtitle { font-size: 14px !important; margin: 0 auto 20px; }
+  .project-virtual-button {
+    width: 100%;
+    max-width: 360px;
+    font-size: 14px !important;
+    margin: 0 auto 24px;
+    display: block;
+  }
+  .project-virtual-note {font-size: 14px !important;  margin: 0 auto; }
+
+  /* Slider */
+  .project-slider-section { height: 320px; }
+  .slider-arrow { width: 48px; height: 48px; }
+  .slider-arrow::before {
+    width: 20px; height: 20px;
+    border-right: 6px solid #fff; border-bottom: 6px solid #fff;
+  }
+
+  /* Alt beyaz blok */
+  .project-bottom-white { height: auto; padding: 32px 16px; }
 }
