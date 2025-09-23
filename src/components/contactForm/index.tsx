@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Input, Button, Row, Col, Typography, Alert } from "antd";
 import "./style.css";
 
@@ -41,15 +41,23 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
       if (onSubmit) {
         await onSubmit(values);
-        setStatus("success");
+        setStatus("success"); // ✅ başarılı
         form.resetFields();
       }
     } catch (err) {
-      setStatus("error");
+      setStatus("error"); // ✅ başarısız
     } finally {
       setLoading(false);
     }
   };
+
+  // ✅ 5 saniye sonra otomatik kapatma
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => setStatus(null), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   return (
     <section
@@ -77,7 +85,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         )}
         {status === "error" && (
           <Alert
-            message="Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
+            message="Mesaj gönderilemedi. Lütfen tekrar deneyin."
             type="error"
             showIcon
             className="mb-16"
