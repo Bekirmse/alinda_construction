@@ -108,7 +108,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="project-slider-section">
         <button className="slider-arrow left" aria-label="Önceki" type="button" />
         <img src={image} alt="Slide Görsel" className="project-slider-image" />
-        <button className="slider-arrow right" aria-label="Sonraki" type="button" />
+        <button className="slider-arrow right" aria-label="Sonraki" type="button"></button>
       </div>
 
       <div className="project-bottom-white" />
