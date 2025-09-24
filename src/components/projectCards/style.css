@@ -73,11 +73,12 @@
 .project-stat-icon {
   width: clamp(56px, 4.4vw, 84px);
   height: clamp(56px, 4.4vw, 84px);
-  background: #D9D9D9;
+  object-fit: contain;   /* PNG doğru oranda görünsün */
   position: absolute;
   top: clamp(32px, 1.7vw, 33px);
   left: clamp(16px, 1.8vw, 34px);
 }
+
 
 .project-stat-label {
   position: absolute;

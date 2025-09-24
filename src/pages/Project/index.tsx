@@ -27,8 +27,10 @@ import Alinda8_16 from "../../assets/images/Alinda8_gallery/Alinda8_16.jpg";
 import Alinda8_17 from "../../assets/images/Alinda8_gallery/Alinda8_17.jpg";
 import Alinda8_18 from "../../assets/images/Alinda8_gallery/Alinda8_18.jpg";
 import Alinda8_19 from "../../assets/images/Alinda8_gallery/Alinda8_19.jpg";
+import DaireIcon from "../../assets/icons/ProjeIcon/daireler.png";
+import AlanIcon from "../../assets/icons/ProjeIcon/m2.png";
 
-type StatBox = { label: string; value: string };
+type StatBox = { label: string; value: string; icon?: string };
 
 type Project = {
   slug: string;
@@ -70,9 +72,9 @@ const projectData: Project[] = [
     ],
     title: "Alinda 8",
     subtitle: "PROJE 1",
-    stats: [
-      { label: "DAİRE", value: "9" },
-      { label: "ALAN", value: "680 M²" },
+     stats: [
+      { label: "DAİRE", value: "9", icon: DaireIcon },
+      { label: "ALAN", value: "680 M²", icon: AlanIcon },
     ],
     buttonText: "PROJE 1 KATALOG →",
     location: "Lefkoşa, KKTC",

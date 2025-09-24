@@ -5,11 +5,13 @@ import "./style.css";
 interface StatBox {
   label: string;
   value: string;
+  icon?: string;
+  
 }
 
 interface ProjectCardProps {
-  image: string; // ✅ Üstte görünen tek resim
-  gallery?: string[]; // ✅ Footer üstündeki slider için çoklu resim
+  image: string;           // ✅ Üstte görünen tek resim
+  gallery?: string[];      // ✅ Footer üstündeki slider için çoklu resim
   title?: string;
   stats?: [StatBox, StatBox];
   location?: string;
@@ -50,17 +52,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* PROJE DETAY BLOĞU */}
       <div className="project-white-block">
-        {stats && (
-          <div className="project-stats-container">
-            {stats.map((s, i) => (
-              <div className="project-stat-box" key={i}>
-                <div className="project-stat-icon" />
-                <div className="project-stat-label">{s.label}</div>
-                <div className="project-stat-value">{s.value}</div>
-              </div>
-            ))}
-          </div>
+       {stats && (
+  <div className="project-stats-container">
+    {stats.map((s, i) => (
+      <div className="project-stat-box" key={i}>
+        {s.icon && (
+          <img
+            src={s.icon}
+            alt={s.label}
+            className="project-stat-icon"
+          />
         )}
+        <div className="project-stat-label">{s.label}</div>
+        <div className="project-stat-value">{s.value}</div>
+      </div>
+    ))}
+  </div>
+)}
+
 
         <div className="project-grid-content">
           <Row gutter={[0, 32]}>
