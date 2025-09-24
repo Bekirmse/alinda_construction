@@ -55,7 +55,7 @@
     padding-top: 93px;
     align-items: center;
     text-align: center;
-    background-color: #212121;
+    background-color: #fff;
     height: 400px;
   }
 
@@ -76,6 +76,7 @@
     margin: 0;
     width: 100%;
     margin-top: 0px !important;
+    color: #000 !important;
   }
 
   /* Açıklama */
@@ -84,7 +85,7 @@
     font-weight: 300;
     font-size: 13px;
     line-height: 1;
-    color: #FFFFFF;
+    color: #000;
     margin: 0;
     width: 100%;
   }

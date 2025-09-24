@@ -30,7 +30,7 @@ type Slide = {
 
 const slides: Slide[] = images.map((img: string, index: number) => ({
   image: img,
-  title: `Alinda 8`,
+  title: `ALİNDA 8`,
   description: "Bu slaytın açıklaması buraya gelecek.",
 }));
 

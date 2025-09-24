@@ -99,22 +99,23 @@
 
 /* Dot (pill) – inaktif */
 .hero-dot {
-  width: 48px;
-  height: 8px;
-  border-radius: 3px;
+  width: 48px;      /* sabit kısa */
+  height: 4px;      /* ✅ inceltildi */
+  border-radius: 0; /* ✅ köşeli */
   background: #757575;
   box-shadow: -1px 1px 4px 0px #00000040;
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: width 220ms ease, background-color 220ms ease, opacity 220ms ease;
+  transition: background-color 220ms ease, opacity 220ms ease;
   opacity: 0.9;
   position: relative;
 }
 
 /* Aktif dot */
 .hero-dot.active {
-  width: 64px;
+  width: 64px;   /* ✅ uzun */
+  height: 4px;   /* incelik aynı */
   background: #ffffff;
   opacity: 1;
 }

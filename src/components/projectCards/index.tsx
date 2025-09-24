@@ -8,8 +8,8 @@ interface StatBox {
 }
 
 interface ProjectCardProps {
-  image: string;           // ✅ Üstte görünen tek resim
-  gallery?: string[];      // ✅ Footer üstündeki slider için çoklu resim
+  image: string; // ✅ Üstte görünen tek resim
+  gallery?: string[]; // ✅ Footer üstündeki slider için çoklu resim
   title?: string;
   stats?: [StatBox, StatBox];
   location?: string;
@@ -104,7 +104,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             ALANLARINI YAKINDAN KEŞFEDİN.
           </div>
           <button className="project-virtual-button">
-            Alinda 08 360° SANAL TURU GÖRÜNTÜLE
+            ALİNDA 8 360° SANAL TURU GÖRÜNTÜLE
           </button>
           <div className="project-virtual-note">
             NOT: SANAL TUR YENİ BİR SEKMEDE AÇILACAKTIR.
