@@ -66,7 +66,7 @@
   text-decoration: none;
 }
 /* === Responsive — sadece mobilde her şey ortalansın === */
-@media (max-width: 768px) {
+@media (max-width: 810px) {
   /* Üst görsel */
   .project-top-image-wrapper { height: 400px; }
   .project-overlay-title {
