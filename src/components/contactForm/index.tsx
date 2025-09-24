@@ -25,7 +25,7 @@ const phoneRegex =
 
 const ContactForm: React.FC<ContactFormProps> = ({
   title = "İletişim Formu",
-  subtitle = "Hızlı iletişim",
+  subtitle = "Hızlı İletişim",
   submitText = "Gönder",
   onSubmit,
   className = "",
@@ -41,17 +41,16 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
       if (onSubmit) {
         await onSubmit(values);
-        setStatus("success"); // ✅ başarılı
+        setStatus("success");
         form.resetFields();
       }
     } catch (err) {
-      setStatus("error"); // ✅ başarısız
+      setStatus("error");
     } finally {
       setLoading(false);
     }
   };
 
-  // ✅ 5 saniye sonra otomatik kapatma
   useEffect(() => {
     if (status) {
       const timer = setTimeout(() => setStatus(null), 5000);
@@ -74,7 +73,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
           </Title>
         </div>
 
-        {/* ✅ Başarı/Hata mesajları */}
         {status === "success" && (
           <Alert
             message="Mesajınız başarıyla gönderildi."
@@ -104,9 +102,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
               <Form.Item
                 label="Adınız Soyadınız"
                 name="fullName"
-                rules={[{ required: true, message: "Lütfen ad soyad giriniz." }]}
+                rules={[
+                  { required: true, message: "Lütfen ad soyad giriniz." },
+                ]}
               >
-                <Input placeholder="Adınız Soyadınız" />
+                <Input placeholder="" />
               </Form.Item>
             </Col>
 
@@ -119,7 +119,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   { type: "email", message: "Geçerli bir e-posta giriniz." },
                 ]}
               >
-                <Input placeholder="E-Posta" inputMode="email" />
+                <Input placeholder="" inputMode="email" />
               </Form.Item>
             </Col>
 
@@ -128,14 +128,17 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 label="Telefon Numarası"
                 name="phone"
                 rules={[
-                  { required: true, message: "Lütfen telefon numarası giriniz." },
+                  {
+                    required: true,
+                    message: "Lütfen telefon numarası giriniz.",
+                  },
                   {
                     pattern: phoneRegex,
                     message: "Geçerli bir telefon numarası giriniz.",
                   },
                 ]}
               >
-                <Input placeholder="Telefon Numarası" inputMode="tel" />
+                <Input placeholder="" inputMode="tel" />
               </Form.Item>
             </Col>
 
@@ -148,7 +151,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   { min: 3, message: "Konu en az 3 karakter olmalı." },
                 ]}
               >
-                <Input placeholder="Konu" />
+                <Input placeholder="" />
               </Form.Item>
             </Col>
 
@@ -162,7 +165,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 ]}
               >
                 <Input.TextArea
-                  placeholder="Mesajınız"
+                  placeholder=""
                   autoSize={{ minRows: 5, maxRows: 10 }}
                   showCount
                 />

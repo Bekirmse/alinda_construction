@@ -23,18 +23,20 @@
 .header-content {
   width: 100%;
   max-width: 1440px;
-  padding: 0;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
   margin: 0 auto;
+
+  /* ✅ solda ve sağda boşluk koruma */
+  padding: 0 24px;
 }
 
 /* === Logo === */
 .header-logo {
-  width:  110px;
+  width: 110px;
   height: 110px;
   object-fit: contain;
 }
@@ -169,10 +171,12 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 1500;
 }
+
 .mobile-burger {
-    display: none;
-  
-  }
+  display: none;
+
+}
+
 @media (max-width: 768px) {
   .header-logo {
     width: 80px;
@@ -182,7 +186,8 @@
   }
 
   .header-buttons {
-    display: none; /* Projeler & Menü gizlensin */
+    display: none;
+    /* Projeler & Menü gizlensin */
   }
 
   .mobile-burger {
@@ -192,12 +197,14 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    color: white; /* default beyaz */
+    color: white;
+    /* default beyaz */
     font-size: 28px;
   }
 
   .mobile-burger.scrolled {
-    color: black; /* scroll sonrası siyah */
+    color: black;
+    /* scroll sonrası siyah */
   }
 
   .sidebar {
@@ -225,15 +232,19 @@
   .sidebar-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* ✅ yatayda ortala */
-    gap: 50px;             /* ✅ 50px boşluk */
-    margin-top: 32px;      /* logo altı boşluk */
+    align-items: center;
+    /* ✅ yatayda ortala */
+    gap: 50px;
+    /* ✅ 50px boşluk */
+    margin-top: 32px;
+    /* logo altı boşluk */
   }
 
   .sidebar-menu a {
     font-size: 22px;
     font-weight: 400;
-    text-align: center; /* ✅ metin ortalı */
+    text-align: center;
+    /* ✅ metin ortalı */
   }
 
   .sidebar-close {

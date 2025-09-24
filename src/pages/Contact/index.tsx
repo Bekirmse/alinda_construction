@@ -2,16 +2,15 @@ import React from "react";
 import "./style.css";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
-import iletisimImage from "../../assets/projects/iletisim.png";
 
 // İkonlar
-import addressIcon from "../../assets/icons/location.png";
-import phoneIcon from "../../assets/icons/phone.png";
-import mailIcon from "../../assets/icons/mail.png";
+import addressIcon from "../../assets/icons/Contact/Contact_Black/location_black.png";
+import phoneIcon from "../../assets/icons/Contact/Contact_Black/phone_black.png";
+import mailIcon from "../../assets/icons/Contact/Contact_Black/mail_black.png";
 
 import { Row, Col } from "antd";
-import instaBlack from "../../assets/icons/insta_black.png";
-import facebookBlack from "../../assets/icons/facebook_black.png";
+import instaBlack from "../../assets/icons/SocialMedia/SocialMedia_Black/insta_black.png";
+import facebookBlack from "../../assets/icons/SocialMedia/SocialMedia_Black/facebook_black.png";
 
 // ✅ Form bileşeni
 import ContactForm from "../../components/contactForm";
@@ -42,16 +41,8 @@ const Contact: React.FC = () => {
 
   return (
     <main className="contact-page">
-      {/* Hero Görsel */}
-      <div className="contact-hero">
-        <img
-          src={iletisimImage}
-          alt="İletişim"
-          className="contact-hero-image"
-        />
-      </div>
-
-      <Header />
+      {/* Bu sayfaya özel: header en baştan siyah içerik modunda kalsın */}
+      <Header fixedTheme="light" />
 
       {/* Sayfa Başlığı */}
       <section className="contact-heading-wrapper">
@@ -203,7 +194,7 @@ const Contact: React.FC = () => {
       >
         <div className="contact-form-container">
           <ContactForm
-            subtitle="Hızlı İletişim"
+            subtitle="HIZLI İLETİŞİM"
             title="İletişim Formu"
             submitText="Gönder"
             onSubmit={handleContactSubmit}

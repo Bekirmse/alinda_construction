@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col } from "antd";
 import "./style.css";
 
@@ -8,7 +8,8 @@ interface StatBox {
 }
 
 interface ProjectCardProps {
-  image: string;
+  image: string;           // ✅ Üstte görünen tek resim
+  gallery?: string[];      // ✅ Footer üstündeki slider için çoklu resim
   title?: string;
   stats?: [StatBox, StatBox];
   location?: string;
@@ -20,6 +21,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
+  gallery = [],
   title,
   stats,
   location,
@@ -28,13 +30,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   features,
   roomTypes,
 }) => {
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % gallery.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + gallery.length) % gallery.length);
+  };
+
   return (
     <section className="project-wrapper">
+      {/* ÜSTTE TEK GÖRSEL */}
       <div className="project-top-image-wrapper">
         <img src={image} alt="Proje Detay" className="project-top-image" />
         {title && <h2 className="project-overlay-title">{title}</h2>}
       </div>
 
+      {/* PROJE DETAY BLOĞU */}
       <div className="project-white-block">
         {stats && (
           <div className="project-stats-container">
@@ -54,10 +68,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <div className="project-column-block project-column-left">
                 <h4>KONUM</h4>
                 <p>{location}</p>
-                {/* <h4>TAMAMLANMA</h4>
-                <p>{completionDate}</p>
-                <h4>BAŞLANGIÇ FİYATI</h4>
-                <p>{price}</p> */}
               </div>
             </Col>
 
@@ -104,12 +114,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="project-divider-bottom" />
       </div>
 
-      {/* SLIDER */}
-      <div className="project-slider-section">
-        <button className="slider-arrow left" aria-label="Önceki" type="button" />
-        <img src={image} alt="Slide Görsel" className="project-slider-image" />
-        <button className="slider-arrow right" aria-label="Sonraki" type="button"></button>
-      </div>
+      {/* FOOTER ÜSTÜNDEKİ SLIDER */}
+      {gallery.length > 0 && (
+        <div className="project-slider-section">
+          <button
+            className="slider-arrow left"
+            aria-label="Önceki"
+            type="button"
+            onClick={prevSlide}
+          >
+            ‹
+          </button>
+
+          <img
+            src={gallery[current]}
+            alt={`Slide ${current + 1}`}
+            className="project-slider-image"
+          />
+
+          <button
+            className="slider-arrow right"
+            aria-label="Sonraki"
+            type="button"
+            onClick={nextSlide}
+          >
+            ›
+          </button>
+        </div>
+      )}
 
       <div className="project-bottom-white" />
     </section>

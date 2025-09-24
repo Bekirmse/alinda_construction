@@ -3,12 +3,12 @@ import { Row, Col } from "antd";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-import alindaWhiteLogo from "../../assets/icons/Alinda-logo-White.png";
-import instaWhite from "../../assets/icons/insta_white.png";
-import facebookWhite from "../../assets/icons/facebook_white.png";
-import phoneIcon from "../../assets/icons/phone.png";
-import mailIcon from "../../assets/icons/mail.png";
-import locationIcon from "../../assets/icons/location.png";
+import alindaWhiteLogo from "../../assets/icons/Logo/Logo_White/Alinda-logo-White.png";
+import instaWhite from "../../assets/icons/SocialMedia/SocialMedia_White/insta_white.png";
+import facebookWhite from "../../assets/icons/SocialMedia/SocialMedia_White/facebook_white.png";
+import phoneIcon from "../../assets/icons/Contact/Contact_White/phone_white.png";
+import mailIcon from "../../assets/icons/Contact/Contact_White/mail_white.png";
+import locationIcon from "../../assets/icons/Contact/Contact_White/location_white.png";
 
 const Footer: React.FC = () => {
   return (
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             <div className="footer-link-block footer-links--projects">
               <p className="footer-section-title">PROJELERİMİZ</p>
               <div className="footer-line2" />
-              <Link to="/projeler">Alinda 08</Link>
+              <Link to="/projeler">Alinda 8</Link>
             </div>
           </Col>
 

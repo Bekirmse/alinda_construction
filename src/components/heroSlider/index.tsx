@@ -1,28 +1,47 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import "./style.css";
 import SlideContent from "../heroSliderItems";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-const slides = [
-  {
-    image: require("../../assets/projects/proje1.jpg"),
-    title: "PROJE 1",
-    description:
-      "Proje 1, şehir merkezine yürüme mesafesinde, sakin bir yerleşim bölgesinde konumlanmış modern bir konut projesidir. 5 katlı tek bloktan oluşan yapı, toplam 10 daireden oluşmaktadır.",
-  },
-];
+// Resimleri dinamik al
+const importAll = (r: any): string[] =>
+  r.keys().map((key: string) => r(key));
+
+// @ts-ignore
+const images: string[] = importAll(
+  // @ts-ignore: Webpack-specific require.context
+  require.context(
+    "../../assets/images/Alinda8_home_slider",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
+type Slide = {
+  image: string;
+  title: string;
+  description: string;
+};
+
+const slides: Slide[] = images.map((img: string, index: number) => ({
+  image: img,
+  title: `Alinda 8`,
+  description: "Bu slaytın açıklaması buraya gelecek.",
+}));
 
 const AUTOPLAY_MS = 4000;
 
 const HeroSlider: React.FC = () => {
-  // [last, ...slides, first]
   const extended = useMemo(
     () => [slides[slides.length - 1], ...slides, slides[0]],
     []
   );
 
-  // preload – beyaz ekranı önlemek için
   const [ready, setReady] = useState(false);
   useEffect(() => {
     const img = new Image();
@@ -30,7 +49,7 @@ const HeroSlider: React.FC = () => {
     img.src = slides[0].image;
   }, []);
 
-  const [index, setIndex] = useState(1);      // gerçek ilk slayt
+  const [index, setIndex] = useState(1);
   const [noTransition, setNoTransition] = useState(false);
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -38,7 +57,6 @@ const HeroSlider: React.FC = () => {
   const touchStartX = useRef<number | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  // ------- autoplay -------
   const clearTimer = useCallback(() => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
@@ -56,14 +74,11 @@ const HeroSlider: React.FC = () => {
     timerRef.current = setInterval(next, AUTOPLAY_MS);
   }, [clearTimer, next]);
 
-  // sadece mount’ta
   useEffect(() => {
     startTimer();
     return clearTimer;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [startTimer, clearTimer]);
 
-  // sekmeden geri dönünce state’i toparla
   useEffect(() => {
     const onVis = () => {
       if (document.hidden) {
@@ -83,7 +98,6 @@ const HeroSlider: React.FC = () => {
     return () => document.removeEventListener("visibilitychange", onVis);
   }, [extended.length, clearTimer, startTimer]);
 
-  // dots
   const realActive = (index - 1 + slides.length) % slides.length;
   const goToDot = (targetReal: number) => {
     const n = slides.length;
@@ -92,7 +106,6 @@ const HeroSlider: React.FC = () => {
     setIndex((idx) => idx + stepsForward);
   };
 
-  // touch → hep sağa
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -103,7 +116,6 @@ const HeroSlider: React.FC = () => {
     touchStartX.current = null;
   };
 
-  // sessiz atlama
   const jumpSilently = (to: number) => {
     if (jumpingRef.current) return;
     jumpingRef.current = true;
@@ -137,7 +149,6 @@ const HeroSlider: React.FC = () => {
     }
   };
 
-  // preload tamamlanana kadar iskelet göster (yükseklik korunur)
   if (!ready) {
     return <div className="hero-slider" />;
   }
@@ -164,7 +175,7 @@ const HeroSlider: React.FC = () => {
       </div>
 
       <div className="hero-dots">
-        {slides.map((_, i) => (
+        {slides.map((_, i: number) => (
           <button
             key={i}
             className={`hero-dot ${realActive === i ? "active" : ""}`}
