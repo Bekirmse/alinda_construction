@@ -17,7 +17,6 @@ type HeaderProps = {
 
 const DEBUG = false;
 const TAG = "[Header]";
-const log = (...a: any[]) => DEBUG && console.log(TAG, ...a);
 const warn = (...a: any[]) => DEBUG && console.warn(TAG, ...a);
 const error = (...a: any[]) => DEBUG && console.error(TAG, ...a);
 
