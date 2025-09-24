@@ -276,7 +276,12 @@ h3.contact-subheading3 {
     padding-right: 25px;
     box-sizing: border-box;
   }
-
+  .alinda-contact-form {
+    padding-bottom: 0px !important;
+  }
+.alinda-contact-section {
+  padding-bottom: 0px !important;
+}
   .responsive-map {
     width: 100%;
     max-width: 100%;
@@ -296,6 +301,7 @@ h3.contact-subheading3 {
     line-height: 1;
     letter-spacing: 0;
     margin: 0;
+    margin-top: 32px;
   }
 
   .contact-section-title {

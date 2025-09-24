@@ -85,7 +85,7 @@
   font-weight: 300;
   white-space: normal;
   width: 100%;
-  font-size: clamp(28px, 8vw, 40px);
+  font-size: clamp(20px, 7vw, 40px) !important;
   text-align: center; /* ✅ yatayda ortalar */
   margin: 0 auto;     /* ✅ kutuyu ortalar */
 }

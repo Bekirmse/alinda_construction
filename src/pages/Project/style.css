@@ -70,9 +70,9 @@
   /* Üst görsel */
   .project-top-image-wrapper { height: 400px; }
   .project-overlay-title {
-    font-size: 36px;
+    font-size: clamp(33px, 6vw, 36px) !important;
     padding: 0 16px;
-    white-space: normal;
+    white-space: nowrap;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
