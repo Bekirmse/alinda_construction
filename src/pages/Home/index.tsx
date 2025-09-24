@@ -67,7 +67,7 @@ const Home = () => {
         </Row>
       </div>
       <div className="custom-section">
-        <p className="custom-text">PROJELERİMİZ</p>
+        <p className="custom-text">ALİNDA 8</p>
       </div>
 
       {/* Proje 1 */}

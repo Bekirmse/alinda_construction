@@ -86,34 +86,48 @@
   }
 
   /* Stat kutuları (DAİRE / ALAN) */
-  .project-stats-container {
-    flex-direction: column;
-    align-items: center;      /* kutuları yatayda ortala */
-    gap: 32px;
-    padding: 0;
-    margin-top: 64px;
-  }
-  .project-stat-box {
-    width: 100%;
-    max-width: 360px;         /* güzel bir mobil genişliği */
-    height: auto;
-    padding: 120px 0 32px;
-    position: relative;
-    text-align: center;
-  }
-  .project-stat-icon {
-    top: 24px;
-    left: 50%;
-    transform: translateX(-50%);   /* ikon ortada */
-    width: 64px;
-    height: 64px;
-  }
-  .project-stat-label,
-  .project-stat-value {
-    left: 50%;
-    transform: translateX(-50%);   /* metinler de ortada */
-    text-align: center;
-  }
+ .project-stats-container {
+  position: relative;
+  display: flex;
+  justify-content: center;   /* ortala */
+  flex-wrap: wrap;           /* küçük ekranlarda alt alta düşsün */
+  gap: 32px;                 /* kutular arası boşluk */
+  margin-top: 100px;
+  padding: 0 24px;           /* kenarlardan nefes aldır */
+}
+.project-stat-box {
+  flex: 1;                   /* kutular esnesin */
+  min-width: 280px;          /* çok küçülmesin */
+  max-width: 420px;          /* çok büyümesin */
+  height: 150px;
+  background: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* dikey ortalama */
+  align-items: center;       /* yatay ortalama */
+  padding: 16px;
+  text-align: center;
+}
+.project-stat-icon {
+  width: 64px;
+  height: 64px;
+  background: #D9D9D9;
+  margin-bottom: 12px;       /* ikon ile yazı arasında boşluk */
+}
+.project-stat-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #4E4E4E;
+  margin-bottom: 4px;
+}
+
+.project-stat-value {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+  white-space: nowrap;
+}
   .project-stat-label { top: 28px; font-size: 12px; }
   .project-stat-value { top: 52px; font-size: 36px; }
 

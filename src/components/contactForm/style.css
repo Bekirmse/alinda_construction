@@ -1,6 +1,6 @@
 .alinda-contact-section {
   padding: 64px 0;
-  background: #f9fbfd;
+  background: transparent !important;
 }
 
 .alinda-contact-container {
@@ -29,10 +29,10 @@
 }
 
 .alinda-contact-form {
-  background: #ffffff;
+  background: transparent !important;
   padding: 32px;
   border-radius: 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: none !important;
 }
 
 .alinda-contact-form .ant-form-item-label>label {
