@@ -158,20 +158,37 @@ body {
   height: clamp(36px, 6vw, 52px);
   font-size: clamp(14px, 4vw, 20px);
   font-weight: 300;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  transition: 0.3s ease;
+  background-color: #000;   /* normalde siyah */
+  color: #fff;              /* yazı beyaz */
+  border: 2px solid #000;   /* border ekledik */
+  transition: all 0.3s ease;
   font-family: 'Encode Sans Expanded', sans-serif;
+  cursor: pointer;
 }
 
+/* Hover efekti → outline görünüm */
 .project-detail-button:hover {
-  background-color: #333;
+  background-color: #fff;   /* arka plan beyaz */
+  color: #000;              /* yazı siyah */
+  border: 2px solid #000;   /* border siyah */
 }
-
 .iletisimButton {
+  width: clamp(100px, 35vw, 180px) !important;
+  height: clamp(36px, 6vw, 52px) !important;
   margin-top: 20px;
   font-size: 20px !important;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;     /* baştan border olsun */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* sadece bunları animasyonla */
+  box-sizing: border-box;     /* border dahil */
+}
+
+.iletisimButton:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #000 !important;
 }
 
 /* ====== Mobile ====== */

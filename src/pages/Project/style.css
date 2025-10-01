@@ -93,7 +93,8 @@
   flex-wrap: wrap;           /* küçük ekranlarda alt alta düşsün */
   gap: 32px;                 /* kutular arası boşluk */
   margin-top: 100px;
-  padding: 0 24px;           /* kenarlardan nefes aldır */
+  padding: 0 24px;     
+  
 }
 .project-stat-box {
   flex: 1;                   /* kutular esnesin */

@@ -5,7 +5,7 @@ import "./style.css";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import ProjectCard from "../../components/projectCards";
-import iletisimImage from "../../assets/projects/iletisim.png";
+import iletisimImage from "../../assets/images/Alinda8_projeBanner/Alinda8_projeBanner.png";
 
 // 📌 Proje 1 görselleri (Alinda8_gallery)
 import Alinda8_1 from "../../assets/images/Alinda8_gallery/Alinda8_1.jpg";

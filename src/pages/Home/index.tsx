@@ -6,8 +6,9 @@ import Footer from "../../components/footer";
 import { Row, Col } from "antd";
 import "./style.css";
 
-import proje3 from "../../assets/projects/proje3.png";
-import proje4 from "../../assets/projects/proje4.png";
+import Alinda8_picture_1 from "../../assets/images/Alinda8_projeBanner/Alinda8_projeBanner.png";
+import Alinda8_picture_2 from "../../assets/images/Alinda8_gallery/Alinda8_2.jpg";
+import Alinda8_picture_3 from "../../assets/images/Alinda8_gallery/Alinda8_7.jpg";
 import PrimaryButton from "../../components/primaryButton";
 import { Link } from "react-router-dom";
 
@@ -73,7 +74,7 @@ const Home = () => {
       {/* Proje 1 */}
       <Row className="project-row" gutter={[0, 0]} align="stretch">
         <Col xs={24} md={12}>
-          <img src={proje3} alt="Proje 3" className="project-image" />
+          <img src={Alinda8_picture_1} alt="Alinda8_picture_1" className="project-image" />
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo
@@ -89,7 +90,7 @@ const Home = () => {
       {/* Proje 2 */}
       <Row className="project-row reverse" gutter={[0, 0]} align="stretch">
         <Col xs={24} md={12}>
-          <img src={proje4} alt="Proje 4" className="project-image" />
+          <img src={Alinda8_picture_2} alt="Alinda8_picture_2" className="project-image" />
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo
@@ -105,7 +106,7 @@ const Home = () => {
       {/* Proje 3 */}
       <Row className="project-row" gutter={[0, 0]} align="stretch">
         <Col xs={24} md={12}>
-          <img src={proje4} alt="Proje 4" className="project-image" />
+          <img src={Alinda8_picture_3} alt="Alinda8_picture_3" className="project-image" />
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo

@@ -1,5 +1,5 @@
 .alinda-contact-section {
-  padding: 64px 0;
+  padding-bottom: 32px;
   background: transparent !important;
 }
 
@@ -80,16 +80,22 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 0;
-  background-color: #000;
-  border: none;
-  transition: background 0.2s ease;
-  color: #fff;
+
+  background-color: #000;     /* normalde siyah */
+  color: #fff;                /* yazı beyaz */
+  border: 2px solid #000;     /* border var ama siyahla aynı renk, görünmüyor */
+  cursor: pointer;
+
+  transition: all 0.3s ease;  /* yumuşak geçiş */
 }
 
 .alinda-submit-btn:hover,
 .alinda-submit-btn:focus {
-  background-color: #111 !important;
+  background-color: #fff !important;    /* hover'da beyaz */
+  color: #000 !important;                /* yazı siyah */
+  border: 2px solid #000;     /* siyah border görünür */
 }
+
 
 .mb-16 {
   margin-bottom: 16px;

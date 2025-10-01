@@ -24,7 +24,7 @@
 
 /* Başlık */
 .hero-title {
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: 'Encode Sans Expanded';
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: .04em;
@@ -56,7 +56,7 @@
   border: none;
   cursor: pointer;
 
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: 'Encode Sans Expanded';
   font-weight: 300;
   letter-spacing: .06em;
   font-size: clamp(14px, 1.6vw, 18px);
@@ -67,6 +67,7 @@
 
 .hero-button:hover {
   background-color: #eee;
+  color: #000;
 }
 
 /* Mobil düzen */
@@ -81,7 +82,7 @@
   }
 
   .hero-title {
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: 'Encode Sans Expanded';
   font-weight: 300;
   white-space: normal;
   width: 100%;
@@ -92,13 +93,5 @@
 }
 
 
-  .hero-button {
-    font-family: 'Encode Sans Expanded', sans-serif;
-    font-weight: 300;
-    width: 120px;
-    height: 28px;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 32px;
-  }
+
 }

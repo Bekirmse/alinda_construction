@@ -6,12 +6,11 @@ interface StatBox {
   label: string;
   value: string;
   icon?: string;
-  
 }
 
 interface ProjectCardProps {
-  image: string;           // ✅ Üstte görünen tek resim
-  gallery?: string[];      // ✅ Footer üstündeki slider için çoklu resim
+  image: string; // ✅ Üstte görünen tek resim
+  gallery?: string[]; // ✅ Footer üstündeki slider için çoklu resim
   title?: string;
   stats?: [StatBox, StatBox];
   location?: string;
@@ -52,24 +51,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* PROJE DETAY BLOĞU */}
       <div className="project-white-block">
-       {stats && (
-  <div className="project-stats-container">
-    {stats.map((s, i) => (
-      <div className="project-stat-box" key={i}>
-        {s.icon && (
-          <img
-            src={s.icon}
-            alt={s.label}
-            className="project-stat-icon"
-          />
+        {stats && (
+          <div className="project-stats-container">
+            {stats.map((s, i) => (
+              <div className="project-stat-box" key={i}>
+                {s.icon && (
+                  <img
+                    src={s.icon}
+                    alt={s.label}
+                    className="project-stat-icon"
+                  />
+                )}
+                <div className="project-stat-label">{s.label}</div>
+                <div className="project-stat-value">{s.value}</div>
+              </div>
+            ))}
+          </div>
         )}
-        <div className="project-stat-label">{s.label}</div>
-        <div className="project-stat-value">{s.value}</div>
-      </div>
-    ))}
-  </div>
-)}
-
 
         <div className="project-grid-content">
           <Row gutter={[0, 32]}>
@@ -103,10 +101,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </Col>
           </Row>
         </div>
+        {/* 360 GELDIGINDE BURAYI YORU MSATIRINDAN KALDIR */}
+        {/* <div className="project-divider" /> */}
 
-        <div className="project-divider" />
-
-        <div className="project-virtual-tour">
+        {/* <div className="project-virtual-tour">
           <div className="project-virtual-title">360° SANAL TUR</div>
           <div className="project-virtual-subtitle">
             PROJEYİ 360° PANORAMİK TUR İLE İNCELEYİN, D-POINT’İN ÇAĞDAŞ YAŞAM
@@ -118,7 +116,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="project-virtual-note">
             NOT: SANAL TUR YENİ BİR SEKMEDE AÇILACAKTIR.
           </div>
-        </div>
+        </div> */}
 
         <div className="project-divider-bottom" />
       </div>
@@ -131,9 +129,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             aria-label="Önceki"
             type="button"
             onClick={prevSlide}
-          >
-            ‹
-          </button>
+          ></button>
 
           <img
             src={gallery[current]}
@@ -146,9 +142,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             aria-label="Sonraki"
             type="button"
             onClick={nextSlide}
-          >
-            ›
-          </button>
+          ></button>
         </div>
       )}
 
