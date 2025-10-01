@@ -34,21 +34,32 @@ const Footer: React.FC = () => {
                 SATIŞ VE MÜŞTERİ HİZMETLERİ
               </p>
 
-             <div className="footer-contact-list">
-  <div className="footer-contact-item">
-    <img src={phoneIcon} alt="Telefon" className="footer-contact-icon" />
-    +90 548 811 09 09
-  </div>
-  <div className="footer-contact-item">
-    <img src={mailIcon} alt="E-posta" className="footer-contact-icon" />
-    info@alindaconstruction.com
-  </div>
-  <div className="footer-contact-item">
-    <img src={locationIcon} alt="Adres" className="footer-contact-icon" />
-    Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli
-  </div>
-</div>
-
+              <div className="footer-contact-list">
+                <div className="footer-contact-item">
+                  <img
+                    src={phoneIcon}
+                    alt="Telefon"
+                    className="footer-contact-icon"
+                  />
+                  +90 548 811 09 09
+                </div>
+                <div className="footer-contact-item">
+                  <img
+                    src={mailIcon}
+                    alt="E-posta"
+                    className="footer-contact-icon"
+                  />
+                  info@alindaconstruction.com
+                </div>
+                <div className="footer-contact-item">
+                  <img
+                    src={locationIcon}
+                    alt="Adres"
+                    className="footer-contact-icon"
+                  />
+                  Atatürk Caddesi, H. Şakir Kompleks, Dükkan 3, Gönyeli
+                </div>
+              </div>
 
               {/* Sosyal Medya */}
               <div className="footer-social-block">
@@ -56,18 +67,26 @@ const Footer: React.FC = () => {
                 <div className="footer-divider" />
                 <div className="footer-social">
                   <a
-                    href="https://www.instagram.com/alinda"
+                    href="https://www.instagram.com/alinda.construction?igsh=YTUwNHo5d2F3cWJr&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={instaWhite} alt="Instagram" className="social-icon" />
+                    <img
+                      src={instaWhite}
+                      alt="Instagram"
+                      className="social-icon"
+                    />
                   </a>
                   <a
-                    href="https://www.facebook.com/alinda"
+                    href="https://www.facebook.com/share/1DJqQvoqao/?mibextid=wwXIfr"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={facebookWhite} alt="Facebook" className="social-icon" />
+                    <img
+                      src={facebookWhite}
+                      alt="Facebook"
+                      className="social-icon"
+                    />
                   </a>
                 </div>
               </div>

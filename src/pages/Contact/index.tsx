@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                   <div className="divider-54" />
                   <div className="social-icons">
                     <a
-                      href="https://www.instagram.com/alinda"
+                      href="https://www.instagram.com/alinda.construction?igsh=YTUwNHo5d2F3cWJr&utm_source=qr"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                       />
                     </a>
                     <a
-                      href="https://www.facebook.com/alinda"
+                      href="https://www.facebook.com/share/1DJqQvoqao/?mibextid=wwXIfr"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
