@@ -1,4 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/u2423024/public_html
-    - /bin/rsync -av --delete ./build/ $DEPLOYPATH/
+    - /bin/rsync -av --delete build/ $DEPLOYPATH
