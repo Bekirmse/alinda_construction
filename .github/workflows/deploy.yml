@@ -1,0 +1,42 @@
+name: 🚀 Deploy to cPanel via FTP
+
+on:
+  push:
+    branches:
+      - master   # master'a push olunca çalışır
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      # Node 18 kullan (CRA 5 ile uyumlu)
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies & build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          server-dir: ${{ secrets.FTP_PATH }}/
+          local-dir: build
+          state-name: .ftp-deploy-sync-state.json
+          # build'de varsa yine de yüklenmesinler:
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/error_log
+            **/deploy.php
+            **/.htaccess
