@@ -28,7 +28,7 @@ const SlideContent: React.FC<SlideContentProps> = ({
         <Row justify="start">
           <Col xs={24} sm={20} md={16} lg={12} xl={10}>
             <Link
-              to={slug ? `/projeler#${slug}` : "/projeler"}
+              to={slug ? `/projelerimiz#${slug}` : "/projelerimiz"}
               className="hero-button"
             >
               {buttonText ?? "PROJE DETAY"}

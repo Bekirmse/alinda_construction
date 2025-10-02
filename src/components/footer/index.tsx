@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
             <div className="footer-link-block footer-links--projects">
               <p className="footer-section-title">PROJELERİMİZ</p>
               <div className="footer-line2" />
-              <Link to="/projeler">Alinda 8</Link>
+              <Link to="/projelerimiz">Alinda 8</Link>
             </div>
           </Col>
 
@@ -107,9 +107,9 @@ const Footer: React.FC = () => {
             <div className="footer-link-block footer-link-block--right">
               <p className="footer-section-title">HIZLI ERİŞİM</p>
               <div className="footer-line2" />
-              <Link to="/about">Biz kimiz</Link>
-              <Link to="/projeler">Projeler</Link>
-              <Link to="/iletisim">İletişim</Link>
+              <Link to="/hakkımızda">Biz kimiz</Link>
+              <Link to="/projelerimiz">Projeler</Link>
+              <Link to="/iletişim">İletişim</Link>
             </div>
           </Col>
         </Row>

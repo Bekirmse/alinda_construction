@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ fixedTheme }) => {
           </Link>
 
           <div className="header-buttons">
-            <Link to="/projeler" className="header-button" onClick={onNavClick}>
+            <Link to="/projelerimiz" className="header-button" onClick={onNavClick}>
               Projeler
             </Link>
             <button className="header-button" onClick={openMenu}>
@@ -116,13 +116,13 @@ const Header: React.FC<HeaderProps> = ({ fixedTheme }) => {
         <div className="sidebar-divider"></div>
 
         <nav className="sidebar-menu">
-          <Link to="/projeler" onClick={onNavClick}>
+          <Link to="/projelerimiz" onClick={onNavClick}>
             Projeler
           </Link>
-          <Link to="/about" onClick={onNavClick}>
+          <Link to="/hakkımızda" onClick={onNavClick}>
             Hakkımızda
           </Link>
-          <Link to="/iletisim" onClick={onNavClick}>
+          <Link to="/iletişim" onClick={onNavClick}>
             Bize Ulaşın
           </Link>
         </nav>
