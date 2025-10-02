@@ -58,7 +58,7 @@ const Home = () => {
                 <div className="intro-button-wrapper">
                   <PrimaryButton
                     text="İncele"
-                    to="/about"
+                    to="/hakkımızda"
                     style={sharedButtonStyle}
                   />
                 </div>
@@ -81,7 +81,7 @@ const Home = () => {
             title="İlk Adım, Güçlü Bir Gelecek"
             description="Bugün, hayalini kurduğumuz yolculuğun ilk adımını atıyoruz. Bu proje, sadece bir inşaat değil; güvenin, emeğin ve geleceğe duyduğumuz inancın bir simgesi..."
             buttonText="Detaylı Bilgi"
-            buttonLink="/projeler"
+            buttonLink="/projelerimiz"
             buttonClassName="project-detail-button"
           />
         </Col>
@@ -97,7 +97,7 @@ const Home = () => {
             title="Her Tuğla Bir Umut, Her Yapı Bir Hikaye"
             description="İnşa ettiğimiz her yapı, sadece taşlardan ya da betonlardan oluşmaz. Her tuğla, bir hayalin temeli, bir umudun başlangıcıdır"
             buttonText="Detaylı Bilgi"
-            buttonLink="/projeler"
+            buttonLink="/projelerimiz"
             buttonClassName="project-detail-button"
           />
         </Col>
@@ -113,7 +113,7 @@ const Home = () => {
             title="Toprağa Değdik, Zirveye Yürüyoruz"
             description="Bu proje, sadece bir temel kazısıyla başlamadı; bir hayalin, bir hedefin ilk adımı oldu. Toprağa dokunduğumuz an, başarıya uzanan yolculuğumuz da başladı. Her tuğlada azim, her katmanda kararlılık var. Şimdi, sağlam adımlarla zirveye yürüme zamanı!"
             buttonText="Detaylı Bilgi"
-            buttonLink="/projeler"
+            buttonLink="/projelerimiz"
             buttonClassName="project-detail-button"
           />
         </Col>
@@ -129,7 +129,7 @@ const Home = () => {
             Ekibimizle hemen iletişime geçin, size özel çözümler sunalım.
           </p>
           <Link
-            to="/iletisim"
+            to="/iletişim"
             className="iletisimButton"
             style={{
               width: "clamp(140px, 10vw, 211px)",
