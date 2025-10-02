@@ -24,9 +24,9 @@ const AppRouter = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/iletisim" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projeler" element={<Project />} />
+        <Route path="/iletişim" element={<Contact />} />
+        <Route path="/hakkımızda" element={<About />} />
+        <Route path="/projelerimiz" element={<Project />} />
       </Routes>
     </BrowserRouter>
   );
