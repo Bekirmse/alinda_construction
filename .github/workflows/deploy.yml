@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           server-dir: ${{ secrets.FTP_PATH }}/
-          local-dir: build
+          local-dir: build/
           state-name: .ftp-deploy-sync-state.json
           # build'de varsa yine de yüklenmesinler:
           exclude: |
