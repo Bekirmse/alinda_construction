@@ -1,8 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u2423024/public_html/
-    - /bin/rm -rf $DEPLOYPATH/*
-    - cd /home/u2423024/repositories/alinda_construction
-    - npm install --force
-    - npm run build
-    - /bin/cp -R build/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/u2423024/public_html
+    - /bin/rsync -av --delete build/ $DEPLOYPATH
