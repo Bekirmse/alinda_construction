@@ -26,7 +26,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/iletişim" element={<Contact />} />
         <Route path="/hakkımızda" element={<About />} />
-        <Route path="/projelerimiz" element={<Project />} />
+        <Route path="/projelerimizz" element={<Project />} />
       </Routes>
     </BrowserRouter>
   );
