@@ -2,6 +2,7 @@
   "name": "alinda_construction",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alindaconstruction.com",
   "dependencies": {
     "@fontsource/montserrat": "^5.2.6",
     "@react-google-maps/api": "^2.20.7",
