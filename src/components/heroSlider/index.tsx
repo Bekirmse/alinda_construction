@@ -18,7 +18,7 @@ const images: string[] = importAll(
   require.context(
     "../../assets/images/Alinda8_home_slider",
     false,
-    /\.(png|jpe?g|svg)$/
+    /\.(png|jpe?g|svg|webp)$/
   )
 );
 

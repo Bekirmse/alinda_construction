@@ -6,9 +6,9 @@ import Footer from "../../components/footer";
 import { Row, Col } from "antd";
 import "./style.css";
 
-import Alinda8_picture_1 from "../../assets/images/Alinda8_projeBanner/Alinda8_projeBanner.png";
-import Alinda8_picture_2 from "../../assets/images/Alinda8_gallery/Alinda8_2.jpg";
-import Alinda8_picture_3 from "../../assets/images/Alinda8_gallery/Alinda8_7.jpg";
+import Alinda8_picture_1 from "../../assets/images/Alinda8_projeBanner/Alinda8_projeBanner.webp";
+import Alinda8_picture_2 from "../../assets/images/Alinda8_gallery/Alinda8_2.webp";
+import Alinda8_picture_3 from "../../assets/images/Alinda8_gallery/Alinda8_7.webp";
 import PrimaryButton from "../../components/primaryButton";
 import { Link } from "react-router-dom";
 

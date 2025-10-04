@@ -1,11 +1,13 @@
 .alinda-contact-section {
   padding-bottom: 32px;
   background: transparent !important;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-contact-container {
   width: min(1120px, 92%);
   margin: 0 auto;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-contact-head {
@@ -19,6 +21,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #6b7280;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-title {
@@ -26,6 +29,7 @@
   font-size: 32px;
   font-weight: 600;
   color: #1f2937;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-contact-form {
@@ -33,11 +37,13 @@
   padding: 32px;
   border-radius: 0;
   box-shadow: none !important;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
-.alinda-contact-form .ant-form-item-label>label {
+.alinda-contact-form .ant-form-item-label > label {
   font-weight: 500;
   color: #374151;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-contact-form .ant-input,
@@ -47,10 +53,9 @@
   border-radius: 0 !important;
   transition: all 0.2s ease;
   height: 48px;
-  /* ✅ inputları daha yüksek yaptık */
   font-size: 16px;
-  /* ✅ yazıyı biraz büyüttük */
   padding: 0 12px;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-contact-form .ant-input-textarea,
@@ -61,6 +66,7 @@
   transition: all 0.2s ease;
   font-size: 16px;
   padding: 12px;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-contact-form .ant-input:focus,
@@ -80,22 +86,20 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 0;
-
-  background-color: #000;     /* normalde siyah */
-  color: #fff;                /* yazı beyaz */
-  border: 2px solid #000;     /* border var ama siyahla aynı renk, görünmüyor */
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
   cursor: pointer;
-
-  transition: all 0.3s ease;  /* yumuşak geçiş */
+  transition: all 0.3s ease;
+  font-family: 'Encode Sans Expanded' !important;
 }
 
 .alinda-submit-btn:hover,
 .alinda-submit-btn:focus {
-  background-color: #fff !important;    /* hover'da beyaz */
-  color: #000 !important;                /* yazı siyah */
-  border: 2px solid #000;     /* siyah border görünür */
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #000;
 }
-
 
 .mb-16 {
   margin-bottom: 16px;

@@ -265,7 +265,7 @@ h3.contact-subheading3 {
 
   .contact-detail {
     justify-content: initial;
-    gap: 40px;
+    gap: 0px;
   }
 
   .contact-map {

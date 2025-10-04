@@ -57,26 +57,33 @@
   color: black;
   border: 2px solid black;
 }
-
 /* Küçük laptop ekranları için (1024px – 1200px) */
 @media (max-width: 1200px) {
   .project-info-container {
-    height: auto;         
+    height: auto;
     padding: 48px 32px;
-    justify-content: flex-start; /* küçük ekranlarda daha doğal hizalama */
-    gap: 24px; /* eşit boşluğu gap ile sağlıyoruz */
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+    gap: 24px;
   }
 
   .project-info-title {
     font-size: 22px;
     line-height: 1.2;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black !important;
   }
 
   .project-info-description {
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1.5; /* okunabilirlik için biraz artırıldı */
+    max-width: 90%; /* açıklama satırları çok uzamasın */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .project-info-button {
@@ -95,19 +102,27 @@
   .project-info-container {
     height: auto;
     padding: 48px 24px;
-    gap: 20px;  /* başlık, açıklama ve buton arasında eşit boşluk */
+    gap: 20px;
     align-items: center;
     text-align: center;
   }
 
   .project-info-title {
-    font-size: 24px;
-    line-height: 1.2;
+    font-size: 22px; /* 24 yerine 22px daha orantılı durur */
+    line-height: 1.3;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black !important;
   }
 
   .project-info-description {
     font-size: 13px;
-    line-height: 1.3;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .project-info-button {
