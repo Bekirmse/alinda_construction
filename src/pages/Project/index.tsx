@@ -34,8 +34,8 @@ type StatBox = { label: string; value: string; icon?: string };
 
 type Project = {
   slug: string;
-  image: string;         // üstteki tek görsel
-  gallery: string[];     // slider için çoklu görsel
+  image: string; // üstteki tek görsel
+  gallery: string[]; // slider için çoklu görsel
   title: string;
   subtitle: string;
   stats: [StatBox, StatBox];
@@ -72,7 +72,7 @@ const projectData: Project[] = [
     ],
     title: "Alinda 8",
     subtitle: "PROJE 1",
-     stats: [
+    stats: [
       { label: "DAİRE", value: "9", icon: DaireIcon },
       { label: "ALAN", value: "680 M²", icon: AlanIcon },
     ],

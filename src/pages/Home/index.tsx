@@ -28,7 +28,7 @@ const Home = () => {
     <div>
       <Header />
       <HeroSlider />
-      
+
       <div className="page-container">
         <Row
           className="section-wrapper"
@@ -74,7 +74,11 @@ const Home = () => {
       {/* Proje 1 */}
       <Row className="project-row" gutter={[0, 0]} align="stretch">
         <Col xs={24} md={12}>
-          <img src={Alinda8_picture_1} alt="Alinda8_picture_1" className="project-image" />
+          <img
+            src={Alinda8_picture_1}
+            alt="Alinda8_picture_1"
+            className="project-image"
+          />
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo
@@ -90,7 +94,11 @@ const Home = () => {
       {/* Proje 2 */}
       <Row className="project-row reverse" gutter={[0, 0]} align="stretch">
         <Col xs={24} md={12}>
-          <img src={Alinda8_picture_2} alt="Alinda8_picture_2" className="project-image" />
+          <img
+            src={Alinda8_picture_2}
+            alt="Alinda8_picture_2"
+            className="project-image"
+          />
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo
@@ -106,7 +114,11 @@ const Home = () => {
       {/* Proje 3 */}
       <Row className="project-row" gutter={[0, 0]} align="stretch">
         <Col xs={24} md={12}>
-          <img src={Alinda8_picture_3} alt="Alinda8_picture_3" className="project-image" />
+          <img
+            src={Alinda8_picture_3}
+            alt="Alinda8_picture_3"
+            className="project-image"
+          />
         </Col>
         <Col xs={24} md={12}>
           <ProjectInfo
